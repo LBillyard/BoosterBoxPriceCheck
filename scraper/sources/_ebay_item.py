@@ -37,7 +37,12 @@ from ._browser import USER_AGENT
 # they don't match other "items sold" text elsewhere on the page.
 
 _SELLER_NAME_RE = re.compile(
-    r'"headline":\{[^{}]*"textSpans":\[\{[^{}]*"text":"([^"]+)"',
+    # The seller card's headline holds the seller name. Match either the
+    # textSpans path (most common) or the bare "text":"..." pair near a
+    # nearby "items sold" marker. We use a permissive .{0,400} to tolerate
+    # nested JSON between the "headline" key and the actual text.
+    r'"headline"\s*:\s*\{.{0,400}?"text"\s*:\s*"([^"]+)"',
+    re.S,
 )
 _ITEMS_SOLD_RE = re.compile(r'(\d[\d,]*)\s+items?\s+sold', re.I)
 _POSITIVE_PCT_RE = re.compile(r'(\d+(?:\.\d+)?)%\s*positive', re.I)

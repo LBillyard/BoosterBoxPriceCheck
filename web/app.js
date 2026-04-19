@@ -162,16 +162,19 @@ function _compactFb(n) {
   return String(n);
 }
 
-function trustPill(feedback) {
+function trustPill(feedback, sellerName, positivePct) {
   if (feedback === null || feedback === undefined) return null;
   let cls, label;
-  if (feedback < 10)        { cls = "trust-new";    label = `${feedback} fb`; }
-  else if (feedback < 100)  { cls = "trust-low";    label = `${feedback} fb`; }
-  else                      { cls = "trust-ok";     label = `${_compactFb(feedback)}+ fb`; }
+  if (feedback < 5)         { cls = "trust-new";    label = `${feedback} sold`; }
+  else if (feedback < 50)   { cls = "trust-low";    label = `${feedback} sold`; }
+  else                      { cls = "trust-ok";     label = `${_compactFb(feedback)} sold`; }
   const span = document.createElement('span');
   span.className = `trust-pill ${cls}`;
   span.textContent = label;
-  span.title = `${feedback.toLocaleString()} eBay feedback`;
+  const parts = [`${feedback.toLocaleString()} items sold`];
+  if (positivePct !== null && positivePct !== undefined) parts.push(`${positivePct}% positive`);
+  if (sellerName) parts.unshift(sellerName);
+  span.title = parts.join(' · ');
   return span;
 }
 
@@ -208,13 +211,8 @@ function makeFeedItem({ source, title, gbp, usd, date, url, sellerFeedback, sell
   const isEbay = source === "ebay_us" || source === "ebay_uk";
   let trust = null;
   if (isEbay) {
-    trust = trustPill(sellerFeedback);
+    trust = trustPill(sellerFeedback, sellerName, sellerPositivePct);
     if (!trust) trust = unknownTrustPill();
-    if (sellerName) {
-      const pctTxt = (sellerPositivePct !== null && sellerPositivePct !== undefined)
-        ? ` · ${sellerPositivePct}% positive` : "";
-      trust.title = `${sellerName} · ${sellerFeedback ?? "?"} feedback${pctTxt}`;
-    }
   }
 
   const titleEl = document.createElement("span");
