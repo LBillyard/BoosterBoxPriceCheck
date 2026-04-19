@@ -41,7 +41,13 @@ function render(snap) {
   for (const [label, vals] of Object.entries(snap.prices)) {
     const div = document.createElement("div");
     div.className = "condition";
-    div.innerHTML = `<div class="label">${label}</div><div class="value">${fmtGBP.format(vals.gbp)}</div>`;
+    const labelEl = document.createElement("div");
+    labelEl.className = "label";
+    labelEl.textContent = label;
+    const valueEl = document.createElement("div");
+    valueEl.className = "value";
+    valueEl.textContent = fmtGBP.format(vals.gbp);
+    div.append(labelEl, valueEl);
     cEl.appendChild(div);
   }
 
@@ -60,10 +66,16 @@ function render(snap) {
     sumEl.textContent = `${snap.listings.length} listed · from ${fmtGBP.format(min)}`;
     for (const item of snap.listings) {
       const li = document.createElement("li");
-      li.innerHTML = `
-        <span class="cond">${item.condition}</span>
-        <span class="gbp">${fmtGBP.format(item.gbp)}</span>
-        <span class="usd">${fmtUSD.format(item.usd)}</span>`;
+      const cond = document.createElement("span");
+      cond.className = "cond";
+      cond.textContent = item.condition;
+      const gbp = document.createElement("span");
+      gbp.className = "gbp";
+      gbp.textContent = fmtGBP.format(item.gbp);
+      const usd = document.createElement("span");
+      usd.className = "usd";
+      usd.textContent = fmtUSD.format(item.usd);
+      li.append(cond, gbp, usd);
       list.appendChild(li);
     }
   } else {

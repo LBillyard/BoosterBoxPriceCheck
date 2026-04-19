@@ -56,12 +56,16 @@ def main() -> int:
     try:
         fx = fetch_usd_to_gbp()
     except Exception as e:
-        # Reuse last-known FX if available
+        fx = None
         if SNAPSHOT_FILE.exists():
-            prev = json.loads(SNAPSHOT_FILE.read_text())
-            fx = prev["fx"]["usd_to_gbp"]
-            print(f"WARN: FX fetch failed, reusing previous rate {fx}", file=sys.stderr)
-        else:
+            try:
+                prev = json.loads(SNAPSHOT_FILE.read_text())
+                fx = float(prev["fx"]["usd_to_gbp"])
+                print(f"WARN: FX fetch failed, reusing previous rate {fx}", file=sys.stderr)
+            except (ValueError, KeyError, json.JSONDecodeError) as fallback_err:
+                write_error(f"FX fetch failed ({e}) and previous snapshot unreadable ({fallback_err})")
+                return 1
+        if fx is None:
             write_error(f"FX fetch failed and no previous rate: {e}")
             return 1
 
