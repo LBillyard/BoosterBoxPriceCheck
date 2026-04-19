@@ -61,3 +61,28 @@ def test_build_snapshot_caps_recent_sales_at_25():
     snap = build_snapshot({}, None, [], 0.80, scraped_at="2026-04-19T12:00:00Z",
                           recent_sales=sales)
     assert len(snap["recent_sales"]) == 25
+
+
+def test_build_snapshot_includes_active_listings_sorted_asc():
+    fx = 0.80
+    active = [
+        {"source": "ebay_us", "title": "Pokemon Base Set Booster Box Sealed B",
+         "usd_cents": 4_500_000, "url": "https://x/2"},
+        {"source": "ebay_uk", "title": "Pokemon Base Set Booster Box Sealed A",
+         "usd_cents": 3_900_000, "gbp_cents": 2_900_000, "url": "https://x/1"},
+    ]
+    snap = build_snapshot({}, None, [], fx, scraped_at="2026-04-19T12:00:00Z",
+                          active_listings=active)
+    al = snap["active_listings"]
+    assert len(al) == 2
+    # Ascending by USD ask.
+    assert al[0]["source"] == "ebay_uk"
+    assert al[0]["gbp"] == 29_000.0  # native GBP, not FX-derived
+    assert al[1]["source"] == "ebay_us"
+    # No date field in the active shape.
+    assert "date" not in al[0]
+
+
+def test_build_snapshot_active_listings_default_empty():
+    snap = build_snapshot({}, None, [], 0.80, scraped_at="2026-04-19T12:00:00Z")
+    assert snap["active_listings"] == []

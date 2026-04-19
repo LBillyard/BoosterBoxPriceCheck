@@ -10,7 +10,7 @@ from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
 from .history import merge_sales
-from .sources import onethirtypoint, ebay_uk, ebay_us
+from .sources import onethirtypoint, ebay_uk, ebay_us, ebay_uk_active, ebay_us_active
 
 URL = "https://www.pricecharting.com/game/pokemon-base-set/booster-box"
 USER_AGENT = (
@@ -91,9 +91,25 @@ def main() -> int:
         source_counts[name] = len(rows)
         recent_sales.extend(rows)
 
+    # Currently-active (Buy It Now) listings from eBay UK + US. Same
+    # isolation pattern — a fail just contributes zero rows.
+    active_rows: list[dict] = []
+    for name, fn in (
+        ("ebay_uk_active", lambda: ebay_uk_active.fetch(gbp_per_usd=fx)),
+        ("ebay_us_active", lambda: ebay_us_active.fetch()),
+    ):
+        try:
+            rows = fn()
+        except Exception as src_err:  # noqa: BLE001
+            print(f"WARN: source {name} failed: {src_err}", file=sys.stderr)
+            rows = []
+        source_counts[name] = len(rows)
+        active_rows.extend(rows)
+
     now = dt.datetime.now(dt.timezone.utc).isoformat()
     snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now,
-                          recent_sales=recent_sales)
+                          recent_sales=recent_sales,
+                          active_listings=active_rows)
     SNAPSHOT_FILE.write_text(json.dumps(snap, indent=2))
 
     # Persist this scrape's recent_sales into the long-running history file.
@@ -112,6 +128,7 @@ def main() -> int:
     print(
         f"OK: wrote {SNAPSHOT_FILE} with {len(prices)} prices, "
         f"{len(listings)} listings, {len(snap['recent_sales'])} recent sales, "
+        f"{len(snap['active_listings'])} active listings, "
         f"history={history_count} ({counts_str})"
     )
     return 0

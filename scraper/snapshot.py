@@ -5,6 +5,10 @@ PURCHASE_PRICE_GBP = 29253.05
 # headroom (and history when sources are slow).
 RECENT_SALES_CAP = 25
 
+# Cap on currently-active listings. There's no point shipping more than the
+# UI will render, and the snapshot file size matters for GitHub Pages.
+ACTIVE_LISTINGS_CAP = 25
+
 
 def _cents_to_dollars(cents: int) -> float:
     return round(cents / 100, 2)
@@ -45,8 +49,34 @@ def _sort_and_cap(sales: list[dict], cap: int) -> list[dict]:
     return sales_sorted[:cap]
 
 
+def _normalise_active(item: dict, fx: float) -> dict:
+    """Project an active-listing source dict into the snapshot shape.
+
+    Active listings have no sale date (they're currently for sale). They
+    follow the same usd_cents / optional gbp_cents convention as sold rows.
+    """
+    usd = _cents_to_dollars(item["usd_cents"])
+    if "gbp_cents" in item and item["gbp_cents"]:
+        gbp = _cents_to_dollars(item["gbp_cents"])
+    else:
+        gbp = _convert(usd, fx)
+    return {
+        "source": item["source"],
+        "title": item["title"],
+        "usd": usd,
+        "gbp": gbp,
+        "url": item.get("url"),
+    }
+
+
+def _sort_active_asc(items: list[dict], cap: int) -> list[dict]:
+    """Sort active listings by ask price (USD) ascending, cap to ``cap``."""
+    return sorted(items, key=lambda x: x.get("usd") or 0)[:cap]
+
+
 def build_snapshot(prices, last_sold, listings, fx, scraped_at: str,
-                   recent_sales: list[dict] | None = None) -> dict:
+                   recent_sales: list[dict] | None = None,
+                   active_listings: list[dict] | None = None) -> dict:
     out_prices = {}
     for cond, cents in prices.items():
         usd = _cents_to_dollars(cents)
@@ -75,6 +105,13 @@ def build_snapshot(prices, last_sold, listings, fx, scraped_at: str,
             RECENT_SALES_CAP,
         )
 
+    out_active: list[dict] = []
+    if active_listings:
+        out_active = _sort_active_asc(
+            [_normalise_active(a, fx) for a in active_listings],
+            ACTIVE_LISTINGS_CAP,
+        )
+
     return {
         "scraped_at": scraped_at,
         "fx": {"usd_to_gbp": fx, "fetched_at": scraped_at},
@@ -82,5 +119,6 @@ def build_snapshot(prices, last_sold, listings, fx, scraped_at: str,
         "last_sold": out_last_sold,
         "listings": out_listings,
         "recent_sales": out_recent_sales,
+        "active_listings": out_active,
         "purchase_price_gbp": PURCHASE_PRICE_GBP,
     }
