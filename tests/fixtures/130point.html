@@ -1,0 +1,72 @@
+<!doctype html>
+<!--
+  Synthetic fixture for tests/test_source_130point.py.
+
+  130point.com sits behind a Cloudflare managed challenge that returns a
+  "Just a moment..." interstitial to plain HTTP clients, so we cannot save a
+  real response from CI. This fixture mimics the public sales table layout
+  closely enough to exercise the parser:
+
+  - one <table> with rows of class "record"
+  - each row has a title cell, price cell, date cell, source link
+  - includes one good Unlimited row, one obvious 1st Edition (must be
+    rejected), one Shadowless (must be rejected), one wrong-set Jungle
+    (must be rejected), one too-cheap loose pack (must be rejected), and
+    one acceptable parenthetical-Unlimited row.
+
+  When 130point.com is unblocked (Playwright) replace this with a real
+  saved page and adjust the parser only if the markup differs.
+-->
+<html><head><title>130point sales</title></head>
+<body>
+<h1>Recent Sales</h1>
+<table class="sales">
+  <thead>
+    <tr><th>Title</th><th>Price</th><th>Date</th><th>Source</th></tr>
+  </thead>
+  <tbody>
+    <tr class="record">
+      <td class="title"><a href="https://www.ebay.com/itm/111222333">Pokemon Base Set Unlimited Booster Box Sealed WOTC 1999</a></td>
+      <td class="price">$41,250.00</td>
+      <td class="date">2026-04-15</td>
+      <td class="source">eBay</td>
+    </tr>
+    <tr class="record">
+      <td class="title"><a href="https://www.ebay.com/itm/444555666">Pokemon Base Set Booster Box Sealed (Unlimited) Authenticated</a></td>
+      <td class="price">$38,995.00</td>
+      <td class="date">04/12/2026</td>
+      <td class="source">PWCC</td>
+    </tr>
+    <tr class="record">
+      <td class="title"><a href="https://www.ebay.com/itm/777888999">Pokemon Base Set 1st Edition Booster Box Sealed BBCE</a></td>
+      <td class="price">$312,500.00</td>
+      <td class="date">2026-04-10</td>
+      <td class="source">eBay</td>
+    </tr>
+    <tr class="record">
+      <td class="title"><a href="https://www.ebay.com/itm/123123123">Pokemon Base Set Shadowless Booster Box Sealed</a></td>
+      <td class="price">$94,000.00</td>
+      <td class="date">Apr 8, 2026</td>
+      <td class="source">eBay</td>
+    </tr>
+    <tr class="record">
+      <td class="title"><a href="https://www.ebay.com/itm/222333444">Pokemon Jungle Booster Box Sealed WOTC</a></td>
+      <td class="price">$3,800.00</td>
+      <td class="date">2026-04-07</td>
+      <td class="source">eBay</td>
+    </tr>
+    <tr class="record">
+      <td class="title"><a href="https://www.ebay.com/itm/555666777">Pokemon Base Set Booster Pack Sealed Unlimited</a></td>
+      <td class="price">$520.00</td>
+      <td class="date">2026-04-05</td>
+      <td class="source">eBay</td>
+    </tr>
+    <tr class="record">
+      <td class="title"><a href="https://www.ebay.com/itm/888999000">Pokemon Base Set Booster Box Sealed Heavy</a></td>
+      <td class="price">$36,200.00</td>
+      <td class="date">04/02/2026</td>
+      <td class="source">PWCC</td>
+    </tr>
+  </tbody>
+</table>
+</body></html>
