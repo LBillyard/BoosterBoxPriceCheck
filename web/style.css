@@ -361,8 +361,12 @@ a { color: inherit; text-decoration: none; }
 .feed-l-top {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   min-width: 0;
+  /* Allow the trust pill to wrap onto a second visual line on narrow
+     viewports (375px mobile) rather than push the title off-screen. */
+  flex-wrap: wrap;
+  row-gap: 4px;
 }
 .feed-pill {
   font-size: 9.5px;
@@ -380,6 +384,44 @@ a { color: inherit; text-decoration: none; }
 .feed-pill.s-130point { color: #f0abfc; border-color: rgba(217, 70, 239, 0.35); background: rgba(217, 70, 239, 0.1); }
 .feed-pill.s-pricecharting { color: #fcd34d; border-color: rgba(251, 191, 36, 0.35); background: rgba(251, 191, 36, 0.1); }
 .feed-pill.s-default { color: var(--fg-mute); border-color: var(--line); background: var(--bg-elev-2); }
+
+/* Trust pill — colour-coded seller-feedback at-a-glance scam check.
+   Sized identically to .feed-pill (same font, same padding) and placed
+   immediately after the source pill in the row's left column. Tier
+   colours mirror the existing palette: red for very-new, amber for
+   low, green for established, neutral grey for unknown. */
+.trust-pill {
+  font-size: 9.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 5px;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  border: 1px solid;
+  font-variant-numeric: tabular-nums;
+}
+.trust-pill.trust-new {
+  color: #fca5a5;
+  background: rgba(248, 113, 113, 0.12);
+  border-color: rgba(248, 113, 113, 0.35);
+}
+.trust-pill.trust-low {
+  color: #fcd34d;
+  background: rgba(251, 191, 36, 0.10);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+.trust-pill.trust-ok {
+  color: #86efac;
+  background: rgba(74, 222, 128, 0.12);
+  border-color: rgba(74, 222, 128, 0.30);
+}
+.trust-pill.trust-unknown {
+  color: var(--fg-dim);
+  background: var(--bg-elev-2);
+  border-color: var(--line);
+}
 .feed-title {
   font-size: 13.5px;
   color: var(--fg);

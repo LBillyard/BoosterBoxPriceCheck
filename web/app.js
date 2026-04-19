@@ -149,7 +149,41 @@ function sourceLabel(source) {
   return map[source] || source;
 }
 
-function makeFeedItem({ source, title, gbp, usd, date, url }) {
+// One-glance scam check: a small pill rendered next to the source pill on
+// each eBay listing. Tier thresholds match the brief — <10 = very new
+// (almost always a scam in the £20k+ band), 10–99 = low (proceed with
+// caution), >=100 = established. Returns null when feedback is unknown so
+// callers can decide whether to render an UNKNOWN grey pill or skip.
+// Compact integer formatter: 109500 -> "109K", 1500000 -> "1.5M".
+// Keeps the trust pill narrow so it never pushes the title off-screen.
+function _compactFb(n) {
+  if (n >= 1_000_000) return (n / 1_000_000).toFixed(n >= 10_000_000 ? 0 : 1).replace(/\.0$/, "") + "M";
+  if (n >= 1_000)     return (n / 1_000).toFixed(n >= 10_000 ? 0 : 1).replace(/\.0$/, "") + "K";
+  return String(n);
+}
+
+function trustPill(feedback) {
+  if (feedback === null || feedback === undefined) return null;
+  let cls, label;
+  if (feedback < 10)        { cls = "trust-new";    label = `${feedback} fb`; }
+  else if (feedback < 100)  { cls = "trust-low";    label = `${feedback} fb`; }
+  else                      { cls = "trust-ok";     label = `${_compactFb(feedback)}+ fb`; }
+  const span = document.createElement('span');
+  span.className = `trust-pill ${cls}`;
+  span.textContent = label;
+  span.title = `${feedback.toLocaleString()} eBay feedback`;
+  return span;
+}
+
+function unknownTrustPill() {
+  const span = document.createElement('span');
+  span.className = 'trust-pill trust-unknown';
+  span.textContent = '? fb';
+  span.title = 'Seller feedback unknown';
+  return span;
+}
+
+function makeFeedItem({ source, title, gbp, usd, date, url, sellerFeedback, sellerName, sellerPositivePct }) {
   const li = document.createElement("li");
   const wrap = url ? document.createElement("a") : document.createElement("div");
   if (url) {
@@ -167,12 +201,29 @@ function makeFeedItem({ source, title, gbp, usd, date, url }) {
   const pill = document.createElement("span");
   pill.className = sourcePillClass(source);
   pill.textContent = sourceLabel(source);
+
+  // Trust pill: only meaningful for eBay sources (the only feeds where we
+  // have seller-feedback data). PriceCharting / 130point pass undefined and
+  // get no pill at all to avoid visual noise.
+  const isEbay = source === "ebay_us" || source === "ebay_uk";
+  let trust = null;
+  if (isEbay) {
+    trust = trustPill(sellerFeedback);
+    if (!trust) trust = unknownTrustPill();
+    if (sellerName) {
+      const pctTxt = (sellerPositivePct !== null && sellerPositivePct !== undefined)
+        ? ` · ${sellerPositivePct}% positive` : "";
+      trust.title = `${sellerName} · ${sellerFeedback ?? "?"} feedback${pctTxt}`;
+    }
+  }
+
   const titleEl = document.createElement("span");
   titleEl.className = "feed-title";
   const t = title || "";
   titleEl.textContent = t.length > 60 ? t.slice(0, 59).trimEnd() + "…" : t;
   titleEl.title = t;
-  top.append(pill, titleEl);
+  if (trust) top.append(pill, trust, titleEl);
+  else top.append(pill, titleEl);
   const bot = document.createElement("div");
   bot.className = "feed-l-bot";
   bot.textContent = date || "";
@@ -215,6 +266,9 @@ function renderRecentSales(snap, history) {
       usd: s.usd,
       date: s.date,
       url: s.url,
+      sellerName: s.seller_name,
+      sellerFeedback: s.seller_feedback,
+      sellerPositivePct: s.seller_positive_pct,
     }));
   }
 }
@@ -242,6 +296,9 @@ function renderActive(snap) {
       usd: item.usd,
       date: null,
       url: item.url,
+      sellerName: item.seller_name,
+      sellerFeedback: item.seller_feedback,
+      sellerPositivePct: item.seller_positive_pct,
     }));
   }
 }
