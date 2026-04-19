@@ -21,6 +21,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r scraper/requirements.txt
 
+      - name: Install patchright Chromium
+        # patchright bundles its own browser-install command; the binary
+        # is shared with vanilla playwright so installing once is enough.
+        run: python -m patchright install --with-deps chromium
+
       - name: Run scraper
         run: python -m scraper.scrape
 
