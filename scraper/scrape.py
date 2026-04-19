@@ -9,7 +9,7 @@ import requests
 from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
-from .sources import onethirtypoint, ebay_uk
+from .sources import onethirtypoint, ebay_uk, ebay_us
 
 URL = "https://www.pricecharting.com/game/pokemon-base-set/booster-box"
 USER_AGENT = (
@@ -79,6 +79,7 @@ def main() -> int:
     for name, fn in (
         ("130point", lambda: onethirtypoint.fetch()),
         ("ebay_uk",  lambda: ebay_uk.fetch(gbp_per_usd=fx)),
+        ("ebay_us",  lambda: ebay_us.fetch()),
     ):
         try:
             rows = fn()

@@ -1,21 +1,28 @@
 """eBay UK sold-listings source.
 
-eBay UK serves SRP (Search Results Page) results as static HTML for desktop
-user agents. The current layout (April 2026) renders each result as a
-``<div class="s-card">`` containing:
+eBay UK serves SRP (Search Results Page) results as JS-hydrated HTML — a
+plain ``requests`` GET returns a placeholder shell, so we render through
+:mod:`scraper.sources._browser` (headless Chromium). The post-hydration
+markup gives one ``<div class="s-card">`` per result, containing:
 
-* ``.s-card__title`` — listing title (with a trailing "Opens in a new
+* ``.s-card__title`` - listing title (with a trailing "Opens in a new
   window or tab" we strip)
-* ``.s-card__price`` — sold price in GBP (e.g. "£41,250.00"); occasionally a
+* ``.s-card__price`` - sold price in GBP (e.g. "£41,250.00"); occasionally a
   range like "£40,000.00 to £45,000.00", in which case we use the lower bound
-* ``.s-card__caption`` — sold metadata, e.g. "Sold 16 Apr 2026"
-* ``a.s-card__link`` — outbound link
+* ``.s-card__caption`` - sold metadata, e.g. "Sold 16 Apr 2026"
+* ``a.s-card__link`` - outbound link
 
 Prices are GBP. We convert to USD inside the source using a passed-in FX
-rate (USD→GBP); having the source emit ``usd_cents`` keeps the orchestrator
-combinator simple — every entry is comparable in one currency before we
+rate (USD->GBP); having the source emit ``usd_cents`` keeps the orchestrator
+combinator simple - every entry is comparable in one currency before we
 filter on the USD price band. The original GBP is preserved as
 ``gbp_cents`` for the snapshot.
+
+Search query: the previous query (``base+set+booster+box+sealed``) was
+dominated by modern Scarlet/Violet and Sword/Shield reprints. We now use
+``base+set+booster+box+wotc`` plus ``_udlo=10000`` (min £10k) to surface
+vintage Unlimited boxes; modern product is naturally cheaper. The
+``_filter`` module rejects whatever still slips through.
 """
 from __future__ import annotations
 
@@ -23,19 +30,15 @@ import re
 import datetime as dt
 from pathlib import Path
 
-import requests
 from bs4 import BeautifulSoup
 
+from ._browser import render
 from ._filter import is_acceptable
 
 URL = (
     "https://www.ebay.co.uk/sch/i.html"
-    "?_nkw=pokemon+base+set+booster+box+sealed"
-    "&LH_Sold=1&LH_Complete=1&_sop=13"
-)
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    "?_nkw=pokemon+base+set+booster+box+wotc"
+    "&LH_Sold=1&LH_Complete=1&_sop=13&_udlo=10000"
 )
 
 _GBP_RE = re.compile(r"£\s*([\d,]+(?:\.\d{2})?)")
@@ -143,22 +146,26 @@ def parse(html: str, gbp_per_usd: float) -> list[dict]:
     return out
 
 
-def fetch(gbp_per_usd: float, timeout: int = 30) -> list[dict]:
-    """Hit eBay UK's sold-listings page and return parsed, filtered sales.
+def fetch(gbp_per_usd: float, timeout_ms: int = 45000) -> list[dict]:
+    """Hit eBay UK's sold-listings page via headless Chromium.
 
-    Returns an empty list on non-2xx (eBay occasionally rate-limits with a
-    302 to a captcha; the orchestrator wraps this in try/except anyway).
+    The SRP needs JS hydration before ``s-card`` markup is in the DOM, so
+    we render through :func:`scraper.sources._browser.render` and wait for
+    the cards to appear.
+
+    Returns an empty list on Playwright failure or rendering hiccup; the
+    orchestrator wraps this in try/except so a single source failure
+    cannot break the snapshot.
     """
-    headers = {
-        "User-Agent": USER_AGENT,
-        "Accept": "text/html,application/xhtml+xml",
-        "Accept-Language": "en-GB,en;q=0.9",
-    }
-    r = requests.get(URL, headers=headers, timeout=timeout)
-    if r.status_code != 200:
+    try:
+        html = render(
+            URL,
+            wait_selector=".srp-results, .s-item, .s-card",
+            timeout_ms=timeout_ms,
+        )
+    except Exception:
         return []
-    r.encoding = "utf-8"
-    return parse(r.text, gbp_per_usd)
+    return parse(html, gbp_per_usd)
 
 
 def parse_fixture(path: str | Path, gbp_per_usd: float) -> list[dict]:

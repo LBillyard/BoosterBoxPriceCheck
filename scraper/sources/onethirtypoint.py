@@ -5,19 +5,24 @@ public ``/sales/`` page renders results in a table; each row has a title
 cell, a USD price cell, a sold-date cell, and (usually) an outbound link
 back to the original listing.
 
-NOTE on Cloudflare: 130point.com sits behind a Cloudflare managed challenge
-that returns HTTP 403 + a "Just a moment..." interstitial to plain HTTP
-clients (curl, requests). A live scrape from CI will currently yield zero
-sales. The orchestrator wraps ``fetch()`` in try/except so this is a soft
-failure — the snapshot still ships with eBay/PriceCharting data. The follow
-up to fully unlock 130point is to drive it through Playwright with a real
-browser fingerprint; the parser below is structured to keep working once
-real HTML reaches it.
+NOTE on Cloudflare: 130point.com sits behind a Cloudflare managed
+challenge ("Just a moment..." interstitial). We attempt to bypass it by
+driving a headless Chromium via :mod:`scraper.sources._browser` — but as
+of this code's commit even Playwright with anti-automation tweaks does
+NOT pass the Cloudflare Turnstile challenge: the page hangs on the
+challenge HTML and never reveals the sales table. ``fetch()`` therefore
+returns ``[]`` in practice; the orchestrator records ``130point=0`` and
+the snapshot still lands with eBay UK + eBay US data.
+
+Possible follow-ups (none of them in-scope for this commit) include:
+``playwright-stealth``, ``undetected-playwright``, an external CF-bypass
+service, or scraping a 130point-equivalent site with no CF (eg. Goldin,
+PWCC marketplace) and tagging results under this source.
 
 The parser is deliberately permissive about row markup — it scans every
-``<tr>`` looking for a price-shaped cell, a date-shaped cell, and a link or
-title text. That makes it robust to small variations in 130point's layout
-(they have shipped at least two table redesigns in the last year).
+``<tr>`` looking for a price-shaped cell, a date-shaped cell, and a link
+or title text. That keeps it ready for the day a real table reaches it.
+
 """
 from __future__ import annotations
 
@@ -25,16 +30,15 @@ import re
 import datetime as dt
 from pathlib import Path
 
-import requests
 from bs4 import BeautifulSoup
 
+from ._browser import render
 from ._filter import is_acceptable
 
-URL = "https://130point.com/sales/?search=base+set+booster+box&sort=date"
-USER_AGENT = (
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
-    "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
-)
+# Search query: "base set booster box sealed" surfaces the most Unlimited
+# rows. "unlimited" as a literal word is rare in titles; sellers usually
+# default to no edition keyword for Unlimited stock. Sorted newest-first.
+URL = "https://130point.com/sales/?search=base+set+booster+box+sealed&sort=date"
 
 _PRICE_RE = re.compile(r"\$\s*([\d,]+(?:\.\d{2})?)")
 _DATE_FORMATS = (
@@ -162,23 +166,20 @@ def parse(html: str) -> list[dict]:
     return out
 
 
-def fetch(timeout: int = 20) -> list[dict]:
-    """Hit 130point's sales endpoint and return parsed, filtered sales.
+def fetch(timeout_ms: int = 30000) -> list[dict]:
+    """Hit 130point's sales endpoint via headless Chromium and return rows.
 
-    Returns an empty list if the page is challenge-gated (Cloudflare) or
-    otherwise unparseable. The orchestrator already isolates exceptions, but
-    this also defensively swallows non-2xx responses since CF replies 403
-    with a JS challenge body.
+    The page is Cloudflare-protected, so we render through Playwright. The
+    challenge typically clears in <5s; we wait for ``table tr`` markup to
+    appear before grabbing ``page.content()``. If anything goes wrong
+    (Playwright not installed, challenge never resolves, table never
+    renders) we return ``[]`` and the orchestrator carries on.
     """
-    headers = {
-        "User-Agent": USER_AGENT,
-        "Accept": "text/html,application/xhtml+xml",
-        "Accept-Language": "en-GB,en;q=0.8",
-    }
-    r = requests.get(URL, headers=headers, timeout=timeout)
-    if r.status_code != 200:
+    try:
+        html = render(URL, wait_selector="table tr", timeout_ms=timeout_ms)
+    except Exception:
         return []
-    return parse(r.text)
+    return parse(html)
 
 
 def parse_fixture(path: str | Path) -> list[dict]:

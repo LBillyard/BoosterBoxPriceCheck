@@ -3,19 +3,20 @@
   Synthetic fixture for tests/test_source_130point.py.
 
   130point.com sits behind a Cloudflare managed challenge that returns a
-  "Just a moment..." interstitial to plain HTTP clients, so we cannot save a
-  real response from CI. This fixture mimics the public sales table layout
-  closely enough to exercise the parser:
+  "Just a moment..." interstitial. As of this fixture's capture date, even
+  Playwright headless Chromium with stealth tweaks does not pass the
+  challenge — every render attempt yields the CF challenge HTML, not the
+  sales table. We retain this synthetic fixture to exercise the parser
+  itself; live ``fetch()`` returns ``[]`` until a CF-bypass strategy is
+  in place (see source docstring for follow-up notes).
 
+  Layout mirrored:
   - one <table> with rows of class "record"
   - each row has a title cell, price cell, date cell, source link
   - includes one good Unlimited row, one obvious 1st Edition (must be
     rejected), one Shadowless (must be rejected), one wrong-set Jungle
     (must be rejected), one too-cheap loose pack (must be rejected), and
     one acceptable parenthetical-Unlimited row.
-
-  When 130point.com is unblocked (Playwright) replace this with a real
-  saved page and adjust the parser only if the markup differs.
 -->
 <html><head><title>130point sales</title></head>
 <body>
