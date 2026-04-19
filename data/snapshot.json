@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-04-19T16:27:28.192247+00:00",
+  "scraped_at": "2026-04-19T16:53:11.770572+00:00",
   "fx": {
     "usd_to_gbp": 0.7389,
-    "fetched_at": "2026-04-19T16:27:28.192247+00:00"
+    "fetched_at": "2026-04-19T16:53:11.770572+00:00"
   },
   "prices": {
     "loose": {
@@ -16,6 +16,31 @@
     "date": "2026-04-16"
   },
   "listings": [],
-  "recent_sales": [],
+  "recent_sales": [
+    {
+      "source": "ebay_us",
+      "title": "Original WOTC Base Set SEALED Booster Box GREEN WINGS (Pokemon Cards)",
+      "usd": 42500.0,
+      "gbp": 31403.25,
+      "date": "2026-03-29",
+      "url": "https://www.ebay.com/itm/318035107020?_skw=pokemon+base+set+booster+box+wotc&itmmeta=01KPKAJ45Y1NH5A36ZEZ99XYS3&hash=item4a0c5e9ccc:g:NjgAAeSwWD5pvYzG&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xDJHDOUzH7LTN1%2F1y7uI80LKFJOFkKRCTLlrkvHPNMaswQJYgM%2FruBXtM0ClICR%2FvwuBK0nu5WZhKGYsHkUsOwyPRD%2BZMOlurGcQFRhNRDhWv2jck%2B0Np786a2pyKcerEt6DLt6dTQCtVXRlFedIS3CTrdFHtB%2FWdPc1mtd2bMT69Z1U05CTgsie3wO%2BU14fsMqXXoFJyLDVnqoe19VcLRI9sSl2TEroJwDl1N0pFenvN9YJ7CtSoxm8aQPWr6ksOAEHuH%2FWJ7H38SPdV4q9MBO%7Ctkp%3ABk9SR5DDyOq0Zw"
+    },
+    {
+      "source": "ebay_us",
+      "title": "Pokemon EN Base Set Unlimited Booster Box WOTC Factory Sealed w/ Acrylic Case",
+      "usd": 36600.0,
+      "gbp": 27043.74,
+      "date": "2026-03-10",
+      "url": "https://www.ebay.com/itm/377006661568?_skw=pokemon+base+set+booster+box+wotc&itmmeta=01KPKAJ45YJ4BVN00CPDX5FF0W&hash=item57c7591fc0:g:La4AAeSwWK1ppy9P&itmprp=enc%3AAQALAAABAGfYFPkwiKCW4ZNSs2u11xBxqGHLb%2FnIE3aY4O1fXBOwccn0mQbtf93zv4SXzNpRfXeFuUhXg%2B7DOrMdH2Ik7No%2BT3X3VuEXH%2B%2FSkX8hW5H6Vju1WXqGBLRudk6l5mF45QpooUFO2B5CSPJ%2BaX2EClvUB1qhq%2BvMyvF36yZrv3UfF5VJ4pPfpxThTiYlK078eeKKJXfyU3OQWC8tsfpMtA9%2FgFhFwM%2FJLF%2F8Wy8mbvnVRPgi9Hrlki6%2FwawaBGvI7ptqJg7Xa2pmC2wKaH%2FAnKcVXPc0dQsNrdSPYEgh7pAqrbsL88xu9hte5NS03qD2BA4mvbba0JsRWgc8YWuY5WU%3D%7Ctkp%3ABk9SR5DDyOq0Zw"
+    },
+    {
+      "source": "ebay_us",
+      "title": "Original WOTC Base Set SEALED Booster Box (Pokemon Cards)",
+      "usd": 35000.0,
+      "gbp": 25861.5,
+      "date": "2026-03-01",
+      "url": "https://www.ebay.com/itm/277723834269?_skw=pokemon+base+set+booster+box+wotc&itmmeta=01KPKAJ45YZWVDNNKATD4XWM54&hash=item40a9a1679d:g:WQkAAeSwHappjzcQ&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBOgtW0UoXJTJ5xYbDbrk7SY%2FfiR4CR7AcefCFDAl6qAzkOswOY7JJpiXwLc63oQkXQZQL7rqRnMkowWP1NVITBQu275AB91dsSdhKBf%2Fl6mk22WUUPQdSROcGXXONipgb3528nkvViwTvR0SLivDlzft7IBE0%2BmfRTCu9WOXu6Fvh1okLY4nW0wFiY0s%2FKW3Dxy3ry3yYsXBwd991bBgoos%2BEp%2Bo90BX7UzfxjUtRGrDSWY5bbdU4dCN6VGHf1Nw6Xszou3KMGJsP2cP8fhgck%7Ctkp%3ABk9SR5DDyOq0Zw"
+    }
+  ],
   "purchase_price_gbp": 29253.05
 }
