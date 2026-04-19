@@ -1,7 +1,10 @@
 from bs4 import BeautifulSoup
+from datetime import datetime
 import re
 
 PRICE_RE = re.compile(r"\$([\d,]+(?:\.\d{2})?)")
+_ISO_DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+_DATE_FORMATS = ("%Y-%m-%d", "%b %d, %Y", "%b %d %Y", "%B %d, %Y", "%m/%d/%Y")
 
 # Minimum plausible price (in cents) for a sealed Pokemon booster box.
 # Anything below this is treated as noise/placeholder (e.g. $0.00 change spans
@@ -49,3 +52,54 @@ def parse_prices(html: str) -> dict[str, int]:
             continue
         prices[label] = cents
     return prices
+
+
+def _normalise_date(text: str) -> str | None:
+    text = text.strip()
+    if not text:
+        return None
+    if _ISO_DATE_RE.match(text):
+        return text
+    for fmt in _DATE_FORMATS:
+        try:
+            return datetime.strptime(text, fmt).date().isoformat()
+        except ValueError:
+            continue
+    return None
+
+
+def parse_last_sold(html: str) -> dict | None:
+    """Find the most recent recorded sale on the page.
+
+    Returns {"usd_cents": int, "date": "YYYY-MM-DD"} or None.
+
+    PriceCharting renders completed sales in a ``<table class="hoverable-rows
+    sortable">`` whose rows contain a ``<td class="date">`` and a
+    ``<span class="js-price">`` price. The table defaults to descending date
+    order, but to be robust we scan all rows and return the latest.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    best_date: str | None = None
+    best_cents: int | None = None
+
+    for row in soup.find_all("tr"):
+        date_cell = row.find("td", class_="date")
+        if not date_cell:
+            continue
+        iso_date = _normalise_date(date_cell.get_text(" ", strip=True))
+        if not iso_date:
+            continue
+        price_span = row.find("span", class_="js-price")
+        if not price_span:
+            continue
+        cents = _to_cents(price_span.get_text(" ", strip=True))
+        if cents is None or cents < _MIN_PLAUSIBLE_CENTS:
+            continue
+        if best_date is None or iso_date > best_date:
+            best_date = iso_date
+            best_cents = cents
+
+    if best_date is None or best_cents is None:
+        return None
+    return {"usd_cents": best_cents, "date": best_date}
