@@ -12,14 +12,14 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from ._browser import render
+from ._browser import fetch_html
 from ._filter import is_acceptable
 from .ebay_us import _parse_usd, _clean_title, _PLACEHOLDER_TITLE
 
 URL = (
     "https://www.ebay.com/sch/i.html"
     "?_nkw=pokemon+base+set+booster+box+wotc"
-    "&LH_BIN=1&_sop=15&_udlo=15000"
+    "&LH_BIN=1&_sop=15"
 )
 
 
@@ -71,14 +71,10 @@ def parse(html: str) -> list[dict]:
     return out
 
 
-def fetch(timeout_ms: int = 45000) -> list[dict]:
-    """Hit eBay US active-listings SRP via headless Chromium."""
+def fetch() -> list[dict]:
+    """Hit eBay US active-listings SRP via plain HTTP (no JS needed)."""
     try:
-        html = render(
-            URL,
-            wait_selector=".srp-results, .s-item, .s-card",
-            timeout_ms=timeout_ms,
-        )
+        html = fetch_html(URL, locale="en-US")
     except Exception:
         return []
     return parse(html)

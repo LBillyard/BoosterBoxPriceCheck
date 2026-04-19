@@ -19,7 +19,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from ._browser import render
+from ._browser import fetch_html
 from ._filter import is_acceptable
 from .ebay_uk import _parse_gbp, _clean_title, _PLACEHOLDER_TITLE
 
@@ -84,14 +84,10 @@ def parse(html: str, gbp_per_usd: float) -> list[dict]:
     return out
 
 
-def fetch(gbp_per_usd: float, timeout_ms: int = 45000) -> list[dict]:
-    """Hit eBay UK active-listings SRP via headless Chromium."""
+def fetch(gbp_per_usd: float) -> list[dict]:
+    """Hit eBay UK active-listings SRP via plain HTTP (no JS needed)."""
     try:
-        html = render(
-            URL,
-            wait_selector=".srp-results, .s-item, .s-card",
-            timeout_ms=timeout_ms,
-        )
+        html = fetch_html(URL, locale="en-GB")
     except Exception:
         return []
     return parse(html, gbp_per_usd)

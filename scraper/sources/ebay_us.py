@@ -28,15 +28,15 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from ._browser import render
+from ._browser import fetch_html
 from ._filter import is_acceptable
 
 # Search query notes: see ``ebay_uk.py``. ``_udlo=15000`` (min $15k) keeps
 # modern reprints out of the SRP entirely.
 URL = (
     "https://www.ebay.com/sch/i.html"
-    "?_nkw=pokemon+base+set+booster+box+wotc"
-    "&LH_Sold=1&LH_Complete=1&_sop=13&_udlo=15000"
+    "?_nkw=pokemon+base+set+booster+box+wotc+sealed"
+    "&LH_Sold=1&LH_Complete=1&_sop=13"
 )
 
 _USD_RE = re.compile(r"\$\s*([\d,]+(?:\.\d{2})?)")
@@ -138,17 +138,10 @@ def parse(html: str) -> list[dict]:
     return out
 
 
-def fetch(timeout_ms: int = 45000) -> list[dict]:
-    """Hit eBay US's sold-listings page via headless Chromium.
-
-    Returns an empty list on Playwright failure; orchestrator isolates.
-    """
+def fetch() -> list[dict]:
+    """Hit eBay US's sold-listings page via plain HTTP (no JS needed)."""
     try:
-        html = render(
-            URL,
-            wait_selector=".srp-results, .s-item, .s-card",
-            timeout_ms=timeout_ms,
-        )
+        html = fetch_html(URL, locale="en-US")
     except Exception:
         return []
     return parse(html)

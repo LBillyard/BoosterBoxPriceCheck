@@ -29,6 +29,24 @@ USER_AGENT = (
 )
 
 
+def fetch_html(url: str, locale: str = "en-GB", timeout: int = 25) -> str:
+    """Plain-HTTP GET with realistic Chrome headers — for sites that
+    don't bot-block (eBay).
+
+    Single request, no retry. Caller's parser returns [] if the page is
+    a JS-shell. Two orders of magnitude faster than Chromium per scrape.
+    """
+    import requests
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": f"{locale},en;q=0.9",
+    }
+    r = requests.get(url, headers=headers, timeout=timeout)
+    r.raise_for_status()
+    return r.text
+
+
 def render(
     url: str,
     wait_selector: str | None = None,
