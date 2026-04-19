@@ -9,6 +9,7 @@ import requests
 from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
+from .history import merge_sales
 from .sources import onethirtypoint, ebay_uk, ebay_us
 
 URL = "https://www.pricecharting.com/game/pokemon-base-set/booster-box"
@@ -18,6 +19,7 @@ USER_AGENT = (
 )
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 SNAPSHOT_FILE = DATA_DIR / "snapshot.json"
+HISTORY_FILE = DATA_DIR / "sales_history.json"
 ERROR_FILE = DATA_DIR / "error.json"
 
 def fetch_page() -> str:
@@ -93,13 +95,24 @@ def main() -> int:
     snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now,
                           recent_sales=recent_sales)
     SNAPSHOT_FILE.write_text(json.dumps(snap, indent=2))
+
+    # Persist this scrape's recent_sales into the long-running history file.
+    # We feed the *normalised* rows (the snapshot shape) so the history
+    # has the same fields as the UI expects.
+    try:
+        history = merge_sales(snap["recent_sales"], HISTORY_FILE)
+        history_count = len(history)
+    except Exception as hist_err:  # noqa: BLE001 — history is opportunistic
+        print(f"WARN: sales history merge failed: {hist_err}", file=sys.stderr)
+        history_count = -1
+
     if ERROR_FILE.exists():
         ERROR_FILE.unlink()
     counts_str = ", ".join(f"{k}={v}" for k, v in source_counts.items())
     print(
         f"OK: wrote {SNAPSHOT_FILE} with {len(prices)} prices, "
-        f"{len(listings)} listings, {len(snap['recent_sales'])} recent sales "
-        f"({counts_str})"
+        f"{len(listings)} listings, {len(snap['recent_sales'])} recent sales, "
+        f"history={history_count} ({counts_str})"
     )
     return 0
 
