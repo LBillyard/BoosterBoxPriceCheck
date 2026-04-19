@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-04-19T19:46:58.422861+00:00",
+  "scraped_at": "2026-04-19T19:48:21.892453+00:00",
   "fx": {
     "usd_to_gbp": 0.7389,
-    "fetched_at": "2026-04-19T19:46:58.422861+00:00"
+    "fetched_at": "2026-04-19T19:48:21.892453+00:00"
   },
   "prices": {
     "loose": {
@@ -17,13 +17,28 @@
   },
   "listings": [],
   "recent_sales": [],
-  "active_listings": [],
+  "active_listings": [
+    {
+      "source": "ebay_uk",
+      "title": "Pokemon Cards 1999 Base Set Unlimited Blue Wing Booster Box - Factory Sealed",
+      "usd": 31225.13,
+      "gbp": 23072.25,
+      "url": "https://www.ebay.co.uk/itm/366019496843?_skw=pokemon+base+set+booster+box+wotc&itmmeta=01KPKMJAMNPHBKVGR1JPJA14GC&hash=item5538764b8b%3Ag%3Ai60AAeSwVNppJkr4&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBZ7x9mqWyUm9y3z0%2FaTTwvGTJ034J4IBZLf%2BcwQJDyaUKpdzRxDpZtr9%2F5vqHARpaWSQvmaTMQtOz0kHqmmUhgAfBf9a5lPchpdhONSKfBbAkj9p0Xz0jGD6%2F48jpGOZZrB18XoHgStFJEW7lIvd%2BVI9fw3VTQvz5EqRmsnvw0bH%2B66BAhgkhadxCcd8%2BVDeMNlJeTtmKaFdYFL7HyrQ%2FCm7YNvVBSU4bV%2BSzGtLNOMVglpSU%2BbprMyZgz678R7EMtPNgX3S4Qt9c0MMvc051N%7Ctkp%3ABk9SR7yqyfS0Zw&LH_BIN=1"
+    },
+    {
+      "source": "ebay_uk",
+      "title": "Sealed 1999 Pokemon Base Set Booster Box Vintage WoTC Wizards 36 Pack",
+      "usd": 47367.71,
+      "gbp": 35000.0,
+      "url": "https://www.ebay.co.uk/itm/198215232725?_skw=pokemon+base+set+booster+box+wotc&itmmeta=01KPKMJAMM6NX4D5455DYCEYYA&hash=item2e268c6cd5%3Ag%3A4lgAAeSwOyxpwAqM&itmprp=enc%3AAQALAAABAGfYFPkwiKCW4ZNSs2u11xA9P8e89yMfZKFOQD6rbhNY9bcpDQn%2FtVT6vyLPTJH8wmVEAtOWtBV9BAlQ6zakKwpyFXLwa4b00RAjPibNScnCvZUktz%2B033NskvE5v4TPeZ77d4E2TYCSjCMqTb2E8PyFySPDFBNThG9h3yO%2BbbbuAj3SIKpXf95wf3LiKP1kzwjKe3eFpniSE8rE%2FoRi4uHhzW%2BF%2BLNhusUgCToLtMtCtt7pim2MJ2DTmvwUl6gOH7w6XZlkIGDR4ZThha3VIPyx9g80%2F5JAOk%2FUx9DdDeR3gKiN%2BksLrAqrXfN9gPjyHo%2BbeRr9UhSUjTVGeXrP%2F%2B4%3D%7Ctkp%3ABk9SR7yqyfS0Zw&LH_BIN=1"
+    }
+  ],
   "purchase_price_gbp": 29253.05,
   "source_counts": {
     "130point": 0,
     "ebay_uk": 0,
     "ebay_us": 0,
-    "ebay_uk_active": 0,
+    "ebay_uk_active": 2,
     "ebay_us_active": 0
   }
 }
