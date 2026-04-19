@@ -110,6 +110,7 @@ def main() -> int:
     snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now,
                           recent_sales=recent_sales,
                           active_listings=active_rows)
+    snap["source_counts"] = source_counts
     SNAPSHOT_FILE.write_text(json.dumps(snap, indent=2))
 
     # Persist this scrape's recent_sales into the long-running history file.

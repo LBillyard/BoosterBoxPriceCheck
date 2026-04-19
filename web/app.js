@@ -137,6 +137,7 @@ function render(snap, history) {
   renderListings(snap);
   renderRecentSales(snap, history);
   renderSparkline(history);
+  renderSources(snap);
 }
 
 function sourcePillClass(source) {
@@ -222,11 +223,17 @@ function renderActive(snap) {
   const card = document.getElementById("active-card");
   const list = document.getElementById("active-list");
   const count = document.getElementById("active-count");
+  const empty = document.getElementById("active-empty");
   list.innerHTML = "";
   const items = snap.active_listings || [];
-  if (!items.length) { card.hidden = true; return; }
   card.hidden = false;
-  count.textContent = `${items.length} live`;
+  if (!items.length) {
+    count.textContent = "";
+    empty.hidden = false;
+    return;
+  }
+  empty.hidden = true;
+  count.textContent = `${items.length} live · from ${fmtGBP.format(Math.min(...items.map(l => l.gbp)))}`;
   for (const item of items) {
     list.appendChild(makeFeedItem({
       source: item.source,
@@ -236,6 +243,38 @@ function renderActive(snap) {
       date: null,
       url: item.url,
     }));
+  }
+}
+
+function renderSources(snap) {
+  const row = document.getElementById("sources-row");
+  const list = document.getElementById("sources-list");
+  const counts = snap.source_counts || {};
+  list.innerHTML = "";
+  const order = ["pricecharting", "ebay_us", "ebay_uk", "130point", "ebay_us_active", "ebay_uk_active"];
+  // Always show PriceCharting (it gave us the hero/last-sold data) at 1.
+  const pcCount = (snap.prices && Object.keys(snap.prices).length) || 0;
+  const all = { pricecharting: pcCount, ...counts };
+  const keys = order.filter(k => k in all);
+
+  if (!keys.length) { row.hidden = true; return; }
+  row.hidden = false;
+  for (const k of keys) {
+    const n = all[k];
+    const li = document.createElement("li");
+    const chip = document.createElement("span");
+    chip.className = "source-chip";
+    const dot = document.createElement("span");
+    dot.className = "src-dot " + (n > 0 ? "ok" : "empty");
+    const name = document.createElement("span");
+    name.className = "src-name";
+    name.textContent = sourceLabel(k.replace(/_active$/, "")) + (k.endsWith("_active") ? " (live)" : "");
+    const cnt = document.createElement("span");
+    cnt.className = "src-count " + (n > 0 ? "nonzero" : "zero");
+    cnt.textContent = String(n);
+    chip.append(dot, name, cnt);
+    li.appendChild(chip);
+    list.appendChild(li);
   }
 }
 

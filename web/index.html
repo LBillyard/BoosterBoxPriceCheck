@@ -18,11 +18,6 @@
     <!-- Top bar -->
     <header class="topbar">
       <div class="brand">
-        <img class="brand-sprite"
-             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
-             alt=""
-             aria-hidden="true"
-             loading="lazy">
         <div class="brand-mark" aria-hidden="true"></div>
         <div class="brand-text">
           <div class="eyebrow">Pokémon TCG · WOTC</div>
@@ -120,12 +115,21 @@
     </section>
 
     <!-- Active eBay listings (currently for sale) -->
-    <section class="feed" id="active-card" hidden>
+    <section class="feed" id="active-card">
       <div class="feed-head">
         <div class="eyebrow">For sale right now</div>
         <span class="feed-count" id="active-count"></span>
       </div>
       <ul class="feed-list" id="active-list"></ul>
+      <div id="active-empty" class="feed-empty" hidden>
+        No qualifying Unlimited Base Set boxes currently listed on eBay UK or US (in the £15k–£80k band, with the wrong-edition filter applied).
+      </div>
+    </section>
+
+    <!-- Source coverage strip — what was checked this scrape -->
+    <section class="sources" id="sources-row" aria-label="Source coverage">
+      <div class="eyebrow sources-label">Sources checked</div>
+      <ul class="sources-list" id="sources-list"></ul>
     </section>
 
     <!-- Recent sales feed (cumulative history) -->
