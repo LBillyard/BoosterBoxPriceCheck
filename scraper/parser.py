@@ -103,3 +103,83 @@ def parse_last_sold(html: str) -> dict | None:
     if best_date is None or best_cents is None:
         return None
     return {"usd_cents": best_cents, "date": best_date}
+
+
+# Map a condition-comparison table header (e.g. "Loose Price", "CIB Price",
+# "New Price", "Graded Price") to the canonical short label used elsewhere in
+# this module / the storage layer. Anything unrecognised falls through as the
+# raw header text (lower-cased, " price" suffix stripped).
+_CONDITION_HEADER_MAP = {
+    "loose price": "loose",
+    "cib price": "cib",
+    "complete price": "cib",
+    "new price": "new",
+    "sealed price": "sealed",
+    "graded price": "sealed",
+    "box only price": "box_only",
+    "manual only price": "manual_only",
+}
+
+
+def _normalise_condition_header(text: str) -> str:
+    key = text.strip().lower()
+    if key in _CONDITION_HEADER_MAP:
+        return _CONDITION_HEADER_MAP[key]
+    if key.endswith(" price"):
+        key = key[: -len(" price")]
+    return key.strip().replace(" ", "_") or "unknown"
+
+
+def parse_listings(html: str) -> list[dict]:
+    """Extract active marketplace listings (eBay etc.) shown on the page.
+
+    Returns a list of {"usd_cents": int, "condition": str, "seller": str|None,
+    "url": str|None}. May be empty.
+
+    PriceCharting renders active store offers in one or more
+    ``<table class="condition-comparison">`` blocks, one per condition. Each
+    body row carries ``data-source-name="eBay"`` (or TCGPlayer / PriceCharting
+    / Amazon / etc.) plus a ``<td class="price">`` and a ``<td class="see-it">``
+    that wraps an outbound affiliate link. Rows whose price cell is empty
+    (no current offer) are skipped.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    listings: list[dict] = []
+
+    for table in soup.find_all("table", class_="condition-comparison"):
+        header_cell = table.find("th", class_="condition")
+        condition = (
+            _normalise_condition_header(header_cell.get_text(" ", strip=True))
+            if header_cell
+            else "unknown"
+        )
+
+        for row in table.find_all("tr"):
+            seller = row.get("data-source-name")
+            if not seller:
+                continue
+
+            price_cell = row.find("td", class_="price")
+            if not price_cell:
+                continue
+            cents = _to_cents(price_cell.get_text(" ", strip=True))
+            if cents is None or cents < _MIN_PLAUSIBLE_CENTS:
+                continue
+
+            url: str | None = None
+            see_it = row.find("td", class_="see-it")
+            if see_it:
+                anchor = see_it.find("a", href=True)
+                if anchor:
+                    url = anchor["href"]
+
+            listings.append(
+                {
+                    "usd_cents": cents,
+                    "condition": condition,
+                    "seller": seller or None,
+                    "url": url,
+                }
+            )
+
+    return listings
