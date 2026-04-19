@@ -1,0 +1,70 @@
+<!doctype html>
+<!--
+  Hand-authored fixture used alongside the real ebay_uk.html capture.
+
+  ebay_uk.html is the actual response from a live SRP query — but the live
+  search currently returns no Unlimited Base Set Booster Box rows in the
+  $15k-80k band, so it only exercises the negative path of the filter.
+
+  This file mirrors eBay's s-card markup exactly (class names, nesting,
+  placeholder/sold caption format) and seeds three rows that should pass
+  the filter so the positive parser path is exercised too.
+-->
+<html><head><meta charset="utf-8"></head><body>
+<ul class="srp-results">
+
+  <li class="s-item-wrapper">
+    <div class="s-card s-card--horizontal">
+      <a class="s-card__link" href="https://www.ebay.co.uk/itm/100000001">link</a>
+      <div role="heading" class="s-card__title">Pokemon Base Set Unlimited Booster Box Sealed WOTC 1999 Charizard Opens in a new window or tab</div>
+      <span class="s-card__price">£32,500.00</span>
+      <span class="s-card__caption">Sold  16 Apr 2026</span>
+    </div>
+  </li>
+
+  <li class="s-item-wrapper">
+    <div class="s-card">
+      <a class="s-card__link" href="https://www.ebay.co.uk/itm/100000002">link</a>
+      <div role="heading" class="s-card__title">Pokemon Base Set Booster Box Sealed (Unlimited) Heavy Wrapped Opens in a new window or tab</div>
+      <span class="s-card__price">£28,750.00</span>
+      <span class="s-card__caption">Sold  14 Apr 2026</span>
+    </div>
+  </li>
+
+  <li class="s-item-wrapper">
+    <div class="s-card">
+      <a class="s-card__link" href="https://www.ebay.co.uk/itm/100000003">link</a>
+      <div role="heading" class="s-card__title">Pokemon Base Set 1st Edition Booster Box Sealed BBCE Authenticated Opens in a new window or tab</div>
+      <span class="s-card__price">£245,000.00</span>
+      <span class="s-card__caption">Sold  10 Apr 2026</span>
+    </div>
+  </li>
+
+  <li class="s-item-wrapper">
+    <div class="s-card">
+      <a class="s-card__link" href="https://www.ebay.co.uk/itm/100000004">link</a>
+      <div role="heading" class="s-card__title">Shop on eBay</div>
+      <span class="s-card__price">£20.00</span>
+    </div>
+  </li>
+
+  <li class="s-item-wrapper">
+    <div class="s-card">
+      <a class="s-card__link" href="https://www.ebay.co.uk/itm/100000005">link</a>
+      <div role="heading" class="s-card__title">Pokemon Base Set Booster Box Sealed Mint Opens in a new window or tab</div>
+      <span class="s-card__price">£30,000.00 to £35,000.00</span>
+      <span class="s-card__caption">Sold  12 Apr 2026</span>
+    </div>
+  </li>
+
+  <li class="s-item-wrapper">
+    <div class="s-card">
+      <a class="s-card__link" href="https://www.ebay.co.uk/itm/100000006">link</a>
+      <div role="heading" class="s-card__title">Pokemon Scarlet and Violet Base Set Booster Box Sealed Opens in a new window or tab</div>
+      <span class="s-card__price">£199.99</span>
+      <span class="s-card__caption">Sold  18 Apr 2026</span>
+    </div>
+  </li>
+
+</ul>
+</body></html>
