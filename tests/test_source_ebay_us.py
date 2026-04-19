@@ -61,3 +61,36 @@ def test_parser_handles_price_range():
     assert _parse_usd("$30,000.00 to $35,000.00") == 30_000_00
     assert _parse_usd("$36,600.00") == 36_600_00
     assert _parse_usd("free") is None
+
+
+def test_real_fixture_extracts_seller_feedback():
+    """The live US capture has seller blocks like 'name 99.9% positive (19.4K)'.
+    Confirm we surface integer feedback counts and percentages."""
+    res = parse_fixture(REAL_FIXTURE)
+    # The fixture's filter-passing rows are sellers with widely varying
+    # reputations. Confirm the parser populates the new fields and at
+    # least one row carries a parsed feedback count.
+    assert any(r.get("seller_feedback") is not None for r in res), (
+        "expected at least one row with parsed seller feedback"
+    )
+    for r in res:
+        assert "seller_name" in r
+        assert "seller_feedback" in r
+        assert "seller_positive_pct" in r
+        if r["seller_feedback"] is not None:
+            assert isinstance(r["seller_feedback"], int)
+        if r["seller_positive_pct"] is not None:
+            assert isinstance(r["seller_positive_pct"], float)
+
+
+def test_feedback_count_parser_handles_k_and_m_suffix():
+    """eBay renders large counts as e.g. '4.1K', '1.5M', '109.5K'."""
+    from scraper.sources.ebay_us import _parse_feedback_count
+    assert _parse_feedback_count("46") == 46
+    assert _parse_feedback_count("1,500") == 1500
+    assert _parse_feedback_count("4.1K") == 4100
+    assert _parse_feedback_count("109.5K") == 109_500
+    assert _parse_feedback_count("1.5M") == 1_500_000
+    assert _parse_feedback_count("-1") == -1
+    assert _parse_feedback_count("") is None
+    assert _parse_feedback_count("garbage") is None

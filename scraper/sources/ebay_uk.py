@@ -34,6 +34,7 @@ from bs4 import BeautifulSoup
 
 from ._browser import fetch_html
 from ._filter import is_acceptable
+from .ebay_us import _seller_from_card
 
 URL = (
     "https://www.ebay.co.uk/sch/i.html"
@@ -132,6 +133,8 @@ def parse(html: str, gbp_per_usd: float) -> list[dict]:
         if link:
             url = link["href"]
 
+        seller_name, seller_feedback, seller_positive_pct = _seller_from_card(card)
+
         out.append(
             {
                 "source": "ebay_uk",
@@ -140,6 +143,9 @@ def parse(html: str, gbp_per_usd: float) -> list[dict]:
                 "gbp_cents": gbp_cents,
                 "date": date_iso,
                 "url": url,
+                "seller_name": seller_name,
+                "seller_feedback": seller_feedback,
+                "seller_positive_pct": seller_positive_pct,
             }
         )
 

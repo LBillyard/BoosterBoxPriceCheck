@@ -54,6 +54,83 @@ _PLACEHOLDER_TITLE = re.compile(r"^shop on ebay$", re.I)
 _TRAILING_NOISE = re.compile(r"\s*opens in a new window or tab\s*$", re.I)
 _LEADING_NOISE = re.compile(r"^\s*new\s+listing\s+", re.I)
 
+# Seller-info parsing — applied identically across all four eBay parsers
+# (sold + active, US + UK). The post-hydration SRP renders the seller block
+# as the LAST ``s-card__attribute-row`` containing the substring "positive".
+# Two layouts are observed:
+#
+#   1. Two spans:  ``<span>username</span><span>99.5% positive (1.5M)</span>``
+#   2. One span empty + combined: ``<span></span><span>name  99.5% positive (4.1K)</span>``
+#
+# We detect by searching for "% positive" inside the row text, then split the
+# username off the rest. Feedback counts can be plain ints ("46"), comma-grouped
+# ("19,400") or k/M-suffixed ("4.1K", "1.5M"). Missing/unparseable fields
+# return ``None`` — never raise — so a layout tweak silently degrades to UNKNOWN
+# rather than dropping the whole listing.
+_SELLER_RE = re.compile(
+    r"(?P<pct>\d{1,3}(?:\.\d+)?)\s*%\s*positive\s*\(\s*(?P<fb>[-\d.,]+\s*[KkMm]?)\s*\)"
+)
+
+
+def _parse_feedback_count(raw: str) -> int | None:
+    """Parse "46", "1,540", "4.1K", "1.5M", "-1" into an int. ``None`` if unparseable."""
+    if not raw:
+        return None
+    s = raw.strip().replace(",", "")
+    mult = 1
+    if s and s[-1] in "kK":
+        mult = 1_000
+        s = s[:-1]
+    elif s and s[-1] in "mM":
+        mult = 1_000_000
+        s = s[:-1]
+    try:
+        return int(round(float(s) * mult))
+    except (ValueError, TypeError):
+        return None
+
+
+def _seller_from_card(card) -> tuple[str | None, int | None, float | None]:
+    """Extract (seller_name, seller_feedback, seller_positive_pct) from an s-card.
+
+    Returns ``(None, None, None)`` when the seller block isn't present
+    (e.g. eBay's "Shop on eBay" placeholder cards) or can't be parsed.
+    Never raises — defensive against eBay markup tweaks.
+    """
+    try:
+        rows = card.find_all(class_="s-card__attribute-row")
+    except Exception:
+        return (None, None, None)
+
+    for row in rows:
+        try:
+            row_text = row.get_text(" ", strip=True)
+        except Exception:
+            continue
+        if "% positive" not in row_text and "%positive" not in row_text:
+            continue
+
+        m = _SELLER_RE.search(row_text)
+        if not m:
+            return (None, None, None)
+        pct_raw = m.group("pct")
+        fb_raw = m.group("fb")
+        try:
+            pct = float(pct_raw)
+        except (ValueError, TypeError):
+            pct = None
+        feedback = _parse_feedback_count(fb_raw)
+
+        # Username = everything before the "% positive" expression. Layouts
+        # observed: ("user", "X% positive (N)") two spans, or
+        # ("", "user X% positive (N)") with the name folded into the second.
+        before = row_text[: m.start()].strip()
+        # Strip trailing punctuation/whitespace that crept in.
+        name = before.rstrip(" ·,") or None
+        return (name, feedback, pct)
+
+    return (None, None, None)
+
 
 def _parse_usd(text: str) -> int | None:
     """Parse '$36,600.00' or '$30,000.00 to $35,000.00' into integer cents.
@@ -131,6 +208,8 @@ def parse(html: str) -> list[dict]:
         if link:
             url = link["href"]
 
+        seller_name, seller_feedback, seller_positive_pct = _seller_from_card(card)
+
         out.append(
             {
                 "source": "ebay_us",
@@ -138,6 +217,9 @@ def parse(html: str) -> list[dict]:
                 "usd_cents": usd_cents,
                 "date": date_iso,
                 "url": url,
+                "seller_name": seller_name,
+                "seller_feedback": seller_feedback,
+                "seller_positive_pct": seller_positive_pct,
             }
         )
 

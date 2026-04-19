@@ -123,6 +123,11 @@ def merge_sales(
             "gbp": sale.get("gbp"),
             "date": sale.get("date"),
             "url": sale.get("url"),
+            # Carry the trust-pill inputs forward so old history entries
+            # render with the same red/amber/green badge as fresh ones.
+            "seller_name": sale.get("seller_name"),
+            "seller_feedback": sale.get("seller_feedback"),
+            "seller_positive_pct": sale.get("seller_positive_pct"),
             "first_seen_at": stamp,
         }
         merged.append(entry)

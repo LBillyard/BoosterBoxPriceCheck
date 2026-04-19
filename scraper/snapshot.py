@@ -36,6 +36,9 @@ def _normalise_sale(item: dict, fx: float) -> dict:
         "gbp": gbp,
         "date": item.get("date"),
         "url": item.get("url"),
+        "seller_name": item.get("seller_name"),
+        "seller_feedback": item.get("seller_feedback"),
+        "seller_positive_pct": item.get("seller_positive_pct"),
     }
 
 
@@ -66,6 +69,9 @@ def _normalise_active(item: dict, fx: float) -> dict:
         "usd": usd,
         "gbp": gbp,
         "url": item.get("url"),
+        "seller_name": item.get("seller_name"),
+        "seller_feedback": item.get("seller_feedback"),
+        "seller_positive_pct": item.get("seller_positive_pct"),
     }
 
 
