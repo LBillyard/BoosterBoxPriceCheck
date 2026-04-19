@@ -2,3 +2,4 @@ requests==2.32.3
 beautifulsoup4==4.12.3
 pytest==8.3.3
 playwright==1.47.0
+patchright==1.58.2

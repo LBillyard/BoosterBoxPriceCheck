@@ -1,21 +1,32 @@
 """Shared headless-browser fetcher for sources that need JS rendering.
 
-Several sources (130point.com behind Cloudflare; eBay's modern SRP) refuse to
-serve usable HTML to a plain ``requests`` client. ``render(url, ...)`` drives
-a real Chromium via Playwright, returning the post-render HTML string. This
-module deliberately does *no* parsing — each source still owns its own
-BeautifulSoup logic; this is just the transport.
+Several sources (130point.com behind Cloudflare; eBay US's modern SRP when
+served from a datacenter IP) refuse to serve usable HTML to a plain
+``requests`` client. ``render(url, ...)`` drives a real Chromium via
+**patchright** — a stealth-patched fork of Playwright that hides the usual
+automation fingerprints (CDP runtime ID, ``navigator.webdriver``, headless
+shell quirks) — and returns the post-render HTML string. This module
+deliberately does *no* parsing; each source still owns its own
+BeautifulSoup logic, this is just the transport.
+
+Why patchright instead of vanilla Playwright:
+    * Vanilla Playwright loses to Cloudflare Turnstile (130point) and to
+      eBay's bot-protection on US datacenter IPs (the GitHub Actions
+      runners). patchright's API is a drop-in replacement —
+      ``from patchright.sync_api import sync_playwright`` — but the
+      bundled Chromium build patches the CDP fingerprint that triggers
+      those challenges.
 
 Why a shared helper:
-    * Both 130point and eBay UK now need the same browser shape (real UA,
-      en-GB locale, desktop viewport, suppressed automation flag). Putting
-      one copy here means a fingerprint tweak fixes every source at once.
-    * Playwright launches are not free (~1s spin-up). Sources call this
-      lazily, once per fetch, so the cost only lands when the orchestrator
-      decides to refresh sales.
+    * Every JS-needing source benefits from the same browser shape (real
+      UA via Chromium's default, locale, desktop viewport). One module
+      means a fingerprint tweak fixes every source at once.
+    * Browser launches are not free (~1-2s spin-up). Sources call this
+      lazily, once per fetch, so the cost only lands when the
+      orchestrator decides to refresh sales.
 
-Failure mode: if Playwright is not installed (e.g. dev environment without
-``pip install playwright`` + ``playwright install chromium``) ``render()``
+Failure mode: if patchright is not installed (e.g. dev environment without
+``pip install patchright`` + ``patchright install chromium``) ``render()``
 raises ``ImportError``. Sources are wrapped in try/except inside the
 orchestrator, so an absent browser degrades to "this source returns 0 rows"
 rather than crashing the whole snapshot.
@@ -76,8 +87,12 @@ def render(
         prices in £ and dates as "16 Apr 2026" — matching the parser.
     """
     # Imported lazily so the rest of the package still imports in
-    # environments without Playwright (e.g. lint, unit tests over fixtures).
-    from playwright.sync_api import sync_playwright
+    # environments without patchright (e.g. lint, unit tests over fixtures).
+    # patchright is a stealth-patched, drop-in API replacement for
+    # ``playwright.sync_api`` — same context manager, same browser/page
+    # objects, but the bundled Chromium hides the CDP fingerprint that
+    # Cloudflare Turnstile and eBay's bot detector key on.
+    from patchright.sync_api import sync_playwright
 
     with sync_playwright() as p:
         browser = p.chromium.launch(

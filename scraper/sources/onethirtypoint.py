@@ -5,19 +5,28 @@ public ``/sales/`` page renders results in a table; each row has a title
 cell, a USD price cell, a sold-date cell, and (usually) an outbound link
 back to the original listing.
 
-NOTE on Cloudflare: 130point.com sits behind a Cloudflare managed
-challenge ("Just a moment..." interstitial). We attempt to bypass it by
-driving a headless Chromium via :mod:`scraper.sources._browser` — but as
-of this code's commit even Playwright with anti-automation tweaks does
-NOT pass the Cloudflare Turnstile challenge: the page hangs on the
-challenge HTML and never reveals the sales table. ``fetch()`` therefore
-returns ``[]`` in practice; the orchestrator records ``130point=0`` and
-the snapshot still lands with eBay UK + eBay US data.
+NOTE on Cloudflare and the new 130point UI:
 
-Possible follow-ups (none of them in-scope for this commit) include:
-``playwright-stealth``, ``undetected-playwright``, an external CF-bypass
-service, or scraping a 130point-equivalent site with no CF (eg. Goldin,
-PWCC marketplace) and tagging results under this source.
+130point.com sits behind a Cloudflare managed challenge ("Just a
+moment..." interstitial). With **patchright** (a stealth-patched
+Playwright fork) the Turnstile challenge does clear in headless-shell
+mode after a few seconds — so the CF problem is solved.
+
+However, 130point has *also* been redesigned: the legacy
+``/sales/?search=...`` endpoint that used to render a results table now
+307-redirects to ``/sales`` and then to the homepage, throwing away the
+search query entirely. The new ``/search?q=...`` endpoint loads but
+ignores the query-string and shows a placeholder ("Try searching for a
+collectible! Enter a search term in the header"); results only appear
+after typing into the header search input and submitting client-side.
+
+Wiring up the typed-search flow with patchright would work, but is
+brittle (a header DOM tweak breaks the scraper) and slow (~30s per
+fetch on top of the existing budget). Until 130point exposes URL-driven
+search again — or a small typed-input flow becomes worth the
+maintenance cost — ``fetch()`` returns ``[]`` in practice. The
+orchestrator records ``130point=0`` and the snapshot still lands with
+eBay UK + US data.
 
 The parser is deliberately permissive about row markup — it scans every
 ``<tr>`` looking for a price-shaped cell, a date-shaped cell, and a link
@@ -167,16 +176,24 @@ def parse(html: str) -> list[dict]:
 
 
 def fetch(timeout_ms: int = 30000) -> list[dict]:
-    """Hit 130point's sales endpoint via headless Chromium and return rows.
+    """Hit 130point's sales endpoint via patchright-driven Chromium.
 
-    The page is Cloudflare-protected, so we render through Playwright. The
-    challenge typically clears in <5s; we wait for ``table tr`` markup to
-    appear before grabbing ``page.content()``. If anything goes wrong
-    (Playwright not installed, challenge never resolves, table never
-    renders) we return ``[]`` and the orchestrator carries on.
+    The page is Cloudflare-protected, so we render through patchright
+    (stealth-patched Playwright). Cloudflare's Turnstile usually clears
+    within ~5-10s in patchright; we then wait up to 20s for ``table tr``
+    markup to appear. As of the module docstring's note, the legacy
+    ``/sales/`` URL now redirects to the homepage and the wait will time
+    out — :func:`parse` returns ``[]`` and the orchestrator carries on.
+    The render() call is kept in place so the source resumes returning
+    data the moment 130point restores URL-driven search.
     """
     try:
-        html = render(URL, wait_selector="table tr", timeout_ms=timeout_ms)
+        html = render(
+            URL,
+            wait_selector="table tr",
+            timeout_ms=timeout_ms,
+            selector_timeout_ms=20000,
+        )
     except Exception:
         return []
     return parse(html)
