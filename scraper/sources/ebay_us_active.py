@@ -5,6 +5,10 @@ Mirrors :mod:`scraper.sources.ebay_us` but targets the live SRP.
 returns items currently for sale.
 
 Output shape matches the sold parser, except ``date`` is ``None``.
+
+Transport: same as the sold variant — patchright-driven Chromium via
+:func:`scraper.sources._browser.render`, because eBay US's bot detector
+serves a JS-shell to vanilla HTTP from datacenter IPs.
 """
 from __future__ import annotations
 
@@ -12,7 +16,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from ._browser import fetch_html
+from ._browser import render
 from ._filter import is_acceptable
 from .ebay_us import _parse_usd, _clean_title, _PLACEHOLDER_TITLE
 
@@ -71,10 +75,20 @@ def parse(html: str) -> list[dict]:
     return out
 
 
-def fetch() -> list[dict]:
-    """Hit eBay US active-listings SRP via plain HTTP (no JS needed)."""
+def fetch(timeout_ms: int = 45000) -> list[dict]:
+    """Hit eBay US active-listings SRP via patchright-driven Chromium.
+
+    See :func:`scraper.sources.ebay_us.fetch` for why we render rather
+    than plain-HTTP this source.
+    """
     try:
-        html = fetch_html(URL, locale="en-US")
+        html = render(
+            URL,
+            wait_selector="div.s-card",
+            timeout_ms=timeout_ms,
+            selector_timeout_ms=20000,
+            locale="en-US",
+        )
     except Exception:
         return []
     return parse(html)

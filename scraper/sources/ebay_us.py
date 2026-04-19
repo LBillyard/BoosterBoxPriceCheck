@@ -19,6 +19,12 @@ We split the implementation into its own file rather than parameterising
 row in the web UI ("ebay.co.uk" vs "ebay.com") and (b) the orchestrator
 gets to isolate the two fetches — if eBay UK rate-limits us today, the US
 result still lands.
+
+Transport differs from ``ebay_uk``: plain HTTP works fine for the UK SRP
+but eBay US returns a 13KB JS-shell to vanilla ``requests`` from
+datacenter IPs (the GitHub Actions runners). We therefore drive a
+patchright-controlled Chromium via :func:`scraper.sources._browser.render`
+to get the hydrated SRP, at the cost of ~25s per fetch.
 """
 from __future__ import annotations
 
@@ -28,7 +34,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from ._browser import fetch_html
+from ._browser import render
 from ._filter import is_acceptable
 
 # Search query notes: see ``ebay_uk.py``. ``_udlo=15000`` (min $15k) keeps
@@ -138,10 +144,27 @@ def parse(html: str) -> list[dict]:
     return out
 
 
-def fetch() -> list[dict]:
-    """Hit eBay US's sold-listings page via plain HTTP (no JS needed)."""
+def fetch(timeout_ms: int = 45000) -> list[dict]:
+    """Hit eBay US's sold-listings page via patchright-driven Chromium.
+
+    Plain HTTP works for eBay UK but eBay US frequently serves a 13KB
+    JS-shell instead of the full SRP HTML when hit from datacenter IPs
+    (notably the GitHub Actions runners). Patchright drives a real
+    Chromium that hides the usual automation fingerprints, so eBay's bot
+    detector lets the full hydrated page through. We wait for the
+    ``s-card`` markup to appear before grabbing ``page.content()``.
+
+    Failure / timeout returns ``[]`` — the orchestrator wraps this in
+    try/except so a single source failure cannot break the snapshot.
+    """
     try:
-        html = fetch_html(URL, locale="en-US")
+        html = render(
+            URL,
+            wait_selector="div.s-card",
+            timeout_ms=timeout_ms,
+            selector_timeout_ms=20000,
+            locale="en-US",
+        )
     except Exception:
         return []
     return parse(html)
