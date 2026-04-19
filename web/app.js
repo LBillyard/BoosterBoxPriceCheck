@@ -124,6 +124,70 @@ function render(snap) {
     sumSub.textContent = "No active listings";
     card.hidden = true;
   }
+
+  renderRecentSales(snap);
+}
+
+function renderRecentSales(snap) {
+  const card = document.getElementById("recent-sales-card");
+  const list = document.getElementById("recent-sales-list");
+  list.innerHTML = "";
+  const sales = (snap.recent_sales || []).slice(0, 10);
+  if (!sales.length) {
+    card.hidden = true;
+    return;
+  }
+  card.hidden = false;
+
+  const sourceLabels = {
+    ebay_uk: { text: "ebay UK", cls: "text-bg-primary" },
+    "130point": { text: "130point", cls: "text-bg-purple" },
+    pricecharting: { text: "pricecharting", cls: "text-bg-secondary" },
+  };
+
+  for (const s of sales) {
+    const li = document.createElement("li");
+    li.className = "list-group-item border-0 sale-row";
+
+    const top = document.createElement("div");
+    top.className = "sale-top";
+    const meta = sourceLabels[s.source] || { text: s.source, cls: "text-bg-secondary" };
+    const badge = document.createElement("span");
+    badge.className = "badge rounded-pill " + meta.cls + " sale-badge";
+    badge.textContent = meta.text;
+    const title = document.createElement("span");
+    title.className = "sale-title";
+    const t = s.title || "";
+    title.textContent = t.length > 50 ? t.slice(0, 49).trimEnd() + "…" : t;
+    title.title = t;
+    top.append(badge, title);
+
+    const bottom = document.createElement("div");
+    bottom.className = "sale-bottom";
+    const gbp = document.createElement("span");
+    gbp.className = "sale-gbp";
+    gbp.textContent = fmtGBP.format(s.gbp);
+    const usd = document.createElement("span");
+    usd.className = "sale-usd";
+    usd.textContent = fmtUSD.format(s.usd);
+    const date = document.createElement("small");
+    date.className = "text-muted sale-date";
+    date.textContent = s.date || "—";
+    bottom.append(gbp, usd, date);
+
+    if (s.url) {
+      const a = document.createElement("a");
+      a.href = s.url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      a.className = "text-decoration-none text-reset d-block";
+      a.append(top, bottom);
+      li.appendChild(a);
+    } else {
+      li.append(top, bottom);
+    }
+    list.appendChild(li);
+  }
 }
 
 document.getElementById("refresh").addEventListener("click", load);
