@@ -1,12 +1,52 @@
 PURCHASE_PRICE_GBP = 29253.05
 
+# Cap on how many recent_sales entries we persist into the snapshot. The
+# frontend only renders the top ~10, but keeping a few more in JSON gives us
+# headroom (and history when sources are slow).
+RECENT_SALES_CAP = 25
+
+
 def _cents_to_dollars(cents: int) -> float:
     return round(cents / 100, 2)
 
 def _convert(usd: float, fx: float) -> float:
     return round(usd * fx, 2)
 
-def build_snapshot(prices, last_sold, listings, fx, scraped_at: str) -> dict:
+
+def _normalise_sale(item: dict, fx: float) -> dict:
+    """Project a source-level sale dict into the snapshot's recent_sales shape.
+
+    Each source emits at minimum: source, title, usd_cents, date, url.
+    eBay UK additionally emits gbp_cents (its native currency); for other
+    sources we derive GBP from USD via the FX rate.
+    """
+    usd = _cents_to_dollars(item["usd_cents"])
+    if "gbp_cents" in item and item["gbp_cents"]:
+        gbp = _cents_to_dollars(item["gbp_cents"])
+    else:
+        gbp = _convert(usd, fx)
+    return {
+        "source": item["source"],
+        "title": item["title"],
+        "usd": usd,
+        "gbp": gbp,
+        "date": item.get("date"),
+        "url": item.get("url"),
+    }
+
+
+def _sort_and_cap(sales: list[dict], cap: int) -> list[dict]:
+    """Sort by date descending (None dates last) and cap to ``cap`` rows."""
+    def key(s):
+        # ISO YYYY-MM-DD sorts lexicographically. Items with no date get
+        # the empty string and fall to the end.
+        return s.get("date") or ""
+    sales_sorted = sorted(sales, key=key, reverse=True)
+    return sales_sorted[:cap]
+
+
+def build_snapshot(prices, last_sold, listings, fx, scraped_at: str,
+                   recent_sales: list[dict] | None = None) -> dict:
     out_prices = {}
     for cond, cents in prices.items():
         usd = _cents_to_dollars(cents)
@@ -28,11 +68,19 @@ def build_snapshot(prices, last_sold, listings, fx, scraped_at: str) -> dict:
             "url": item.get("url"),
         })
 
+    out_recent_sales: list[dict] = []
+    if recent_sales:
+        out_recent_sales = _sort_and_cap(
+            [_normalise_sale(s, fx) for s in recent_sales],
+            RECENT_SALES_CAP,
+        )
+
     return {
         "scraped_at": scraped_at,
         "fx": {"usd_to_gbp": fx, "fetched_at": scraped_at},
         "prices": out_prices,
         "last_sold": out_last_sold,
         "listings": out_listings,
+        "recent_sales": out_recent_sales,
         "purchase_price_gbp": PURCHASE_PRICE_GBP,
     }

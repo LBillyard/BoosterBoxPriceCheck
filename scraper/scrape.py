@@ -9,6 +9,7 @@ import requests
 from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
+from .sources import onethirtypoint, ebay_uk
 
 URL = "https://www.pricecharting.com/game/pokemon-base-set/booster-box"
 USER_AGENT = (
@@ -69,12 +70,36 @@ def main() -> int:
             write_error(f"FX fetch failed and no previous rate: {e}")
             return 1
 
+    # Recent sales from auxiliary sources. Each source is isolated so a
+    # single failure (captcha, rate-limit, layout change) cannot break the
+    # snapshot — it just yields zero entries from that source.
+    recent_sales: list[dict] = []
+    source_counts: dict[str, int] = {}
+
+    for name, fn in (
+        ("130point", lambda: onethirtypoint.fetch()),
+        ("ebay_uk",  lambda: ebay_uk.fetch(gbp_per_usd=fx)),
+    ):
+        try:
+            rows = fn()
+        except Exception as src_err:  # noqa: BLE001 — source must not kill snapshot
+            print(f"WARN: source {name} failed: {src_err}", file=sys.stderr)
+            rows = []
+        source_counts[name] = len(rows)
+        recent_sales.extend(rows)
+
     now = dt.datetime.now(dt.timezone.utc).isoformat()
-    snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now)
+    snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now,
+                          recent_sales=recent_sales)
     SNAPSHOT_FILE.write_text(json.dumps(snap, indent=2))
     if ERROR_FILE.exists():
         ERROR_FILE.unlink()
-    print(f"OK: wrote {SNAPSHOT_FILE} with {len(prices)} prices, {len(listings)} listings")
+    counts_str = ", ".join(f"{k}={v}" for k, v in source_counts.items())
+    print(
+        f"OK: wrote {SNAPSHOT_FILE} with {len(prices)} prices, "
+        f"{len(listings)} listings, {len(snap['recent_sales'])} recent sales "
+        f"({counts_str})"
+    )
     return 0
 
 if __name__ == "__main__":
