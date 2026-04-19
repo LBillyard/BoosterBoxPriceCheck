@@ -95,7 +95,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 10.5px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: var(--fg-dim);
+  color: var(--fg-mute);
   font-weight: 600;
 }
 .brand-title {
@@ -366,7 +366,8 @@ a { color: inherit; text-decoration: none; }
 .foot-link:hover { color: var(--fg); }
 .foot-sep { color: var(--fg-dim); }
 
-@media (max-width: 380px) {
-  .stats { grid-template-columns: 1fr 1fr; }
-  .stat-value { font-size: 16px; }
+@media (max-width: 360px) {
+  .stat { padding: 10px 8px; }
+  .stat-value { font-size: 15px; }
+  .stat-label { font-size: 9.5px; letter-spacing: 0.1em; }
 }
