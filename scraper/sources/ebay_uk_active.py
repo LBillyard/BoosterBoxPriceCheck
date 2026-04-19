@@ -21,6 +21,7 @@ from bs4 import BeautifulSoup
 
 from ._browser import fetch_html
 from ._filter import is_acceptable
+from ._ebay_item import fetch_seller
 from .ebay_uk import _parse_gbp, _clean_title, _PLACEHOLDER_TITLE
 from .ebay_us import _seller_from_card
 
@@ -91,12 +92,24 @@ def parse(html: str, gbp_per_usd: float) -> list[dict]:
 
 
 def fetch(gbp_per_usd: float) -> list[dict]:
-    """Hit eBay UK active-listings SRP via plain HTTP (no JS needed)."""
+    """Hit eBay UK active-listings SRP via plain HTTP (no JS needed).
+
+    The SRP doesn't include seller info on the listing cards, so we
+    follow up on each accepted listing with a per-item-page fetch to
+    extract seller name + items-sold + positive %.
+    """
     try:
         html = fetch_html(URL, locale="en-GB")
     except Exception:
         return []
-    return parse(html, gbp_per_usd)
+    listings = parse(html, gbp_per_usd)
+    for item in listings:
+        if not item.get("seller_name") and item.get("url"):
+            seller = fetch_seller(item["url"], locale="en-GB")
+            item["seller_name"] = seller.get("seller_name")
+            item["seller_feedback"] = seller.get("seller_items_sold")
+            item["seller_positive_pct"] = seller.get("seller_positive_pct")
+    return listings
 
 
 def parse_fixture(path: str | Path, gbp_per_usd: float) -> list[dict]:

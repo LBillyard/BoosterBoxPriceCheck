@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup
 
 from ._browser import render
 from ._filter import is_acceptable
+from ._ebay_item import fetch_seller
 from .ebay_us import _parse_usd, _clean_title, _PLACEHOLDER_TITLE, _seller_from_card
 
 URL = (
@@ -84,7 +85,9 @@ def fetch(timeout_ms: int = 45000) -> list[dict]:
     """Hit eBay US active-listings SRP via patchright-driven Chromium.
 
     See :func:`scraper.sources.ebay_us.fetch` for why we render rather
-    than plain-HTTP this source.
+    than plain-HTTP this source. The SRP doesn't include seller info
+    on the cards, so for each accepted listing we follow up with a
+    plain-HTTP fetch to the item page to extract seller trust signals.
     """
     try:
         html = render(
@@ -96,7 +99,14 @@ def fetch(timeout_ms: int = 45000) -> list[dict]:
         )
     except Exception:
         return []
-    return parse(html)
+    listings = parse(html)
+    for item in listings:
+        if not item.get("seller_name") and item.get("url"):
+            seller = fetch_seller(item["url"], locale="en-US")
+            item["seller_name"] = seller.get("seller_name")
+            item["seller_feedback"] = seller.get("seller_items_sold")
+            item["seller_positive_pct"] = seller.get("seller_positive_pct")
+    return listings
 
 
 def parse_fixture(path: str | Path) -> list[dict]:
