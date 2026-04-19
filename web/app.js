@@ -78,3 +78,18 @@ setInterval(load, POLL_MS);
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker.register("sw.js").catch(() => {});
 }
+
+// Keep screen awake while the app is visible (PWA only).
+let wakeLock = null;
+async function requestWakeLock() {
+  if (!("wakeLock" in navigator)) return;
+  try {
+    wakeLock = await navigator.wakeLock.request("screen");
+  } catch (e) {
+    console.warn("wake lock denied:", e);
+  }
+}
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") requestWakeLock();
+});
+requestWakeLock();
