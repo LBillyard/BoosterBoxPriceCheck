@@ -1,4 +1,5 @@
 const DATA_URL = "data/snapshot.json";
+const HISTORY_URL = "data/sales_history.json";
 const POLL_MS = 5 * 60 * 1000;
 
 const fmtGBP = new Intl.NumberFormat("en-GB", { style: "currency", currency: "GBP", maximumFractionDigits: 0 });
@@ -49,9 +50,20 @@ async function load() {
   errEl.hidden = true;
   refreshBtn.classList.add("spin");
   try {
-    const r = await fetch(DATA_URL, { cache: "no-store" });
-    if (!r.ok) throw new Error(`HTTP ${r.status}`);
-    render(await r.json());
+    // History is best-effort — the file may not exist yet on a fresh
+    // deploy. Snapshot is required.
+    const [snapRes, histRes] = await Promise.all([
+      fetch(DATA_URL, { cache: "no-store" }),
+      fetch(HISTORY_URL, { cache: "no-store" }).catch(() => null),
+    ]);
+    if (!snapRes.ok) throw new Error(`HTTP ${snapRes.status}`);
+    const snap = await snapRes.json();
+    let history = [];
+    if (histRes && histRes.ok) {
+      try { history = await histRes.json(); } catch { history = []; }
+      if (!Array.isArray(history)) history = [];
+    }
+    render(snap, history);
   } catch (e) {
     errEl.textContent = `Could not load data: ${e.message}`;
     errEl.hidden = false;
@@ -60,7 +72,8 @@ async function load() {
   }
 }
 
-function render(snap) {
+function render(snap, history) {
+  history = history || [];
   const updatedEl = document.getElementById("updated");
   const ageHrs = (Date.now() - new Date(snap.scraped_at).getTime()) / 3_600_000;
   updatedEl.textContent = `Updated ${relative(snap.scraped_at)}`;
@@ -103,19 +116,27 @@ function render(snap) {
     lsSub.textContent = "no record";
   }
 
+  // Prefer eBay active listings for the "Active listings" stat — they're
+  // the actual currently-for-sale supply. Fall back to PriceCharting's
+  // marketplace array if eBay returned nothing.
   const liVal = document.getElementById("stat-listings-value");
   const liSub = document.getElementById("stat-listings-sub");
-  if (snap.listings && snap.listings.length) {
-    const min = Math.min(...snap.listings.map(l => l.gbp));
-    liVal.textContent = String(snap.listings.length);
+  const activeForStat = (snap.active_listings && snap.active_listings.length)
+                       ? snap.active_listings
+                       : (snap.listings || []);
+  if (activeForStat.length) {
+    const min = Math.min(...activeForStat.map(l => l.gbp));
+    liVal.textContent = String(activeForStat.length);
     liSub.textContent = `from ${fmtGBP.format(min)}`;
   } else {
     liVal.textContent = "0";
     liSub.textContent = "none active";
   }
 
+  renderActive(snap);
   renderListings(snap);
-  renderRecentSales(snap);
+  renderRecentSales(snap, history);
+  renderSparkline(history);
 }
 
 function sourcePillClass(source) {
@@ -171,15 +192,20 @@ function makeFeedItem({ source, title, gbp, usd, date, url }) {
   return li;
 }
 
-function renderRecentSales(snap) {
+function renderRecentSales(snap, history) {
   const card = document.getElementById("recent-sales-card");
   const list = document.getElementById("recent-sales-list");
   const count = document.getElementById("feed-count");
   list.innerHTML = "";
-  const sales = (snap.recent_sales || []).slice(0, 10);
+  // Prefer the cumulative history file; fall back to the latest snapshot
+  // window when history is empty (fresh deploy, no scrape yet).
+  const source = (history && history.length)
+                ? history
+                : (snap.recent_sales || []);
+  const sales = source.slice(0, 15);
   if (!sales.length) { card.hidden = true; return; }
   card.hidden = false;
-  count.textContent = `${snap.recent_sales.length} total`;
+  count.textContent = `${source.length} total`;
   for (const s of sales) {
     list.appendChild(makeFeedItem({
       source: s.source,
@@ -188,6 +214,27 @@ function renderRecentSales(snap) {
       usd: s.usd,
       date: s.date,
       url: s.url,
+    }));
+  }
+}
+
+function renderActive(snap) {
+  const card = document.getElementById("active-card");
+  const list = document.getElementById("active-list");
+  const count = document.getElementById("active-count");
+  list.innerHTML = "";
+  const items = snap.active_listings || [];
+  if (!items.length) { card.hidden = true; return; }
+  card.hidden = false;
+  count.textContent = `${items.length} live`;
+  for (const item of items) {
+    list.appendChild(makeFeedItem({
+      source: item.source,
+      title: item.title,
+      gbp: item.gbp,
+      usd: item.usd,
+      date: null,
+      url: item.url,
     }));
   }
 }
@@ -208,6 +255,43 @@ function renderListings(snap) {
       url: item.url,
     }));
   }
+}
+
+function renderSparkline(history) {
+  const svg = document.getElementById("hero-spark");
+  if (!svg) return;
+  // Take last ~20 dated entries, ascending by date.
+  const dated = (history || [])
+    .filter(h => h.date && Number.isFinite(h.usd))
+    .sort((a, b) => (a.date < b.date ? -1 : a.date > b.date ? 1 : 0))
+    .slice(-20);
+  if (dated.length < 2) { svg.hidden = true; return; }
+
+  const W = 200, H = 28, pad = 1;
+  const xs = dated.map((_, i) => i);
+  const ys = dated.map(d => d.usd);
+  const xMin = 0, xMax = xs.length - 1;
+  const yMin = Math.min(...ys), yMax = Math.max(...ys);
+  const ySpan = yMax - yMin || 1;
+  const sx = i => pad + (i - xMin) / (xMax - xMin || 1) * (W - 2 * pad);
+  const sy = v => H - pad - (v - yMin) / ySpan * (H - 2 * pad);
+  const points = dated.map((d, i) => `${sx(i).toFixed(2)},${sy(d.usd).toFixed(2)}`);
+  const linePath = `M ${points.join(" L ")}`;
+  const areaPath = `${linePath} L ${sx(xMax).toFixed(2)},${(H - pad).toFixed(2)} L ${sx(0).toFixed(2)},${(H - pad).toFixed(2)} Z`;
+
+  svg.innerHTML = `
+    <defs>
+      <linearGradient id="spark-fill" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="#4ade80" stop-opacity="0.28"/>
+        <stop offset="100%" stop-color="#4ade80" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path d="${areaPath}" fill="url(#spark-fill)" stroke="none"/>
+    <path d="${linePath}" fill="none" stroke="#4ade80"
+          stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+          opacity="0.85"/>
+  `;
+  svg.hidden = false;
 }
 
 document.getElementById("refresh").addEventListener("click", load);

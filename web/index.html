@@ -51,6 +51,8 @@
           <span class="pl-pill" id="pl-badge">—</span>
           <span class="pl-vs">vs purchase £29,253</span>
         </div>
+        <svg id="hero-spark" class="hero-spark" viewBox="0 0 200 28"
+             preserveAspectRatio="none" aria-hidden="true" hidden></svg>
         <ul class="chase-row" aria-label="Iconic Base Set holos">
           <li>
             <a href="https://www.pricecharting.com/game/pokemon-base-set/charizard-4"
@@ -117,7 +119,16 @@
       </div>
     </section>
 
-    <!-- Recent sales feed -->
+    <!-- Active eBay listings (currently for sale) -->
+    <section class="feed" id="active-card" hidden>
+      <div class="feed-head">
+        <div class="eyebrow">For sale right now</div>
+        <span class="feed-count" id="active-count"></span>
+      </div>
+      <ul class="feed-list" id="active-list"></ul>
+    </section>
+
+    <!-- Recent sales feed (cumulative history) -->
     <section class="feed" id="recent-sales-card" hidden>
       <div class="feed-head">
         <div class="eyebrow">Recent sales</div>
@@ -126,10 +137,10 @@
       <ul class="feed-list" id="recent-sales-list"></ul>
     </section>
 
-    <!-- Active listings (collapsible-feeling card) -->
+    <!-- PriceCharting marketplace listings (legacy) -->
     <section class="feed" id="listings-card" hidden>
       <div class="feed-head">
-        <div class="eyebrow">For sale right now</div>
+        <div class="eyebrow">PriceCharting marketplace</div>
       </div>
       <ul class="feed-list" id="listings-list"></ul>
     </section>

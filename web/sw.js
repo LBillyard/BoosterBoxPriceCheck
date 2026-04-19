@@ -1,4 +1,4 @@
-const CACHE = "boosterbox-v4";
+const CACHE = "boosterbox-v5";
 const SHELL = ["./", "index.html", "style.css", "app.js", "manifest.webmanifest", "icon-192.png", "icon-512.png"];
 
 self.addEventListener("install", e => {
@@ -13,7 +13,10 @@ self.addEventListener("activate", e => {
 });
 self.addEventListener("fetch", e => {
   const url = new URL(e.request.url);
-  if (url.pathname.endsWith("/data/snapshot.json")) {
+  // Always-fresh data — bypass the shell cache and only fall back to it
+  // if the network is offline. Both snapshot AND history are dynamic.
+  if (url.pathname.endsWith("/data/snapshot.json")
+      || url.pathname.endsWith("/data/sales_history.json")) {
     e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
   } else {
     e.respondWith(caches.match(e.request).then(r => r || fetch(e.request)));
