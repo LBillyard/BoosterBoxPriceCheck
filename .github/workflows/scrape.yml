@@ -36,7 +36,17 @@ jobs:
           git add data/
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "chore: snapshot $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git push
+            exit 0
           fi
+          git commit -m "chore: snapshot $(date -u +'%Y-%m-%d %H:%M UTC')"
+          # Retry on push race: if someone else pushed between our scrape
+          # and our push, rebase on top and retry. Up to 5 attempts.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (attempt $i), rebasing..."
+            git pull --rebase origin main
+          done
+          echo "Failed to push after 5 attempts" >&2
+          exit 1
