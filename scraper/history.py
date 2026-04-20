@@ -45,16 +45,28 @@ from pathlib import Path
 HISTORY_CAP = 500
 
 
+def _normalise_url(url: str) -> str:
+    """Strip query + fragment so eBay's per-scrape ``itmmeta`` token doesn't
+    make the same listing look like a new entry every run.
+
+    Example: ``https://www.ebay.com/itm/285176228006?_skw=...&itmmeta=01KPM...``
+    -> ``https://www.ebay.com/itm/285176228006``.
+    """
+    from urllib.parse import urlsplit, urlunsplit
+    parts = urlsplit(url)
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
+
+
 def _dedupe_key(sale: dict) -> str:
     """Stable identity for a sale row.
 
-    Prefer ``url`` — it's already unique on eBay/PriceCharting. Fall back
-    to a hash of the rest so rows without URLs (130point, future sources)
-    still dedupe correctly.
+    Prefer the path-stripped ``url`` — eBay's ``itmmeta`` query param
+    rotates every scrape so the raw URL drifts even though the listing
+    is the same. Fall back to a content hash for rows without URLs.
     """
     url = sale.get("url")
     if url:
-        return f"url:{url}"
+        return f"url:{_normalise_url(url)}"
     blob = "|".join([
         str(sale.get("source") or ""),
         str(sale.get("title") or ""),
