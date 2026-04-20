@@ -131,3 +131,63 @@ def render(
             return page.content()
         finally:
             browser.close()
+
+
+def render_many(
+    urls: list[str],
+    wait_selector: str | None = None,
+    timeout_ms: int = 30000,
+    selector_timeout_ms: int = 8000,
+    locale: str = "en-GB",
+) -> dict[str, str]:
+    """Fetch multiple URLs in a SINGLE patchright browser session.
+
+    Reusing the browser context across navigations means we pay the
+    ~5-15s Chromium spin-up cost once instead of N times. Cookies and
+    fingerprint persist across hops, which also makes us look more
+    human to bot detectors that key on session continuity.
+
+    Returns ``{url: html}``. URLs that fail to load (timeout, network
+    error) get an empty string so callers can detect the failure
+    without raising.
+    """
+    from patchright.sync_api import sync_playwright
+
+    out: dict[str, str] = {}
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--disable-dev-shm-usage",
+                "--no-sandbox",
+            ],
+        )
+        try:
+            ctx = browser.new_context(
+                user_agent=USER_AGENT,
+                locale=locale,
+                viewport={"width": 1280, "height": 900},
+                java_script_enabled=True,
+            )
+            ctx.add_init_script(
+                "Object.defineProperty(navigator, 'webdriver', "
+                "{get: () => undefined});"
+            )
+            page = ctx.new_page()
+            for url in urls:
+                try:
+                    page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
+                    if wait_selector:
+                        try:
+                            page.wait_for_selector(
+                                wait_selector, timeout=selector_timeout_ms
+                            )
+                        except Exception:
+                            pass
+                    out[url] = page.content()
+                except Exception:
+                    out[url] = ""
+            return out
+        finally:
+            browser.close()

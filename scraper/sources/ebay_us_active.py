@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 
 from ._browser import render
 from ._filter import is_acceptable
-from ._ebay_item import fetch_seller
+from ._ebay_item import fetch_sellers_rendered
 from .ebay_us import _parse_usd, _clean_title, _PLACEHOLDER_TITLE, _seller_from_card
 
 URL = (
@@ -86,8 +86,10 @@ def fetch(timeout_ms: int = 45000) -> list[dict]:
 
     See :func:`scraper.sources.ebay_us.fetch` for why we render rather
     than plain-HTTP this source. The SRP doesn't include seller info
-    on the cards, so for each accepted listing we follow up with a
-    plain-HTTP fetch to the item page to extract seller trust signals.
+    on the cards, so we follow up with a single patchright session that
+    visits every accepted item URL in one browser context to extract
+    seller trust signals (plain HTTP returns a JS shell from datacenter
+    IPs for the US item view).
     """
     try:
         html = render(
@@ -100,12 +102,23 @@ def fetch(timeout_ms: int = 45000) -> list[dict]:
     except Exception:
         return []
     listings = parse(html)
-    for item in listings:
-        if not item.get("seller_name") and item.get("url"):
-            seller = fetch_seller(item["url"], locale="en-US")
-            item["seller_name"] = seller.get("seller_name")
-            item["seller_feedback"] = seller.get("seller_items_sold")
-            item["seller_positive_pct"] = seller.get("seller_positive_pct")
+
+    # Batch-render every item page in a single browser session to get
+    # seller name + items-sold + positive %. One Chromium spin-up,
+    # multiple navigations, shared cookies/fingerprint.
+    item_urls = [it["url"] for it in listings if it.get("url") and not it.get("seller_name")]
+    if item_urls:
+        try:
+            sellers = fetch_sellers_rendered(item_urls, locale="en-US")
+        except Exception:
+            sellers = {}
+        for item in listings:
+            url = item.get("url")
+            if url and url in sellers:
+                s = sellers[url]
+                item["seller_name"] = s.get("seller_name")
+                item["seller_feedback"] = s.get("seller_items_sold")
+                item["seller_positive_pct"] = s.get("seller_positive_pct")
     return listings
 
 
