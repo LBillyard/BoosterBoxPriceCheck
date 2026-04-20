@@ -49,12 +49,15 @@ _SELLER_NAME_RE = re.compile(
 # card's trustSignals JSON block, not from anywhere on the page. Item
 # pages also render related-product carousels with their own "X items
 # sold" labels — using a plain global regex grabs those instead of the
-# seller's actual stats. We isolate the trustSignals block first, then
-# match within it.
-_TRUST_SIGNALS_RE = re.compile(
-    r'"trustSignals?"\s*:\s*\[(.{0,600}?)\]',
-    re.S,
-)
+# seller's actual stats.
+#
+# We can't cleanly delimit the trustSignals JSON array with a regex
+# (nested brackets), so instead we locate the "trustSignals" key and
+# take a fixed-size window after it. ~800 chars is enough to capture
+# both signals (positive% + items sold) but short enough that the
+# carousel data is still well outside the window.
+_TRUST_SIGNALS_KEY_RE = re.compile(r'"trustSignals?"\s*:\s*\[', re.I)
+_TRUST_WINDOW = 800
 # Captures plain ints, commas (385, 1,234), and K/M shorthand (89K, 1.5M).
 _ITEMS_SOLD_RE = re.compile(r'(\d+(?:[,.]\d+)?[KkMm]?)\s+items?\s+sold', re.I)
 _POSITIVE_PCT_RE = re.compile(r'(\d+(?:\.\d+)?)%\s*positive', re.I)
@@ -93,13 +96,17 @@ def parse(html: str) -> dict:
 
     items_sold = None
     positive_pct = None
-    trust_block_match = _TRUST_SIGNALS_RE.search(html)
-    if trust_block_match:
-        trust_block = trust_block_match.group(1)
-        m = _ITEMS_SOLD_RE.search(trust_block)
+    key_match = _TRUST_SIGNALS_KEY_RE.search(html)
+    if key_match:
+        # Take a fixed window after "trustSignals":[ — enough to cover
+        # both signals (positive% + items sold) without ranging into
+        # related-product carousels' own "X items sold" labels.
+        start = key_match.end()
+        trust_window = html[start:start + _TRUST_WINDOW]
+        m = _ITEMS_SOLD_RE.search(trust_window)
         if m:
             items_sold = _parse_items_sold(m.group(1))
-        m = _POSITIVE_PCT_RE.search(trust_block)
+        m = _POSITIVE_PCT_RE.search(trust_window)
         if m:
             try:
                 positive_pct = float(m.group(1))
