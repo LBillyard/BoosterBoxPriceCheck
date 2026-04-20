@@ -32,7 +32,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from ._browser import fetch_html
+from ._browser import fetch_html, render
 from ._filter import is_acceptable
 from .ebay_us import _seller_from_card
 
@@ -153,18 +153,25 @@ def parse(html: str, gbp_per_usd: float) -> list[dict]:
 
 
 def fetch(gbp_per_usd: float, timeout_ms: int = 45000) -> list[dict]:
-    """Hit eBay UK's sold-listings page via headless Chromium.
+    """Hit eBay UK's sold-listings page via patchright-driven Chromium.
 
-    The SRP needs JS hydration before ``s-card`` markup is in the DOM, so
-    we render through :func:`scraper.sources._browser.render` and wait for
-    the cards to appear.
+    Plain HTTP now returns a 13KB JS shell from datacenter IPs (same
+    blocking eBay applies to the US SRP). Patchright drives a real
+    Chromium that hides the usual automation fingerprints so the full
+    hydrated SRP comes through.
 
-    Returns an empty list on Playwright failure or rendering hiccup; the
-    orchestrator wraps this in try/except so a single source failure
-    cannot break the snapshot.
+    Returns an empty list on render failure; the orchestrator wraps
+    this in try/except so a single source failure cannot break the
+    snapshot.
     """
     try:
-        html = fetch_html(URL, locale="en-GB")
+        html = render(
+            URL,
+            wait_selector="div.s-card",
+            timeout_ms=timeout_ms,
+            selector_timeout_ms=20000,
+            locale="en-GB",
+        )
     except Exception:
         return []
     return parse(html, gbp_per_usd)

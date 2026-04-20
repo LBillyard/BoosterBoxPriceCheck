@@ -19,9 +19,9 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from ._browser import fetch_html
+from ._browser import fetch_html, render
 from ._filter import is_acceptable
-from ._ebay_item import fetch_seller
+from ._ebay_item import fetch_sellers_rendered
 from .ebay_uk import _parse_gbp, _clean_title, _PLACEHOLDER_TITLE
 from .ebay_us import _seller_from_card
 
@@ -92,25 +92,43 @@ def parse(html: str, gbp_per_usd: float) -> list[dict]:
 
 
 def fetch(gbp_per_usd: float) -> list[dict]:
-    """Hit eBay UK active-listings SRP via plain HTTP (no JS needed).
+    """Hit eBay UK active-listings SRP via patchright-driven Chromium.
 
-    The SRP doesn't include seller info on the listing cards, so we
-    follow up on each accepted listing with a per-item-page fetch to
-    extract seller name + items-sold + positive %. Drops listings whose
-    item page didn't render — without seller trust signals the user
-    can't judge legitimacy.
+    Plain HTTP returns a 13KB JS shell from datacenter IPs. The SRP
+    also doesn't include seller info on the listing cards, so we
+    follow up on each accepted listing with a per-item-page fetch
+    (plain HTTP works for UK item pages) to extract seller name +
+    items-sold + positive %. Drops listings whose item page didn't
+    render — without seller trust signals the user can't judge
+    legitimacy.
     """
     try:
-        html = fetch_html(URL, locale="en-GB")
+        html = render(
+            URL,
+            wait_selector="div.s-card",
+            timeout_ms=45000,
+            selector_timeout_ms=20000,
+            locale="en-GB",
+        )
     except Exception:
         return []
     listings = parse(html, gbp_per_usd)
-    for item in listings:
-        if not item.get("seller_name") and item.get("url"):
-            seller = fetch_seller(item["url"], locale="en-GB")
-            item["seller_name"] = seller.get("seller_name")
-            item["seller_feedback"] = seller.get("seller_items_sold")
-            item["seller_positive_pct"] = seller.get("seller_positive_pct")
+    # Batch item-page renders through patchright — eBay UK item pages
+    # now return a JS shell to plain HTTP from datacenter IPs, same as
+    # the SRP, so we use the rendered path for both.
+    item_urls = [it["url"] for it in listings if it.get("url") and not it.get("seller_name")]
+    if item_urls:
+        try:
+            sellers = fetch_sellers_rendered(item_urls, locale="en-GB")
+        except Exception:
+            sellers = {}
+        for item in listings:
+            url = item.get("url")
+            if url and url in sellers:
+                s = sellers[url]
+                item["seller_name"] = s.get("seller_name")
+                item["seller_feedback"] = s.get("seller_items_sold")
+                item["seller_positive_pct"] = s.get("seller_positive_pct")
     # Same drop-on-no-trust-signals rule as ebay_us_active so the UI
     # never shows a row whose seller we couldn't read.
     return [
