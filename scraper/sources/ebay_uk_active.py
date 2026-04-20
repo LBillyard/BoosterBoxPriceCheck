@@ -96,7 +96,9 @@ def fetch(gbp_per_usd: float) -> list[dict]:
 
     The SRP doesn't include seller info on the listing cards, so we
     follow up on each accepted listing with a per-item-page fetch to
-    extract seller name + items-sold + positive %.
+    extract seller name + items-sold + positive %. Drops listings whose
+    item page didn't render — without seller trust signals the user
+    can't judge legitimacy.
     """
     try:
         html = fetch_html(URL, locale="en-GB")
@@ -109,7 +111,12 @@ def fetch(gbp_per_usd: float) -> list[dict]:
             item["seller_name"] = seller.get("seller_name")
             item["seller_feedback"] = seller.get("seller_items_sold")
             item["seller_positive_pct"] = seller.get("seller_positive_pct")
-    return listings
+    # Same drop-on-no-trust-signals rule as ebay_us_active so the UI
+    # never shows a row whose seller we couldn't read.
+    return [
+        it for it in listings
+        if it.get("seller_name") or it.get("seller_positive_pct") is not None
+    ]
 
 
 def parse_fixture(path: str | Path, gbp_per_usd: float) -> list[dict]:

@@ -119,7 +119,17 @@ def fetch(timeout_ms: int = 45000) -> list[dict]:
                 item["seller_name"] = s.get("seller_name")
                 item["seller_feedback"] = s.get("seller_items_sold")
                 item["seller_positive_pct"] = s.get("seller_positive_pct")
-    return listings
+
+    # Drop listings whose item page didn't render fully — without seller
+    # trust signals the user can't judge legitimacy, so don't show a
+    # half-loaded entry. A row counts as rendered if we have either a
+    # seller name OR a positive_pct (both come from the trustSignals
+    # block; if neither parsed, the page returned a JS shell or a CAPTCHA).
+    rendered = [
+        it for it in listings
+        if it.get("seller_name") or it.get("seller_positive_pct") is not None
+    ]
+    return rendered
 
 
 def parse_fixture(path: str | Path) -> list[dict]:

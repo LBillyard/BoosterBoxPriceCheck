@@ -44,6 +44,17 @@ _SELLER_NAME_RE = re.compile(
     r'"headline"\s*:\s*\{.{0,400}?"text"\s*:\s*"([^"]+)"',
     re.S,
 )
+
+# CRITICAL: items-sold and positive-% MUST be extracted from the seller
+# card's trustSignals JSON block, not from anywhere on the page. Item
+# pages also render related-product carousels with their own "X items
+# sold" labels — using a plain global regex grabs those instead of the
+# seller's actual stats. We isolate the trustSignals block first, then
+# match within it.
+_TRUST_SIGNALS_RE = re.compile(
+    r'"trustSignals?"\s*:\s*\[(.{0,600}?)\]',
+    re.S,
+)
 # Captures plain ints, commas (385, 1,234), and K/M shorthand (89K, 1.5M).
 _ITEMS_SOLD_RE = re.compile(r'(\d+(?:[,.]\d+)?[KkMm]?)\s+items?\s+sold', re.I)
 _POSITIVE_PCT_RE = re.compile(r'(\d+(?:\.\d+)?)%\s*positive', re.I)
@@ -68,24 +79,32 @@ def _parse_items_sold(raw: str) -> int | None:
 
 
 def parse(html: str) -> dict:
-    """Extract seller-trust signals from an eBay item-page HTML string."""
+    """Extract seller-trust signals from an eBay item-page HTML string.
+
+    Both items_sold and positive_pct are extracted ONLY from the seller
+    card's trustSignals JSON block (not the page at large) so that
+    promoted-product carousels' "X items sold" labels don't pollute the
+    seller's actual stats.
+    """
     name = None
     m = _SELLER_NAME_RE.search(html)
     if m:
         name = m.group(1).strip() or None
 
     items_sold = None
-    m = _ITEMS_SOLD_RE.search(html)
-    if m:
-        items_sold = _parse_items_sold(m.group(1))
-
     positive_pct = None
-    m = _POSITIVE_PCT_RE.search(html)
-    if m:
-        try:
-            positive_pct = float(m.group(1))
-        except ValueError:
-            positive_pct = None
+    trust_block_match = _TRUST_SIGNALS_RE.search(html)
+    if trust_block_match:
+        trust_block = trust_block_match.group(1)
+        m = _ITEMS_SOLD_RE.search(trust_block)
+        if m:
+            items_sold = _parse_items_sold(m.group(1))
+        m = _POSITIVE_PCT_RE.search(trust_block)
+        if m:
+            try:
+                positive_pct = float(m.group(1))
+            except ValueError:
+                positive_pct = None
 
     return {
         "seller_name": name,
