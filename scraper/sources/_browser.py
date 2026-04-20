@@ -118,6 +118,11 @@ def render(
                 "{get: () => undefined});"
             )
             page = ctx.new_page()
+            # Clamp every page operation (waitForXxx, click, etc.) to a
+            # hard ceiling. Without this, a Cloudflare challenge that
+            # never resolves can leave the page indefinitely loading.
+            page.set_default_timeout(timeout_ms)
+            page.set_default_navigation_timeout(timeout_ms)
             page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)
             if wait_selector:
                 try:
@@ -175,6 +180,8 @@ def render_many(
                 "{get: () => undefined});"
             )
             page = ctx.new_page()
+            page.set_default_timeout(timeout_ms)
+            page.set_default_navigation_timeout(timeout_ms)
             for url in urls:
                 try:
                     page.goto(url, wait_until="domcontentloaded", timeout=timeout_ms)

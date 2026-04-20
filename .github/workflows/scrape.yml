@@ -11,6 +11,9 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    # Hard ceiling so a hung patchright/Cloudflare interaction can't
+    # leave the job running for hours. Normal scrape is ~2-3 min.
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
 
