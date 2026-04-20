@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-04-20T00:28:36.167254+00:00",
+  "scraped_at": "2026-04-20T00:40:20.008042+00:00",
   "fx": {
     "usd_to_gbp": 0.7389,
-    "fetched_at": "2026-04-20T00:28:36.167254+00:00"
+    "fetched_at": "2026-04-20T00:40:20.008042+00:00"
   },
   "prices": {
     "loose": {
@@ -23,7 +23,7 @@
       "usd": 42500.0,
       "gbp": 31403.25,
       "date": "2026-03-29",
-      "url": "https://www.ebay.com/itm/318035107020?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KPM4J7MR726MRDZFSJY2CSWB&hash=item4a0c5e9ccc:g:NjgAAeSwWD5pvYzG&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDJHDOUzH7LTN1%2F1y7uI80LKFJOFkKRCTLlrkvHPNMas2ruif4DO6VnIy8LDguA29wnzVtiy5rQ7gIJxl6JNUx07YVDdupjZK11zDu27IJTbMDwjZOMDsu5bBsoECc6Jn3KGiiP%2BzP7EADZcfWb7Kr7CKeMbo%2FDImIkOK9bpCFnfsDcGmJ%2F1u6U%2FVF%2F2NN%2BqhAMelSGglPXgOnQE9B2L%2BcLAMpxlwAp8nq7l3sLz5IThSsl%2BD%2FAGOEXzNBtZXaWUjIijHRBdlKxKOJJofw8VWBL1EBaY33emKCtuXaEPB1H5w%3D%3D%7Ctkp%3ABk9SR8b6yIS1Zw",
+      "url": "https://www.ebay.com/itm/318035107020?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KPM57RBXGDRRHNZMW41HHY4V&hash=item4a0c5e9ccc:g:NjgAAeSwWD5pvYzG&itmprp=enc%3AAQALAAABEGfYFPkwiKCW4ZNSs2u11xB4ihKQ%2Fo0KtvARBnPxCzLJgKnvDUwmY8RR8lc%2F33AmqyuC5B1AbnvGTP2ZD2NDNBN21VdrczCyNWyGQWDQk6Tg5%2FnJRSKREkQie7dwZHQTkumQOztaICYbP4q6R44yA92Ygq%2FHZ05OpmAWM7HEPHvTl%2FgdegJDywBw93jp%2FyQI7UsxsF%2BWQvB89S%2F9iP6OT0q%2F3fNEqqWoTHT9oDOjpWCNmgVkS3%2Fg%2F39BaZqmIKo42SVqSrj30BRgAqp9USKNOWGNSuPcy0aosa3O7NcG8cPH4SWOnfLj250p7IC%2BpEvJYrwYJzkbYEZWgDfm8zk61lVmG%2Fyq6LzKWSARiRRHJkYt%7Ctkp%3ABk9SR46Gn4W1Zw",
       "seller_name": "tca_gaming",
       "seller_feedback": 109500,
       "seller_positive_pct": 100.0
@@ -34,7 +34,7 @@
       "usd": 36600.0,
       "gbp": 27043.74,
       "date": "2026-03-10",
-      "url": "https://www.ebay.com/itm/377006661568?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KPM4J7MSW4S08WMXYSGJE1QV&hash=item57c7591fc0:g:La4AAeSwWK1ppy9P&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDuyUXgnVnYMtY%2B2A38veJipsi%2FT2jo5Lk41mjhwks%2F9FzoPSB8SFbbNkdRql9C5HoXhetC1EkRjZyy9LAj4%2F7XqCJyySUe8E%2FglPwhKcIb4VjejIowX%2BiZIwhWrEPlSt%2FFTiunkBn%2BpTYuzrhmr5IoHqje%2FfcTyW75iM01I6UQ86peS28v%2FsXdPabtbMquuvZKozzVFD6uhSwXSTwdXXeNrJJnR9Qqvcu0uDX2JyVavHmzJlt5RRLu5MQP%2FxUq8EMbc4jjaMzoUO5hdL%2FQOa%2Bdtx1OKRFHemFHQBuFquPpNQ%3D%3D%7Ctkp%3ABk9SR8j6yIS1Zw",
+      "url": "https://www.ebay.com/itm/377006661568?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KPM57RBYJNYK29WBP0TC2T4G&hash=item57c7591fc0:g:La4AAeSwWK1ppy9P&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDuyUXgnVnYMtY%2B2A38veJipsi%2FT2jo5Lk41mjhwks%2F9Jl9lqehCxC8unx%2FQmPL%2Bagt4EtYn89%2FzFdkmz2N6ih0cGyr%2BbJbFFSgKBPY%2BNpwty2oGZrRFy5DyAp2caWJi2l4axDGGO3u2Zf7I%2Fgcwbf2KbfbhSad7bVaJAKRgrXLmxFc58sad%2F8ULYQdAZsOBVcT5M3lWDRudEaf4aNHYtmo7Spn6CXaQ2xptuhslGRerRyXw8nB2oS9j45LXKSF48%2Brza36jnmdVbsH43ExjrF1SNUJ0i8gAO3LDt2VR4d6zg%3D%3D%7Ctkp%3ABk9SR5CGn4W1Zw",
       "seller_name": "probstein123",
       "seller_feedback": 1500000,
       "seller_positive_pct": 99.5
@@ -45,7 +45,7 @@
       "usd": 35000.0,
       "gbp": 25861.5,
       "date": "2026-03-01",
-      "url": "https://www.ebay.com/itm/277723834269?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KPM4J7MTY58N1M44RGSBKMAB&hash=item40a9a1679d:g:WQkAAeSwHappjzcQ&itmprp=enc%3AAQALAAABEGfYFPkwiKCW4ZNSs2u11xCF3ZkWiHEKY6BCpNAbjmvI7kCmkdN%2FQp7bfsbClB3O9a0gwmFocrCxnWeJhn5%2Fb02S1ndCsxSVPaOwR9OoWwKKFu57Q92hPpjynKWTP%2FDZDGColznDxUAls6IPEAyRrOq4eNXPkHEPs04joX3Cp9f%2FiuGQkZ8DOMCNsAkxdHl7AivBxuY4AzCGiOAXqn2yItqTCDIt3836k9EEK0jqrThu966%2BLnBy2nrPwjV%2FIPphQA27rKbfFzsgNbzLDE1Ru81%2FyC0nGTX%2BVEWF7VTPuMEL4hAsjimHuVvTLPJNmQdxcAiPirf%2BCrBdwNzCoZkXvAKT2kLPZbIVWR6luUT6yNF6%7Ctkp%3ABk9SR8r6yIS1Zw",
+      "url": "https://www.ebay.com/itm/277723834269?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KPM57RBYJQ1QJTE4J1P6T6B3&hash=item40a9a1679d:g:WQkAAeSwHappjzcQ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBOgtW0UoXJTJ5xYbDbrk7SY%2FfiR4CR7AcefCFDAl6qA%2Fzl8ru4JTPmYQa0byeTdx%2FmBFvCBNvqoTWT3yiJ%2FIY7Kpp6KbPxoBJt%2BZ6JsAWCnl3nB0Dr8vuB0KiIXpCcZprd6TjE0CLv5e0YCLc18dIzcbm0FZ7M9aN3xZLQXkyuD3XXbRxreqFjr1%2BPkl%2Bttd2ym7K7HQfzmYsgGOsd5TdParo9DTbLuJamb%2BE9V2kytwh3KPwhQuzXuo4Vt2rQholX%2F1hHZFV948B%2FcIyMaPZ0yr4rNa1pzyoU1UsLsXxF2w%3D%3D%7Ctkp%3ABk9SR5KGn4W1Zw",
       "seller_name": "tca_gaming",
       "seller_feedback": 109500,
       "seller_positive_pct": 100.0
@@ -57,17 +57,27 @@
       "title": "Pokemon Base Set Booster Box Unlimited 1999 WOTC Factory Sealed English 36 Packs",
       "usd": 45000.0,
       "gbp": 33250.5,
-      "url": "https://www.ebay.com/itm/285176228006?_skw=pokemon+base+set+booster+box+wotc&itmmeta=01KPM4K1AN0TGX6JWWSMX3TQQJ&hash=item4265d3e8a6%3Ag%3ASzYAAeSw2eVopNgs&itmprp=enc%3AAQALAAABAGfYFPkwiKCW4ZNSs2u11xDYJIH0PbzBSszAR9jsjxp2uV3a7UbHtu2iQ%2B8MyRFony9KU6%2B7jJZGc4wh2eGNLOrYz94dnURq9J6UFKZSAr%2B4K5l1%2BAmD9qrX6Y4mRWgZ9Guk2Q6AWNxeswp3cRtToZ6rurDW5VereCGkYHCIoa8DOhKeroSgU7vcI5PsrokUw6aUO4m8afdkHD9sIswsR%2BMWB51fTibLsK6bgQYz7BVNgkjB92C7ARE%2BvBHPqTyhSTb9JqrHMVsEdsyIzPBneXv5yhHIc9pmVawCDiLn5GaInHJ3G6qUnM4j0OqO1Q9soW%2Fd5NFCk2TOpg5Jw0wUEJM%3D%7Ctkp%3ABk9SR7iVzIS1Zw&LH_BIN=1",
+      "url": "https://www.ebay.com/itm/285176228006?_skw=pokemon+base+set+booster+box+wotc&itmmeta=01KPM58H8D405RZCC3SCY75415&hash=item4265d3e8a6%3Ag%3ASzYAAeSw2eVopNgs&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xB%2BVJDBQzxKEtLJco2fNnoGtoVBGP3kCGbDOHvKv%2BH8V2WOonAQEPWi4mb3mJOlDLqor9RT6rtQVPrfg5gSue0MNCZbm229xllyRbl%2FVX%2FddDQ3%2BiRp74tJQGiW9akhsb%2F7EFM0BxrOglvq%2BYlCKYS4oR%2FUiygjsKW3p8maNEms36VGR65JGh%2FbHQGVbzs348pu7GfHCuvhzs38vJE5LNjJyY12AE%2FJ29p71LEnDWNEcQp4RLKsi6zmKH5b56Fuc9glx%2FVlhsheHxjxrA9zhkUw%7Ctkp%3ABk9SR7CUooW1Zw&LH_BIN=1",
       "seller_name": "Poke Unlimited",
       "seller_feedback": 89000,
       "seller_positive_pct": 99.9
     },
     {
       "source": "ebay_us",
-      "title": "1999 Pokemon Base Set Unlimited Booster Box WOTC Sealed",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box WOTC Sealed Mint Blue Wing Charizard",
+      "usd": 50000.0,
+      "gbp": 36945.0,
+      "url": "https://www.ebay.com/itm/236017015392?_skw=pokemon+base+set+booster+box+wotc&epid=9026714747&itmmeta=01KPM58H8D5ZG9CW2GKPVZQ879&hash=item36f3b5da60%3Ag%3AP84AAeSwaGln327A&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xBR1teP43U%2FMO5AXMQIaRxbI06jU2%2FCi%2BuzdwLpUddm7o0MVCwv2bc3c0U8tdNkcLsMvFLpf2NJt492Q877%2FRaAabLaf1WX1lOVso%2Fbe5EkYPi%2FZbKTQnSrGJ0%2BSgpo54FtcHDXDmwTAfp4l05DQYhsh0T474dyN7BiliGZQwEN2V3hvZ%2F85t39nPqo2qsYb2%2BHct6NY0xCnvQgTFomV0WMUeQ7jbi8TY4HGBNlhAKIYgbY9qXG8tpkTsMOSHcjyTlqB1887Fk05d%2BL6kiml822%7Ctkp%3ABk9SR7CUooW1Zw&LH_BIN=1",
+      "seller_name": "Poke Unlimited",
+      "seller_feedback": 89000,
+      "seller_positive_pct": 99.9
+    },
+    {
+      "source": "ebay_us",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box WOTC Sealed Blue Wing Charizard",
       "usd": 80000.0,
       "gbp": 59112.0,
-      "url": "https://www.ebay.com/itm/335765516351?_skw=pokemon+base+set+booster+box+wotc&epid=9026714747&itmmeta=01KPM4K1ANDRB9A575DZHSQDF7&hash=item4e2d2f303f%3Ag%3AOXcAAOSwpgJngZvN&itmprp=enc%3AAQALAAAA4GfYFPkwiKCW4ZNSs2u11xDrBnM%2BZE1zYv4fXXqXARIva%2Baz%2FzL5Efy81UaSfN0DQvWO%2BrU0lY4%2Fe5%2FZXQBQtSQFWPZU3lrSnrkG50B16Aesmtmmn%2FctaicXSJfAbtYhVCUW9CHfb9NumfvVZiH37QYbnfRT7gFv%2BZks4a9%2FkJNd%2F8cfQdk8GQ8cIzDajcdlXTyjoOZZPhEZixUTvY4RyeGmyTpnahZEW1AvMqkYvZb7QY5etfj3SrCASIJmucTUVDzNqeOGc7ulojMJs%2FBmZrQWnwPZs76ASK6JpI6TM%2FBv%7Ctkp%3ABk9SR7iVzIS1Zw&LH_BIN=1",
+      "url": "https://www.ebay.com/itm/376104613663?_skw=pokemon+base+set+booster+box+wotc&epid=9026714747&itmmeta=01KPM58H8DYP3DSHW6MVTZ9ZVH&hash=item579194f71f%3Ag%3Az40AAOSwL-Bn5dUY&itmprp=enc%3AAQALAAABAGfYFPkwiKCW4ZNSs2u11xCkU1VTLRGDAohpwv5TH9inlKc6%2FJCozj8gGZ5Adr1eNk6TOnGlZxdThbvxKCJOU3tU3NKsBBYJdZUblQNBrfOt%2BdA%2BtccaGn5uHxpDarmIR1XfuuOziz%2FoFKSZFtORG8MkqJy2j0gknOCwIYRgYG0TxxPmoyUMn7dygnDpI2pQKseO3EXMXKhasDcDvqj2hn4pwmkpC%2B0E8tHe2M2WQC5oLZe4PYKFHtHzkbfeLX7twBgI15AObwYUO8Ezs96zBhlhAoz7zctXb9f2mVzj1ozshGq6iemph7pU1a2xbosA%2Fe00s1soUDjzVFgScdnIMmg%3D%7Ctkp%3ABk9SR7CUooW1Zw&LH_BIN=1",
       "seller_name": "Poke Unlimited",
       "seller_feedback": 89000,
       "seller_positive_pct": 99.9
@@ -79,6 +89,6 @@
     "ebay_uk": 0,
     "ebay_us": 3,
     "ebay_uk_active": 0,
-    "ebay_us_active": 2
+    "ebay_us_active": 3
   }
 }
