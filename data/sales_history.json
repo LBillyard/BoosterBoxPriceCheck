@@ -1,5 +1,17 @@
 [
   {
+    "source": "pricecharting",
+    "title": "Heritage / auction (via PriceCharting)",
+    "usd": 41250.0,
+    "gbp": 30479.62,
+    "date": "2026-04-16",
+    "url": "https://www.pricecharting.com/game/pokemon-base-set/booster-box",
+    "seller_name": null,
+    "seller_feedback": null,
+    "seller_positive_pct": null,
+    "first_seen_at": "2026-04-20T00:51:37Z"
+  },
+  {
     "source": "ebay_us",
     "title": "Original WOTC Base Set SEALED Booster Box GREEN WINGS (Pokemon Cards)",
     "usd": 42500.0,

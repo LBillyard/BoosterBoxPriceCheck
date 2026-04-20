@@ -91,6 +91,27 @@ def main() -> int:
         source_counts[name] = len(rows)
         recent_sales.extend(rows)
 
+    # Also include the PriceCharting "last sold" so it appears in the
+    # Recent Sales feed — otherwise the Last Sold card at the top of the
+    # UI shows a value (e.g. a Heritage Auctions sale) that has no
+    # matching row in the list, looking like a bug.
+    if last_sold and last_sold.get("usd_cents"):
+        usd = last_sold["usd_cents"] / 100.0
+        recent_sales.append({
+            "source": "pricecharting",
+            "title": "Heritage / auction (via PriceCharting)",
+            "usd_cents": last_sold["usd_cents"],
+            "date": last_sold.get("date"),
+            "url": "https://www.pricecharting.com/game/pokemon-base-set/booster-box",
+            # PriceCharting reports the sale, not the seller — leave
+            # seller fields None so the trust pill is suppressed for
+            # auction-house rows (UI knows to skip non-eBay sources).
+            "seller_name": None,
+            "seller_feedback": None,
+            "seller_positive_pct": None,
+        })
+        source_counts["pricecharting_last_sold"] = 1
+
     # Currently-active (Buy It Now) listings from eBay UK + US. Same
     # isolation pattern — a fail just contributes zero rows.
     active_rows: list[dict] = []
