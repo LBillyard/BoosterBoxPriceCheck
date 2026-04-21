@@ -25,24 +25,34 @@ SOURCE_TIMEOUT_S = 180
 def _run_with_timeout(name: str, fn, timeout_s: int = SOURCE_TIMEOUT_S) -> list:
     """Run fn() on a worker thread, abandon it if it overruns.
 
-    NOTE: Python threads can't be killed, so an abandoned worker
-    continues running until the process exits. That's fine here: the
-    outermost workflow timeout is the real stop, and patchright's
-    browser is cleaned up when the process ends.
+    CRITICAL: We deliberately do NOT use ``with ThreadPoolExecutor()``.
+    The context manager's ``__exit__`` calls ``shutdown(wait=True)``,
+    which blocks on the worker thread — and if the worker is stuck in
+    a hung patchright navigation, shutdown waits forever. Each stuck
+    source would then pin the runner until the workflow's own timeout
+    killed it (observed: 3 stuck sources = full 12-min ceiling).
+
+    Instead: explicit shutdown(wait=False) on timeout so we return
+    immediately. The abandoned worker leaks until the Python process
+    exits, which is fine — the workflow will exit cleanly after we
+    write the snapshot, and patchright's browser is cleaned up then.
     """
     start = time.monotonic()
-    with ThreadPoolExecutor(max_workers=1) as ex:
-        fut = ex.submit(fn)
-        try:
-            rows = fut.result(timeout=timeout_s)
-        except FutTimeoutError:
-            elapsed = int(time.monotonic() - start)
-            print(f"WARN: source {name} timed out after {elapsed}s", file=sys.stderr, flush=True)
-            return []
-        except Exception as e:  # noqa: BLE001
-            elapsed = int(time.monotonic() - start)
-            print(f"WARN: source {name} failed after {elapsed}s: {e}", file=sys.stderr, flush=True)
-            return []
+    ex = ThreadPoolExecutor(max_workers=1)
+    fut = ex.submit(fn)
+    try:
+        rows = fut.result(timeout=timeout_s)
+    except FutTimeoutError:
+        elapsed = int(time.monotonic() - start)
+        print(f"WARN: source {name} timed out after {elapsed}s", file=sys.stderr, flush=True)
+        ex.shutdown(wait=False, cancel_futures=True)
+        return []
+    except Exception as e:  # noqa: BLE001
+        elapsed = int(time.monotonic() - start)
+        print(f"WARN: source {name} failed after {elapsed}s: {e}", file=sys.stderr, flush=True)
+        ex.shutdown(wait=False, cancel_futures=True)
+        return []
+    ex.shutdown(wait=False)  # worker already finished; this is instant
     elapsed = int(time.monotonic() - start)
     print(f"INFO: source {name} returned {len(rows)} rows in {elapsed}s", file=sys.stderr, flush=True)
     return rows
