@@ -2,6 +2,8 @@
 import json
 import sys
 import datetime as dt
+import time
+from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutTimeoutError
 from pathlib import Path
 
 import requests
@@ -10,7 +12,40 @@ from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
 from .history import merge_sales
-from .sources import onethirtypoint, ebay_uk, ebay_us, ebay_uk_active, ebay_us_active
+from .sources import ebay_uk, ebay_us, ebay_uk_active, ebay_us_active
+
+# Per-source hard ceiling. Patchright's internal timeouts are not
+# always honoured when a page is stuck on a Cloudflare challenge, so we
+# wrap every source fetch in a ThreadPoolExecutor and kill-wait at
+# this boundary. Budget: 4 sources x 3min = 12min, matching the
+# workflow timeout-minutes.
+SOURCE_TIMEOUT_S = 180
+
+
+def _run_with_timeout(name: str, fn, timeout_s: int = SOURCE_TIMEOUT_S) -> list:
+    """Run fn() on a worker thread, abandon it if it overruns.
+
+    NOTE: Python threads can't be killed, so an abandoned worker
+    continues running until the process exits. That's fine here: the
+    outermost workflow timeout is the real stop, and patchright's
+    browser is cleaned up when the process ends.
+    """
+    start = time.monotonic()
+    with ThreadPoolExecutor(max_workers=1) as ex:
+        fut = ex.submit(fn)
+        try:
+            rows = fut.result(timeout=timeout_s)
+        except FutTimeoutError:
+            elapsed = int(time.monotonic() - start)
+            print(f"WARN: source {name} timed out after {elapsed}s", file=sys.stderr, flush=True)
+            return []
+        except Exception as e:  # noqa: BLE001
+            elapsed = int(time.monotonic() - start)
+            print(f"WARN: source {name} failed after {elapsed}s: {e}", file=sys.stderr, flush=True)
+            return []
+    elapsed = int(time.monotonic() - start)
+    print(f"INFO: source {name} returned {len(rows)} rows in {elapsed}s", file=sys.stderr, flush=True)
+    return rows
 
 URL = "https://www.pricecharting.com/game/pokemon-base-set/booster-box"
 USER_AGENT = (
@@ -72,22 +107,22 @@ def main() -> int:
             write_error(f"FX fetch failed and no previous rate: {e}")
             return 1
 
-    # Recent sales from auxiliary sources. Each source is isolated so a
-    # single failure (captcha, rate-limit, layout change) cannot break the
-    # snapshot — it just yields zero entries from that source.
+    # Recent sales from auxiliary sources. Each source is isolated AND
+    # wrapped in a hard timeout so a stuck patchright session on one
+    # source can't pin the whole scrape.
+    #
+    # 130point is currently excluded: Cloudflare blocks every patchright
+    # variant we've tried, so the source always returns 0 and its
+    # challenge-never-resolves failure mode was hanging the runner.
+    # Re-add it if/when a stealth bypass lands.
     recent_sales: list[dict] = []
     source_counts: dict[str, int] = {}
 
     for name, fn in (
-        ("130point", lambda: onethirtypoint.fetch()),
         ("ebay_uk",  lambda: ebay_uk.fetch(gbp_per_usd=fx)),
         ("ebay_us",  lambda: ebay_us.fetch()),
     ):
-        try:
-            rows = fn()
-        except Exception as src_err:  # noqa: BLE001 — source must not kill snapshot
-            print(f"WARN: source {name} failed: {src_err}", file=sys.stderr)
-            rows = []
+        rows = _run_with_timeout(name, fn)
         source_counts[name] = len(rows)
         recent_sales.extend(rows)
 
@@ -113,17 +148,13 @@ def main() -> int:
         source_counts["pricecharting_last_sold"] = 1
 
     # Currently-active (Buy It Now) listings from eBay UK + US. Same
-    # isolation pattern — a fail just contributes zero rows.
+    # timeout + isolation pattern.
     active_rows: list[dict] = []
     for name, fn in (
         ("ebay_uk_active", lambda: ebay_uk_active.fetch(gbp_per_usd=fx)),
         ("ebay_us_active", lambda: ebay_us_active.fetch()),
     ):
-        try:
-            rows = fn()
-        except Exception as src_err:  # noqa: BLE001
-            print(f"WARN: source {name} failed: {src_err}", file=sys.stderr)
-            rows = []
+        rows = _run_with_timeout(name, fn)
         source_counts[name] = len(rows)
         active_rows.extend(rows)
 
