@@ -1,5 +1,6 @@
 """Entry point: fetch PriceCharting page, parse, fetch FX, write data files."""
 import json
+import os
 import sys
 import datetime as dt
 import time
@@ -197,4 +198,10 @@ def main() -> int:
     return 0
 
 if __name__ == "__main__":
-    sys.exit(main())
+    rc = main()
+    # If a source timed out, its abandoned worker thread is still alive
+    # running a hung patchright browser. Python's atexit machinery joins
+    # all non-daemon threads on interpreter shutdown, so a normal
+    # sys.exit() would block forever waiting for that leaked thread.
+    # We've already written the snapshot, so bypass atexit entirely.
+    os._exit(rc)
