@@ -7,6 +7,11 @@ on:
 
 permissions:
   contents: write
+  # Needed so we can trigger pages.yml via workflow_dispatch at the end.
+  # GITHUB_TOKEN-pushed commits don't fire other workflows' `on: push`
+  # triggers, so without this the Pages deploy never runs from a cron
+  # scrape and the live site serves a stale data/snapshot.json.
+  actions: write
 
 jobs:
   scrape:
@@ -33,12 +38,14 @@ jobs:
         run: python -m scraper.scrape
 
       - name: Commit snapshot
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git commit -m "chore: snapshot $(date -u +'%Y-%m-%d %H:%M UTC')"
@@ -46,6 +53,7 @@ jobs:
           # and our push, rebase on top and retry. Up to 5 attempts.
           for i in 1 2 3 4 5; do
             if git push; then
+              echo "committed=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             echo "Push rejected (attempt $i), rebasing..."
@@ -53,3 +61,13 @@ jobs:
           done
           echo "Failed to push after 5 attempts" >&2
           exit 1
+
+      - name: Trigger Pages deploy
+        # GITHUB_TOKEN-pushed commits DON'T fire the `on: push` trigger in
+        # pages.yml, so without an explicit workflow_dispatch the live
+        # site never picks up the new snapshot. Dispatch only when we
+        # actually committed something, to avoid no-op deploys.
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pages.yml --ref main
