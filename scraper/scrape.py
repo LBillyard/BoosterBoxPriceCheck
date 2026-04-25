@@ -13,12 +13,16 @@ from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
 from .history import merge_sales
-from .sources import ebay_uk, ebay_us, ebay_us_active
+from .sources import ebay_uk, ebay_us, ebay_us_active, ebay_pinned
 # ebay_uk_active is intentionally not imported. Tried 3 URL variants
 # (no filter / vintage query / sort-only) and every single one hung
 # patchright on the GitHub Actions IP range. eBay UK refuses to serve
 # active-listing SRPs to datacenter IPs regardless of URL shape.
 # Wasted 3 min/cron for zero rows. Re-add when a working bypass lands.
+#
+# As a workaround, ebay_pinned fetches user-supplied item-page URLs
+# directly (item pages DO render reliably for both .co.uk and .com).
+# Add tracked listings in scraper/sources/ebay_pinned.py.
 
 # Per-source hard ceiling. Patchright's internal timeouts are not
 # always honoured when a page is stuck on a Cloudflare challenge, so we
@@ -177,6 +181,13 @@ def main() -> int:
         rows = _run_with_timeout("ebay_us_active(retry)", lambda: ebay_us_active.fetch())
     source_counts["ebay_us_active"] = len(rows)
     active_rows.extend(rows)
+
+    # User-pinned listings (workaround for the blocked ebay_uk SRP).
+    # Each is fetched as an item page directly. Dedupe is handled by
+    # build_snapshot's URL-based merge later.
+    pinned = _run_with_timeout("ebay_pinned", lambda: ebay_pinned.fetch(gbp_per_usd=fx))
+    source_counts["ebay_pinned"] = len(pinned)
+    active_rows.extend(pinned)
 
     now = dt.datetime.now(dt.timezone.utc).isoformat()
     snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now,
