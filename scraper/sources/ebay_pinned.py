@@ -139,42 +139,44 @@ def fetch(gbp_per_usd: float = 0.78) -> list[dict]:
         else:
             by_locale["ebay_us"].append(f"https://www.ebay.com/itm/{item_id}")
 
-    import sys
     out: list[dict] = []
     for src, urls in by_locale.items():
         if not urls:
             continue
         locale = "en-GB" if src == "ebay_uk" else "en-US"
-        print(f"DEBUG: ebay_pinned: rendering {len(urls)} {src} urls", file=sys.stderr, flush=True)
         try:
-            htmls = render_many(urls, locale=locale, selector_timeout_ms=8000)
-        except Exception as e:
-            print(f"DEBUG: ebay_pinned: render_many raised: {e!r}", file=sys.stderr, flush=True)
+            # CRITICAL: must pass wait_selector. Without it, render_many
+            # captures the 13KB JS-shell that eBay serves before its
+            # SPA hydrates — title/price/seller all extracted to None.
+            # The h1 only appears once the listing detail JS has run.
+            htmls = render_many(
+                urls,
+                locale=locale,
+                wait_selector="h1.x-item-title__mainTitle, h1[data-testid='x-item-title'], .x-item-title__mainTitle",
+                timeout_ms=30000,
+                selector_timeout_ms=15000,
+            )
+        except Exception:
             continue
         for url, html in htmls.items():
-            if not html:
-                print(f"DEBUG: ebay_pinned: empty html for {url}", file=sys.stderr, flush=True)
+            if not html or len(html) < 50_000:
+                # Anything under 50KB is a JS shell or error page —
+                # eBay item pages are 500KB-1MB hydrated.
                 continue
             row = parse_item(html, src)
             if not row:
-                print(f"DEBUG: ebay_pinned: parse_item returned None for {url} (html={len(html)}b)",
-                      file=sys.stderr, flush=True)
                 continue
             row["url"] = url
-            # Pull seller-trust signals from the same HTML.
             seller = parse_seller(html)
             row["seller_name"] = seller.get("seller_name")
             row["seller_feedback"] = seller.get("seller_items_sold")
             row["seller_positive_pct"] = seller.get("seller_positive_pct")
-            # If we couldn't read seller info the row would render as a
-            # grey "?" pill; prefer to drop pinned items with no seller
-            # info rather than show a useless row.
+            # Without seller signals the row would render as a grey "?"
+            # pill — drop it rather than surface a useless row.
             if row["seller_positive_pct"] is None and not row["seller_name"]:
-                print(f"DEBUG: ebay_pinned: no seller signals for {url} (title={row['title'][:40]!r})",
-                      file=sys.stderr, flush=True)
                 continue
-            # Convert GBP rows to USD using the live FX (filter used a
-            # rough 0.78 estimate; this is the precise number).
+            # GBP rows: convert to USD using live FX (filter used ~0.78
+            # estimate; this is the precise number for the snapshot).
             if src == "ebay_uk":
                 gbp = row["gbp_cents"] / 100.0
                 row["usd_cents"] = int(round(gbp / gbp_per_usd * 100))
