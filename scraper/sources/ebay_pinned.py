@@ -139,20 +139,26 @@ def fetch(gbp_per_usd: float = 0.78) -> list[dict]:
         else:
             by_locale["ebay_us"].append(f"https://www.ebay.com/itm/{item_id}")
 
+    import sys
     out: list[dict] = []
     for src, urls in by_locale.items():
         if not urls:
             continue
         locale = "en-GB" if src == "ebay_uk" else "en-US"
+        print(f"DEBUG: ebay_pinned: rendering {len(urls)} {src} urls", file=sys.stderr, flush=True)
         try:
             htmls = render_many(urls, locale=locale, selector_timeout_ms=8000)
-        except Exception:
+        except Exception as e:
+            print(f"DEBUG: ebay_pinned: render_many raised: {e!r}", file=sys.stderr, flush=True)
             continue
         for url, html in htmls.items():
             if not html:
+                print(f"DEBUG: ebay_pinned: empty html for {url}", file=sys.stderr, flush=True)
                 continue
             row = parse_item(html, src)
             if not row:
+                print(f"DEBUG: ebay_pinned: parse_item returned None for {url} (html={len(html)}b)",
+                      file=sys.stderr, flush=True)
                 continue
             row["url"] = url
             # Pull seller-trust signals from the same HTML.
@@ -164,6 +170,8 @@ def fetch(gbp_per_usd: float = 0.78) -> list[dict]:
             # grey "?" pill; prefer to drop pinned items with no seller
             # info rather than show a useless row.
             if row["seller_positive_pct"] is None and not row["seller_name"]:
+                print(f"DEBUG: ebay_pinned: no seller signals for {url} (title={row['title'][:40]!r})",
+                      file=sys.stderr, flush=True)
                 continue
             # Convert GBP rows to USD using the live FX (filter used a
             # rough 0.78 estimate; this is the precise number).
