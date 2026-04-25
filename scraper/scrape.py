@@ -13,8 +13,7 @@ from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
 from .history import merge_sales
-from .sources import ebay_uk, ebay_us, ebay_us_active
-# ebay_uk_active intentionally not imported — see comment in main().
+from .sources import ebay_uk, ebay_us, ebay_uk_active, ebay_us_active
 
 # Per-source hard ceiling. Patchright's internal timeouts are not
 # always honoured when a page is stuck on a Cloudflare challenge, so we
@@ -161,24 +160,22 @@ def main() -> int:
         })
         source_counts["pricecharting_last_sold"] = 1
 
-    # Currently-active (Buy It Now) listings.
-    #
-    # ebay_uk_active is intentionally disabled: in 5+ days of operation
-    # it has timed out on every single cron (100% failure rate) while
-    # eating 3 minutes per attempt. eBay UK appears to block the BIN
-    # SRP from GitHub Actions IPs in a way that hangs patchright
-    # indefinitely. Re-enable when we have a working bypass.
-    #
-    # ebay_us_active gets one retry on empty/timeout — eBay's bot
-    # detection is intermittent, and a second attempt with a fresh
-    # patchright session often lands.
+    # Currently-active (Buy It Now) listings. Each source gets one
+    # retry on empty/timeout — eBay's bot detection is intermittent
+    # and a second patchright session often lands what the first
+    # missed. ebay_uk_active uses an internal URL fallback chain to
+    # work around the BIN+sort SRP that hangs patchright outright.
     active_rows: list[dict] = []
-    rows = _run_with_timeout("ebay_us_active", lambda: ebay_us_active.fetch())
-    if not rows:
-        print("INFO: ebay_us_active returned 0; retrying once", file=sys.stderr, flush=True)
-        rows = _run_with_timeout("ebay_us_active(retry)", lambda: ebay_us_active.fetch())
-    source_counts["ebay_us_active"] = len(rows)
-    active_rows.extend(rows)
+    for name, fn in (
+        ("ebay_uk_active", lambda: ebay_uk_active.fetch(gbp_per_usd=fx)),
+        ("ebay_us_active", lambda: ebay_us_active.fetch()),
+    ):
+        rows = _run_with_timeout(name, fn)
+        if not rows:
+            print(f"INFO: {name} returned 0; retrying once", file=sys.stderr, flush=True)
+            rows = _run_with_timeout(f"{name}(retry)", fn)
+        source_counts[name] = len(rows)
+        active_rows.extend(rows)
 
     now = dt.datetime.now(dt.timezone.utc).isoformat()
     snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now,

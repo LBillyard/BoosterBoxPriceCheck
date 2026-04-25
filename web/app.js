@@ -80,8 +80,24 @@ function render(snap, history) {
   setStatus(ageHrs);
 
   // ─── Hero ────────────────────────────────────────────────────────
-  const hero = snap.prices.loose || snap.prices.new || snap.prices.sealed
-            || (snap.prices && Object.values(snap.prices)[0]);
+  // Prefer the median of recent_sales (real transactions) over
+  // PriceCharting's "loose" tier — PC's algorithmic number lags real
+  // activity by weeks, so when active asks are £33k+ and recent sales
+  // are £30k+ the £26k loose value reads as wrong. Fall back to PC if
+  // we have fewer than 2 recent sales.
+  const pcLoose = snap.prices.loose || snap.prices.new || snap.prices.sealed
+              || (snap.prices && Object.values(snap.prices)[0]);
+  const recents = (history && history.length ? history : (snap.recent_sales || []))
+                  .filter(s => Number.isFinite(s.gbp) && Number.isFinite(s.usd));
+  let hero = pcLoose;
+  if (recents.length >= 2) {
+    const sortedGbp = recents.map(s => s.gbp).sort((a, b) => a - b);
+    const sortedUsd = recents.map(s => s.usd).sort((a, b) => a - b);
+    const mid = Math.floor(sortedGbp.length / 2);
+    const medianGbp = sortedGbp.length % 2 ? sortedGbp[mid] : (sortedGbp[mid - 1] + sortedGbp[mid]) / 2;
+    const medianUsd = sortedUsd.length % 2 ? sortedUsd[mid] : (sortedUsd[mid - 1] + sortedUsd[mid]) / 2;
+    hero = { gbp: medianGbp, usd: medianUsd };
+  }
   if (hero) {
     animateNumber(document.getElementById("hero-gbp"), hero.gbp, v => fmtGBP.format(Math.round(v)));
     document.getElementById("hero-usd").textContent = fmtUSD.format(hero.usd);

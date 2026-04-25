@@ -25,11 +25,24 @@ from ._ebay_item import fetch_sellers_rendered
 from .ebay_uk import _parse_gbp, _clean_title, _PLACEHOLDER_TITLE
 from .ebay_us import _seller_from_card
 
-URL = (
-    "https://www.ebay.co.uk/sch/i.html"
-    "?_nkw=pokemon+base+set+booster+box+wotc"
-    "&LH_BIN=1&_sop=15&_udlo=10000"
+# URL fallback chain. The original (LH_BIN=1 + _sop=15 + _udlo) was
+# observed to hang patchright 100% of the time — eBay UK appears to
+# treat the BIN-only / lowest-price-first SRP as bot-sensitive and
+# never finishes serving the hydrated page. The other variants drop
+# either LH_BIN, the price floor, or the sort to find an SRP that
+# patchright can render. We try in order; first one that produces any
+# accepted listing wins.
+URL_VARIANTS = (
+    # Default sort (best match), no BIN/sort/floor — most permissive.
+    "https://www.ebay.co.uk/sch/i.html?_nkw=pokemon+base+set+booster+box+wotc",
+    # Vintage-targeted query.
+    "https://www.ebay.co.uk/sch/i.html?_nkw=pokemon+1999+base+set+booster+box+sealed",
+    # All listings (auction + BIN), price ascending, no floor.
+    "https://www.ebay.co.uk/sch/i.html?_nkw=pokemon+base+set+booster+box+wotc&_sop=15",
 )
+# Kept for backwards compatibility with imports / scripts that
+# reference the original constant.
+URL = URL_VARIANTS[0]
 
 
 def parse(html: str, gbp_per_usd: float) -> list[dict]:
@@ -101,18 +114,28 @@ def fetch(gbp_per_usd: float) -> list[dict]:
     items-sold + positive %. Drops listings whose item page didn't
     render — without seller trust signals the user can't judge
     legitimacy.
+
+    Uses a URL fallback chain — the original BIN+sort+floor combo
+    hangs patchright. Tries each URL in order; first one that yields
+    parsed listings (before the seller-info filter) wins. Per-URL
+    timeout is short (30s) so the whole chain fits inside the
+    orchestrator's per-source budget.
     """
-    try:
-        html = render(
-            URL,
-            wait_selector="div.s-card",
-            timeout_ms=45000,
-            selector_timeout_ms=20000,
-            locale="en-GB",
-        )
-    except Exception:
-        return []
-    listings = parse(html, gbp_per_usd)
+    listings: list[dict] = []
+    for url in URL_VARIANTS:
+        try:
+            html = render(
+                url,
+                wait_selector="div.s-card",
+                timeout_ms=30000,
+                selector_timeout_ms=12000,
+                locale="en-GB",
+            )
+        except Exception:
+            continue
+        listings = parse(html, gbp_per_usd)
+        if listings:
+            break
     # Batch item-page renders through patchright — eBay UK item pages
     # now return a JS shell to plain HTTP from datacenter IPs, same as
     # the SRP, so we use the rendered path for both.
