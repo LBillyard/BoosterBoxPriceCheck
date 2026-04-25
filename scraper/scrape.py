@@ -13,16 +13,22 @@ from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
 from .history import merge_sales
-from .sources import ebay_uk, ebay_us, ebay_us_active, ebay_pinned
-# ebay_uk_active is intentionally not imported. Tried 3 URL variants
-# (no filter / vintage query / sort-only) and every single one hung
-# patchright on the GitHub Actions IP range. eBay UK refuses to serve
-# active-listing SRPs to datacenter IPs regardless of URL shape.
-# Wasted 3 min/cron for zero rows. Re-add when a working bypass lands.
+from .sources import ebay_uk, ebay_us, ebay_us_active
+# Two eBay UK sources are intentionally disabled:
 #
-# As a workaround, ebay_pinned fetches user-supplied item-page URLs
-# directly (item pages DO render reliably for both .co.uk and .com).
-# Add tracked listings in scraper/sources/ebay_pinned.py.
+# - ebay_uk_active: tried 3 URL variants, all hung patchright on the
+#   GH IP range. eBay UK refuses active-listing SRPs to datacenter IPs.
+#
+# - ebay_pinned: aimed to bypass the SRP block by fetching item pages
+#   directly, but eBay applies the same bot detection — patchright
+#   gets a 13KB JS-shell that never hydrates, then hangs on cleanup
+#   for the full source-timeout window. 90s wasted per cron for zero
+#   rows.
+#
+# Both will need a residential proxy or eBay's official Browse API
+# to land. For now we accept the gap: US listings + PriceCharting
+# cover the headline numbers, and the user can add UK entries via
+# a static overlay (out of scope of this orchestrator).
 
 # Per-source hard ceiling. Patchright's internal timeouts are not
 # always honoured when a page is stuck on a Cloudflare challenge, so we
@@ -182,12 +188,7 @@ def main() -> int:
     source_counts["ebay_us_active"] = len(rows)
     active_rows.extend(rows)
 
-    # User-pinned listings (workaround for the blocked ebay_uk SRP).
-    # Each is fetched as an item page directly. Dedupe is handled by
-    # build_snapshot's URL-based merge later.
-    pinned = _run_with_timeout("ebay_pinned", lambda: ebay_pinned.fetch(gbp_per_usd=fx))
-    source_counts["ebay_pinned"] = len(pinned)
-    active_rows.extend(pinned)
+    # ebay_pinned removed — see import-line comment for why.
 
     now = dt.datetime.now(dt.timezone.utc).isoformat()
     snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now,
