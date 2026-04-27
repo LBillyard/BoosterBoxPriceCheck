@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-04-26T12:55:21.508884+00:00",
+  "scraped_at": "2026-04-27T02:10:57.418672+00:00",
   "fx": {
     "usd_to_gbp": 0.74115,
-    "fetched_at": "2026-04-26T12:55:21.508884+00:00"
+    "fetched_at": "2026-04-27T02:10:57.418672+00:00"
   },
   "prices": {
     "loose": {
@@ -34,7 +34,7 @@
       "usd": 42500.0,
       "gbp": 31498.88,
       "date": "2026-03-29",
-      "url": "https://www.ebay.com/itm/318035107020?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ4XK6PYMEFF8E1SQ223K9PS&hash=item4a0c5e9ccc:g:NjgAAeSwWD5pvYzG&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDJHDOUzH7LTN1%2F1y7uI80LKFJOFkKRCTLlrkvHPNMas%2Fi%2F5hbwaWeDyE5kIyk61KAx63R7khZigXShBte4amtBZSD1EhiEAPllnXpamlWNt%2Fb4QvlWumUHYQnObhZKKyM4zCD4MDicSuXZlKAFdN3KWdB6MMvlXGq2Pl96JyrLmJUGtF8DYGANTXc6sWQQlrUIP4VTqu5lO7AM%2FIyf%2F5tcETTdKNLU49idYTNKgSox%2Fw05ITgn4b3H9m%2FqAWOZNDaGaGoH5ZRrdse1XBWKMX8YTJdJRlMcG0B4ru2MALoT9g%3D%3D%7Ctkp%3ABk9SR9DrzJ25Zw",
+      "url": "https://www.ebay.com/itm/318035107020?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ6B4J9KQVBHC41D7Q4RB3TF&hash=item4a0c5e9ccc:g:NjgAAeSwWD5pvYzG&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDJHDOUzH7LTN1%2F1y7uI80LKFJOFkKRCTLlrkvHPNMaszNlsvUcKMsPDxrEX2xWt28FfbKOg%2F6ooewvVo%2FwNWUKFf4U3QkN4s%2F6Zhw6oVtq57VgJnohp1%2BPRxyCJgaezS8pk7T6lj%2B%2BPKfWuNCTkzXwH0iay3CGAWOZQ%2BHa4LFP3lOEwgypwZIgUn66SpBYtWXNh64ysky%2FRQlEEFe7HVYsquqvOnUPA0%2BBg3ihwt3HuTXHNtJbCBm3rZcBR%2Bbsmg88NCMkuNC9u3Gs%2BXcCgL3x%2FJzJhURr%2FO8xY1NkMCyMMg%3D%3D%7Ctkp%3ABk9SR_qkksu5Zw",
       "seller_name": "tca_gaming",
       "seller_feedback": 109600,
       "seller_positive_pct": 100.0
@@ -45,7 +45,7 @@
       "usd": 36600.0,
       "gbp": 27126.09,
       "date": "2026-03-10",
-      "url": "https://www.ebay.com/itm/377006661568?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ4XK6PZD1FX6GT1ZJ8SKDHA&hash=item57c7591fc0:g:La4AAeSwWK1ppy9P&itmprp=enc%3AAQALAAABEGfYFPkwiKCW4ZNSs2u11xBxqGHLb%2FnIE3aY4O1fXBOwccn0mQbtf93zv4SXzNpRfXeFuUhXg%2B7DOrMdH2Ik7No%2BT3X3VuEXH%2B%2FSkX8hW5H6Vju1WXqGBLRudk6l5mF45QpooUFO2B5CSPJ%2BaX2EClucwGHZj9wKBiqV%2FiwfdhzZJLc8usDaCbEUtNotJKlIFBXgb%2FiQGKNMkqnZmoNL2xw%2BaMlSgE0PFjkzy--TkoDfDTGqJrvvGAaQrCiRghYI4UpQMJ6IVT1pEMTkZ2xQkzaGzUdcVanRBqiYFkjUzFe9b65xglf6BlDQzM21iAedbtftP7jYsayuZZ6M19ZugPVdxdd820VovcnSNYMKnCb9%7Ctkp%3ABk9SR9TrzJ25Zw",
+      "url": "https://www.ebay.com/itm/377006661568?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ6B4J9MENFD2TAAPP40NMC4&hash=item57c7591fc0:g:La4AAeSwWK1ppy9P&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDuyUXgnVnYMtY%2B2A38veJipsi%2FT2jo5Lk41mjhwks%2F9BhUvVyxQKJ%2B41cgY2iNsOf2Yb%2FlbUQAqgiMHy0Nw5hi5n8fwLkjyTweAwqhMY83T1AZED%2FputN0PlUgBTjC3EvjydWPtc09tuSWP4cTUp0zve8dOsbhh9pLOHrRQuVdfB7AnKKV8ZLZMKz%2B0nI%2BnLMEpCOkaCD4OBTaMhFmVIHvpZH5P0WhYEelp47VZJGao%2F7grpjXQSYIBQytda9YxvPu1YBO%2BwL9g5SYo0lewsgP5mWG569wC6w04xqL9ZLZfQ%3D%3D%7Ctkp%3ABk9SR_6kksu5Zw",
       "seller_name": "probstein123",
       "seller_feedback": 1500000,
       "seller_positive_pct": 99.5
@@ -56,18 +56,29 @@
       "usd": 35000.0,
       "gbp": 25940.25,
       "date": "2026-03-01",
-      "url": "https://www.ebay.com/itm/277723834269?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ4XK6Q08S5V79313MY53Y06&hash=item40a9a1679d:g:WQkAAeSwHappjzcQ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBOgtW0UoXJTJ5xYbDbrk7SY%2FfiR4CR7AcefCFDAl6qA1JNH4pexK0YbbPUsUfBg4fg1o0rl6px04P0lThzh65RWQCLADNqyOuAQRcj19CS5TLSbLyxOzLf1ykLdi%2Fw07DuEFsa5O1EPJgoRltmYf4UIwy2fAhqFcj5OcmM0ZEdWLdXXalq%2BhC1oLUJKhagYb%2FH5axm7PIc43VRpkxinctrWJaq7PNv10DVg28a375Tenjlw0%2F7I7NztkDPdT8crCbYZNvyuGoy%2BbTfziVcCnkfIe4cNYRu4OE44Vvsco9VrQ%3D%3D%7Ctkp%3ABk9SR9brzJ25Zw",
+      "url": "https://www.ebay.com/itm/277723834269?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ6B4J9NA30WQYSJ77E7NQTC&hash=item40a9a1679d:g:WQkAAeSwHappjzcQ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBOgtW0UoXJTJ5xYbDbrk7SY%2FfiR4CR7AcefCFDAl6qA9Ya8JHWzvFt8VEYy10gAMfpxZzmk9oYzxLMJtwEqiPT4i4Wx2a18UwV7Q67qN%2FYYH2D5KHbMd729CL0wNWcFBjzGF%2BlL%2FRuo9hqEpGIdlMzZedR2eKphCkyzeqsGIYwe5Ps8zbwa%2F7WDYQhIsotedy26M0jMN9Xt3YFVTaQxnWM4J85q4GDrJG8WxiRqoR6wr1KOFYNAibIj2YlOmvqp45paqa0COVxhz91OLOlAOKOu1exTTcD5md9els5Vzakcg%3D%3D%7Ctkp%3ABk9SR_6kksu5Zw",
       "seller_name": "tca_gaming",
       "seller_feedback": 109600,
       "seller_positive_pct": 100.0
     }
   ],
-  "active_listings": [],
+  "active_listings": [
+    {
+      "source": "ebay_us",
+      "title": "XRAY Base Set SEALED Booster Box WOTC Authentic Guarantee LOA (Pokemon Cards)",
+      "usd": 57000.0,
+      "gbp": 42245.55,
+      "url": "https://www.ebay.com/itm/267648591048?_skw=pokemon+base+set+booster+box+wotc&epid=9026714747&itmmeta=01KQ6B6Z0DKSRW565JEQFTZ1EG&hash=item3e511964c8%3Ag%3A9ZgAAeSw-dNp6jgd&itmprp=enc%3AAQALAAABAGfYFPkwiKCW4ZNSs2u11xDG%2FQVyLyTc3V3fM%2BovIGsg9g0zq4TgnL9Qg3Tw0subV2YcAAU0s4NIkAEgr3GLkh5Apj%2F2vNBjgB0R38%2FdjIp6AE0%2FHpLjbcMqP1IA0tpJINyRgBGt06SCv763MAicf2r6BGCZvJ0%2F%2B0DWqkQwPEnkNpMApKHIpgHBrY6Q6%2B6MPh3Oxta470U7LcfxARVFwfqasDZeWk2LbNjaCQPdKJwWeK0%2BbcY2LtciXQpg63MbQf4OSovGWq7CqasyOhyrhegwhKFDu3aZiLU%2FrS2%2Fxc1G3Qibzxs4jkVXr3GvOqbz%2FLcFTa72XiMRVM001H14frI%3D%7Ctkp%3ABk9SR6zwm8u5Zw&LH_BIN=1",
+      "seller_name": "941 Sports Cards",
+      "seller_feedback": 110000,
+      "seller_positive_pct": 99.9
+    }
+  ],
   "purchase_price_gbp": 29253.05,
   "source_counts": {
     "ebay_uk": 0,
     "ebay_us": 3,
     "pricecharting_last_sold": 1,
-    "ebay_us_active": 0
+    "ebay_us_active": 1
   }
 }
