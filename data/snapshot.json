@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-04-28T02:17:41.655734+00:00",
+  "scraped_at": "2026-04-28T13:53:36.935590+00:00",
   "fx": {
     "usd_to_gbp": 0.73691,
-    "fetched_at": "2026-04-28T02:17:41.655734+00:00"
+    "fetched_at": "2026-04-28T13:53:36.935590+00:00"
   },
   "prices": {
     "loose": {
@@ -11,18 +11,18 @@
     }
   },
   "last_sold": {
-    "usd": 41250.0,
-    "gbp": 30397.54,
-    "date": "2026-04-16"
+    "usd": 42100.0,
+    "gbp": 31023.91,
+    "date": "2026-04-28"
   },
   "listings": [],
   "recent_sales": [
     {
       "source": "pricecharting",
       "title": "Heritage / auction (via PriceCharting)",
-      "usd": 41250.0,
-      "gbp": 30397.54,
-      "date": "2026-04-16",
+      "usd": 42100.0,
+      "gbp": 31023.91,
+      "date": "2026-04-28",
       "url": "https://www.pricecharting.com/game/pokemon-base-set/booster-box",
       "seller_name": null,
       "seller_feedback": null,
@@ -30,11 +30,22 @@
     },
     {
       "source": "ebay_us",
+      "title": "Pokemon TCG WOTC Base Set Unlimited Booster Box SEALED NEW w/Acrylic Case",
+      "usd": 42100.0,
+      "gbp": 31023.91,
+      "date": "2026-04-27",
+      "url": "https://www.ebay.com/itm/377121371150?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQA5NMJFHBJE160Y7HDRAT23&hash=item57ce2f740e:g:luQAAeSwn8tp4nor&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDAU9Z%2B2usNtuT6g24aInY4zoto0vScdxbSsz7wtY9nhGbfsuEGSPzNQgxfRBfWjjwRBe3wXwxndwO74iplRpkH0ejxIQEADN9NKAVHhzsc586VPoYLDIxx2DGICzlWNSHk0b3%2BWIdZGnh4rcDitiIt50TXjke%2B6qOTX9s2gOkDgscTPVQuLiXr%2BqGD8k0oiOLrLLXnoIfN2RuhnVlZds1qXxVj%2FF7Ty5UZF3e0DYsLB22GqGts5Fr5emjBgTs6kv1Rwv3WXL5Bi%2BqedijN%2FDCz6WHKKBUErgi6UJMNb4WRjg%3D%3D%7Ctkp%3ABk9SR6jJ1sW6Zw",
+      "seller_name": "probstein123",
+      "seller_feedback": 1500000,
+      "seller_positive_pct": 99.5
+    },
+    {
+      "source": "ebay_us",
       "title": "Original WOTC Base Set SEALED Booster Box GREEN WINGS (Pokemon Cards)",
       "usd": 42500.0,
       "gbp": 31318.67,
       "date": "2026-03-29",
-      "url": "https://www.ebay.com/itm/318035107020?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ8XX0JHYDAV2FYB6ZBD49XD&hash=item4a0c5e9ccc:g:NjgAAeSwWD5pvYzG&itmprp=enc%3AAQALAAABEGfYFPkwiKCW4ZNSs2u11xB4ihKQ%2Fo0KtvARBnPxCzLJgKnvDUwmY8RR8lc%2F33AmqyuC5B1AbnvGTP2ZD2NDNBN21VdrczCyNWyGQWDQk6Tg5%2FnJRSKREkQie7dwZHQTkumQOztaICYbP4q6R44yA92rNqYGB5MrSIpSNBcI%2BAFMhStvQYKADezqhLJqvNct8I%2BUsJPz0zP1EMiqDULXG3x4QCsGVY21SzdAPxsUNT7N7WA3UpZyhpSh1Kyl3PN4n4sIp7vSd6qU69Uzi9YAGwXkjAU7sueVpI5hpf09CWTVSm7c0SiknSRdIhLZ1dG4XxqN%2FSzYrxdeHWIQ3mTN32S%2F%2BDWWqzlw0yQbJAXqqakD%7Ctkp%3ABk9SR7aJ9J26Zw",
+      "url": "https://www.ebay.com/itm/318035107020?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQA5NMJGGFZ5VKCAYTD8KWC2&hash=item4a0c5e9ccc:g:NjgAAeSwWD5pvYzG&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDJHDOUzH7LTN1%2F1y7uI80LKFJOFkKRCTLlrkvHPNMas8CYxQSAW1qvdd1VLzUuoPtcKnYrBlnHSCmWFlQF6KpH1Yb91htDfZvEEA9hQibNqKufgWWf5sGIpCqkpkFkz3Jz4JGTkOOucaR4Yp%2BoJnt%2BhKOhujUtQz%2BHjxHh3WF1han9WeouFvhuErA1J%2FJ68dtVPhpB40wn1aQcW8rwkD0nAkBBN%2BYvI2n91eSaYozHssRcNFLRdESZ0PmWbGAJqPdQuQK2sn%2F6lOI6MjKi0ADVuHRnrQi1o%2F7j4uP7eDoD9A%3D%3D%7Ctkp%3ABk9SR6rJ1sW6Zw",
       "seller_name": "tca_gaming",
       "seller_feedback": 109600,
       "seller_positive_pct": 100.0
@@ -45,7 +56,7 @@
       "usd": 36600.0,
       "gbp": 26970.91,
       "date": "2026-03-10",
-      "url": "https://www.ebay.com/itm/377006661568?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ8XX0JJ9HAZ2K8PRGA9DGGV&hash=item57c7591fc0:g:La4AAeSwWK1ppy9P&itmprp=enc%3AAQALAAABEGfYFPkwiKCW4ZNSs2u11xBxqGHLb%2FnIE3aY4O1fXBOwccn0mQbtf93zv4SXzNpRfXeFuUhXg%2B7DOrMdH2Ik7No%2BT3X3VuEXH%2B%2FSkX8hW5H6Vju1WXqGBLRudk6l5mF45QpooUFO2B5CSPJ%2BaX2EClt1ngwf8Cv186NeOT%2FghJ7n2BGR0NSKpiJcE%2FV60bwf4aNHV6RIGjaoDGoW5NLNQl3twAMlAt%2F4eCrRLLT9CQAxozHKWTUu33JMIBPMVjN25Clt08MN6SjL3m2EF%2F5uTt3d8HxYoToBtHiEzU8GU7PMgHD%2Bh403g1kEZLTtsJMdD%2F6nQV2RmEsxTfQ1LqL2tul0VMLe2lpiise2oMfwuXTR%7Ctkp%3ABk9SR7iJ9J26Zw",
+      "url": "https://www.ebay.com/itm/377006661568?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQA5NMJGRDY6PMQJ3ES9ABB0&hash=item57c7591fc0:g:La4AAeSwWK1ppy9P&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDuyUXgnVnYMtY%2B2A38veJipsi%2FT2jo5Lk41mjhwks%2F9Ap73kooemhAxi6Pftu6Wi7gxG%2BmW%2FapIPCBiU%2BA3CdtSS9j27Yp7duT4XqGsPh2%2BaZwF4HnhwSICU3zZDx%2FpeiaIUWc149kOv0N0Mlvo5fp4c%2BC34edw5z1VBXJmsec3pEtEacY27SE29Lubg0c7jnpYqLc7KiZn%2BIx%2BtLEO8umH1iXPt0Kxion9Uag8tFM8dfCPxfStWbqIg0a1KezMxYV10LmRAk6xm43w%2FxrOeGNJYvsTs5GsrosRBdQRhFF4g%3D%3D%7Ctkp%3ABk9SR6rJ1sW6Zw",
       "seller_name": "probstein123",
       "seller_feedback": 1500000,
       "seller_positive_pct": 99.5
@@ -56,7 +67,7 @@
       "usd": 35000.0,
       "gbp": 25791.85,
       "date": "2026-03-01",
-      "url": "https://www.ebay.com/itm/277723834269?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQ8XX0JJ8XHWV1SJ2C1K9K46&hash=item40a9a1679d:g:WQkAAeSwHappjzcQ&itmprp=enc%3AAQALAAABEGfYFPkwiKCW4ZNSs2u11xCF3ZkWiHEKY6BCpNAbjmvI7kCmkdN%2FQp7bfsbClB3O9a0gwmFocrCxnWeJhn5%2Fb02S1ndCsxSVPaOwR9OoWwKKFu57Q92hPpjynKWTP%2FDZDGColznDxUAls6IPEAyRrOp9XjvFl1Q3Qs91knoy8NiXdome5G%2FqOKCJKAW9odyGsa%2BCfa5TBnm4lnsNIadYe36e6el%2FE0xM4Alw7ihYsMLl%2BIACh2kmN2%2F3PY0Y7sq9bxaukuNhsdUPA8aDZiatwkF1T1o5LRqPeibvQh4wKpr0I%2FmUfs5M2%2ByaqpVdUXt085G1%2BmYSWPRNuZIU9pj7xYq9bj9de2paDsf9vfZF0Ws5%7Ctkp%3ABk9SR7iJ9J26Zw",
+      "url": "https://www.ebay.com/itm/277723834269?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQA5NMJG03SAMKVG03Y8H7DS&hash=item40a9a1679d:g:WQkAAeSwHappjzcQ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBOgtW0UoXJTJ5xYbDbrk7SY%2FfiR4CR7AcefCFDAl6qA2esQGYN3P88RNTJflQFtkvwNOLaYK3205deqIbGf%2FxgdqBRuVb%2FW%2FxZp%2Bk01nSY%2Fo7Q6m92zQfCQCL6a9O160IRs3QjbFi70QdUV4uj%2FJ8%2BtqcsUgrHLvA8v3YYt8eGIKYK3fR0upv%2Bftmf1d4Zp4CJW6s%2FvAVfziKu8mLFU4cKYcLHZbutwpeFsntuIPz9zASwi9AKCR47%2FJkD7uxh04%2B2UdANiznZpdV9gNu%2B919jW3nL9XyOPNbZCcm8OPS43g%3D%3D%7Ctkp%3ABk9SR6rJ1sW6Zw",
       "seller_name": "tca_gaming",
       "seller_feedback": 109600,
       "seller_positive_pct": 100.0
@@ -66,7 +77,7 @@
   "purchase_price_gbp": 29253.05,
   "source_counts": {
     "ebay_uk": 0,
-    "ebay_us": 3,
+    "ebay_us": 4,
     "pricecharting_last_sold": 1,
     "ebay_us_active": 0
   }
