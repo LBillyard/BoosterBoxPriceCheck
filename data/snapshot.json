@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-04-29T02:28:21.979547+00:00",
+  "scraped_at": "2026-04-29T13:31:42.000201+00:00",
   "fx": {
     "usd_to_gbp": 0.74242,
-    "fetched_at": "2026-04-29T02:28:21.979547+00:00"
+    "fetched_at": "2026-04-29T13:31:42.000201+00:00"
   },
   "prices": {
     "loose": {
@@ -27,57 +27,13 @@
       "seller_name": null,
       "seller_feedback": null,
       "seller_positive_pct": null
-    },
-    {
-      "source": "ebay_us",
-      "title": "Pokemon TCG WOTC Base Set Unlimited Booster Box SEALED NEW w/Acrylic Case",
-      "usd": 42100.0,
-      "gbp": 31255.88,
-      "date": "2026-04-27",
-      "url": "https://www.ebay.com/itm/377121371150?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQBGVMB5RHNMF272RFF9DYZZ&hash=item57ce2f740e:g:luQAAeSwn8tp4nor&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDAU9Z%2B2usNtuT6g24aInY4zoto0vScdxbSsz7wtY9nhCSJGryQOhNjjqvhTYG%2F3YpN6kUjhdb9Qypax57TWLvL%2BMbLSozb0RomgLFYFE4rTJDv1pqFKcWuBq6TwHgdtBCiQhFzVXLsT7J6PVPBrATIx5tUvKzkRvgPxzb7spdNPLbAX1qOFvtCTfSdQPHsn9zTxhsPSvc9Dz5T%2FgrZWHjGsm7%2FLFOhF2VmBGT9QKI0PX59%2BcT%2F0zdz7%2FF95WWqpG%2BQRsgrV6OJzzaD8PXuHvWb1aB4DobA4nZvIV2luixe8g%3D%3D%7Ctkp%3ABk9SR-TF7vC6Zw",
-      "seller_name": "probstein123",
-      "seller_feedback": 1500000,
-      "seller_positive_pct": 99.5
-    },
-    {
-      "source": "ebay_us",
-      "title": "Original WOTC Base Set SEALED Booster Box GREEN WINGS (Pokemon Cards)",
-      "usd": 42500.0,
-      "gbp": 31552.85,
-      "date": "2026-03-29",
-      "url": "https://www.ebay.com/itm/318035107020?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQBGVMB7Q6QMBR6J2CW2DZ9Q&hash=item4a0c5e9ccc:g:NjgAAeSwWD5pvYzG&itmprp=enc%3AAQALAAABEGfYFPkwiKCW4ZNSs2u11xB4ihKQ%2Fo0KtvARBnPxCzLJgKnvDUwmY8RR8lc%2F33AmqyuC5B1AbnvGTP2ZD2NDNBN21VdrczCyNWyGQWDQk6Tg5%2FnJRSKREkQie7dwZHQTkumQOztaICYbP4q6R44yA93OePIlCZVbjlDyPPIgZyEeYUwuLzjnsmGr0peOqWhYz%2FQ%2FUuQOJKZgy8x0iXIt0lFdA7cv6889dopP7CSONGmU1ERRi%2BnWJVEaEUB6Z%2FvULucxp45TGX7k0xsLF3Kp5es6lfW%2FW8GVnVukQ6FIZkZjQT5C0%2FOey9UQ%2BtZwJWd%2BLM5Uo%2B%2FWea6vutpeGqNJlSav0EH7vDk%2BWwbkGxyNcDW8%7Ctkp%3ABk9SR-jF7vC6Zw",
-      "seller_name": "tca_gaming",
-      "seller_feedback": 109600,
-      "seller_positive_pct": 100.0
-    },
-    {
-      "source": "ebay_us",
-      "title": "Pokemon EN Base Set Unlimited Booster Box WOTC Factory Sealed w/ Acrylic Case",
-      "usd": 36600.0,
-      "gbp": 27172.57,
-      "date": "2026-03-10",
-      "url": "https://www.ebay.com/itm/377006661568?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQBGVMB9524D63TWM9GDKG3P&hash=item57c7591fc0:g:La4AAeSwWK1ppy9P&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xDuyUXgnVnYMtY%2B2A38veJipsi%2FT2jo5Lk41mjhwks%2F9KPMsCdYQNjpXH%2B2n5Yv9sxd33E8MVvL95Wp5X6zSp2jA4XUGRubNNM9qibSXrhwnJ6HYQ%2FP2pfhVu9wSiIac5ca0z8KrJ9J1ozSdnCBPAG11O8i41Yo6GjdPqDdfCUB6E58LGnF1PMOfiNxOgoOpJlEiMJ8NC8xdl%2BBMltsoep87%2FxSEAR7YHB5L9t%2BWsYZD7%2FUk622Jcp%2BRZGcrqEPtZnipi4u2ZyZYwZ1rgb%2FwHhQGsmZfr2LzCRd2lXnWq7rbg%3D%3D%7Ctkp%3ABk9SR-zF7vC6Zw",
-      "seller_name": "probstein123",
-      "seller_feedback": 1500000,
-      "seller_positive_pct": 99.5
-    },
-    {
-      "source": "ebay_us",
-      "title": "Original WOTC Base Set SEALED Booster Box (Pokemon Cards)",
-      "usd": 35000.0,
-      "gbp": 25984.7,
-      "date": "2026-03-01",
-      "url": "https://www.ebay.com/itm/277723834269?_skw=pokemon+base+set+booster+box+wotc+sealed&itmmeta=01KQBGVMB98E90F4VVHGFV2KKA&hash=item40a9a1679d:g:WQkAAeSwHappjzcQ&itmprp=enc%3AAQALAAAA8GfYFPkwiKCW4ZNSs2u11xBOgtW0UoXJTJ5xYbDbrk7SY%2FfiR4CR7AcefCFDAl6qAwTl5YXPb2ZVkD9NiC4ejJ%2BOSg8AuVLrOY4KqAiWziQOeDKMnbgk7W2K3ZHJAd6rckBJvfI9fzTMfqN2lWWVQzrGTWugSW7mb2useWvRKF2Bp8ai%2BFD56R2NZA431rtFSgtrbsngz6lGv6nr6rcS8AaUnMUIoXjhRd0lTR7mjTr4PEFRPkW%2BGksco2HfU0xHqlu3cMATn6wLXS2BWtZkcNwLhnRq5MdPosj5pj6vbJO3w3f9f721IFeLNUi15TNi3g%3D%3D%7Ctkp%3ABk9SR-7F7vC6Zw",
-      "seller_name": "tca_gaming",
-      "seller_feedback": 109600,
-      "seller_positive_pct": 100.0
     }
   ],
   "active_listings": [],
   "purchase_price_gbp": 29253.05,
   "source_counts": {
     "ebay_uk": 0,
-    "ebay_us": 4,
+    "ebay_us": 0,
     "pricecharting_last_sold": 1,
     "ebay_us_active": 0
   }
