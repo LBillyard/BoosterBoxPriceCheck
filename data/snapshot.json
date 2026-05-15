@@ -1,19 +1,19 @@
 {
-  "scraped_at": "2026-05-14T13:55:32.191609+00:00",
+  "scraped_at": "2026-05-15T02:36:22.426540+00:00",
   "fx": {
-    "usd_to_gbp": 0.74019,
-    "fetched_at": "2026-05-14T13:55:32.191609+00:00"
+    "usd_to_gbp": 0.7402,
+    "fetched_at": "2026-05-15T02:36:22.426540+00:00"
   },
   "prices": {
     "loose": {
       "usd": 36251.0,
-      "gbp": 26832.63
+      "gbp": 26832.99
     }
   },
   "last_sold": {
     "usd": 36251.0,
-    "gbp": 26832.63,
-    "date": "2026-04-30"
+    "gbp": 26832.99,
+    "date": "2026-05-14"
   },
   "listings": [],
   "recent_sales": [
@@ -21,8 +21,8 @@
       "source": "pricecharting",
       "title": "Heritage / auction (via PriceCharting)",
       "usd": 36251.0,
-      "gbp": 26832.63,
-      "date": "2026-04-30",
+      "gbp": 26832.99,
+      "date": "2026-05-14",
       "url": "https://www.pricecharting.com/game/pokemon-base-set/booster-box",
       "seller_name": null,
       "seller_feedback": null,
