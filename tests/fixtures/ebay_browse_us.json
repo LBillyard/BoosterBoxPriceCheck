@@ -1,0 +1,153 @@
+{
+  "href": "https://api.ebay.com/buy/browse/v1/item_summary/search?q=pokemon%20base%20set%20booster%20box%20wotc%20sealed&filter=price:%5B15000..%5D,priceCurrency:USD,buyingOptions:%7BFIXED_PRICE%7D&limit=50",
+  "total": 5,
+  "limit": 50,
+  "offset": 0,
+  "itemSummaries": [
+    {
+      "itemId": "v1|115678901234|0",
+      "title": "Pokemon Base Set Booster Box WOTC Sealed 1999 Unlimited 36 Packs",
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/abcAAOSwexampleA/s-l500.jpg"
+      },
+      "price": {
+        "value": "35000.00",
+        "currency": "USD"
+      },
+      "itemWebUrl": "https://www.ebay.com/itm/115678901234",
+      "itemCreationDate": "2026-05-10T12:00:00.000Z",
+      "condition": "New",
+      "conditionId": "1000",
+      "buyingOptions": ["FIXED_PRICE"],
+      "categories": [
+        {"categoryId": "183454", "categoryName": "Pokémon TCG Sealed Booster Boxes"}
+      ],
+      "leafCategoryIds": ["183454"],
+      "itemLocation": {
+        "postalCode": "100**",
+        "country": "US"
+      },
+      "listingMarketplaceId": "EBAY_US",
+      "seller": {
+        "username": "vintage_tcg_vault",
+        "feedbackPercentage": "99.8",
+        "feedbackScore": 4521
+      }
+    },
+    {
+      "itemId": "v1|115678901235|0",
+      "title": "PSA Graded Pokemon Base Set Booster Box WOTC Sealed 1999 BGS 9.5",
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/defAAOSwexampleB/s-l500.jpg"
+      },
+      "price": {
+        "value": "48000.00",
+        "currency": "USD"
+      },
+      "itemWebUrl": "https://www.ebay.com/itm/115678901235",
+      "itemCreationDate": "2026-05-08T18:30:00.000Z",
+      "condition": "New",
+      "conditionId": "1000",
+      "buyingOptions": ["FIXED_PRICE"],
+      "categories": [
+        {"categoryId": "183454", "categoryName": "Pokémon TCG Sealed Booster Boxes"}
+      ],
+      "leafCategoryIds": ["183454"],
+      "itemLocation": {
+        "postalCode": "902**",
+        "country": "US"
+      },
+      "listingMarketplaceId": "EBAY_US",
+      "seller": {
+        "username": "graded_grail_shop",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 1287
+      }
+    },
+    {
+      "itemId": "v1|115678901236|0",
+      "title": "Pokemon Base Set Booster Box WOTC 1999 Sealed Mint Condition",
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/ghiAAOSwexampleC/s-l500.jpg"
+      },
+      "price": {
+        "value": "37500.00",
+        "currency": "USD"
+      },
+      "itemWebUrl": "https://www.ebay.com/itm/115678901236",
+      "itemCreationDate": "2026-05-12T09:15:00.000Z",
+      "condition": "New",
+      "conditionId": "1000",
+      "buyingOptions": ["FIXED_PRICE"],
+      "categories": [
+        {"categoryId": "183454", "categoryName": "Pokémon TCG Sealed Booster Boxes"}
+      ],
+      "leafCategoryIds": ["183454"],
+      "itemLocation": {
+        "postalCode": "606**",
+        "country": "US"
+      },
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|115678901237|0",
+      "title": "Pokemon Japanese Base Set Booster Box Sealed WOTC Era Original",
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/jklAAOSwexampleD/s-l500.jpg"
+      },
+      "price": {
+        "value": "25000.00",
+        "currency": "USD"
+      },
+      "itemWebUrl": "https://www.ebay.com/itm/115678901237",
+      "itemCreationDate": "2026-05-11T22:45:00.000Z",
+      "condition": "New",
+      "conditionId": "1000",
+      "buyingOptions": ["FIXED_PRICE"],
+      "categories": [
+        {"categoryId": "183454", "categoryName": "Pokémon TCG Sealed Booster Boxes"}
+      ],
+      "leafCategoryIds": ["183454"],
+      "itemLocation": {
+        "postalCode": "100**",
+        "country": "JP"
+      },
+      "listingMarketplaceId": "EBAY_US",
+      "seller": {
+        "username": "tokyo_card_imports",
+        "feedbackPercentage": "99.2",
+        "feedbackScore": 873
+      }
+    },
+    {
+      "itemId": "v1|115678901238|0",
+      "title": "Pokemon Base Set Booster Box WOTC Sealed Unlimited English 1999",
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/mnoAAOSwexampleE/s-l500.jpg"
+      },
+      "price": {
+        "value": "36200.00",
+        "currency": "USD"
+      },
+      "itemWebUrl": "https://www.ebay.com/itm/115678901238",
+      "itemCreationDate": "2026-05-13T14:20:00.000Z",
+      "condition": "New",
+      "conditionId": "1000",
+      "buyingOptions": ["FIXED_PRICE"],
+      "categories": [
+        {"categoryId": "183454", "categoryName": "Pokémon TCG Sealed Booster Boxes"}
+      ],
+      "leafCategoryIds": ["183454"],
+      "itemLocation": {
+        "postalCode": "331**",
+        "country": "US"
+      },
+      "listingMarketplaceId": "EBAY_US",
+      "seller": {
+        "username": "sealed_set_supply",
+        "feedbackPercentage": "99.5",
+        "feedbackScore": 2104
+      }
+    }
+  ]
+}

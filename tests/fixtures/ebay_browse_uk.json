@@ -1,0 +1,98 @@
+{
+  "href": "https://api.ebay.com/buy/browse/v1/item_summary/search?q=pokemon%20base%20set%20booster%20box%20wotc%20sealed&filter=price:%5B10000..%5D,priceCurrency:GBP,buyingOptions:%7BFIXED_PRICE%7D&limit=50",
+  "total": 3,
+  "limit": 50,
+  "offset": 0,
+  "itemSummaries": [
+    {
+      "itemId": "v1|225678901234|0",
+      "title": "Pokemon Base Set Booster Box WOTC Sealed 1999 Unlimited UK Seller",
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/pqrAAOSwexampleF/s-l500.jpg"
+      },
+      "price": {
+        "value": "28000.00",
+        "currency": "GBP"
+      },
+      "itemWebUrl": "https://www.ebay.co.uk/itm/225678901234",
+      "itemCreationDate": "2026-05-09T10:00:00.000Z",
+      "condition": "New",
+      "conditionId": "1000",
+      "buyingOptions": ["FIXED_PRICE"],
+      "categories": [
+        {"categoryId": "183454", "categoryName": "Pokémon TCG Sealed Booster Boxes"}
+      ],
+      "leafCategoryIds": ["183454"],
+      "itemLocation": {
+        "postalCode": "SW1**",
+        "country": "GB"
+      },
+      "listingMarketplaceId": "EBAY_GB",
+      "seller": {
+        "username": "british_booster_co",
+        "feedbackPercentage": "99.7",
+        "feedbackScore": 3258
+      }
+    },
+    {
+      "itemId": "v1|225678901235|0",
+      "title": "PSA 9 Pokemon Base Set Booster Box WOTC Graded Sealed 1999",
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/stuAAOSwexampleG/s-l500.jpg"
+      },
+      "price": {
+        "value": "32000.00",
+        "currency": "GBP"
+      },
+      "itemWebUrl": "https://www.ebay.co.uk/itm/225678901235",
+      "itemCreationDate": "2026-05-11T16:45:00.000Z",
+      "condition": "New",
+      "conditionId": "1000",
+      "buyingOptions": ["FIXED_PRICE"],
+      "categories": [
+        {"categoryId": "183454", "categoryName": "Pokémon TCG Sealed Booster Boxes"}
+      ],
+      "leafCategoryIds": ["183454"],
+      "itemLocation": {
+        "postalCode": "M1***",
+        "country": "GB"
+      },
+      "listingMarketplaceId": "EBAY_GB",
+      "seller": {
+        "username": "manchester_mint",
+        "feedbackPercentage": "99.4",
+        "feedbackScore": 1492
+      }
+    },
+    {
+      "itemId": "v1|225678901236|0",
+      "title": "Pokemon Base Set Booster Box WOTC Sealed Unlimited 1999 English",
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/vwxAAOSwexampleH/s-l500.jpg"
+      },
+      "price": {
+        "value": "29500.00",
+        "currency": "GBP"
+      },
+      "itemWebUrl": "https://www.ebay.co.uk/itm/225678901236",
+      "itemCreationDate": "2026-05-13T08:30:00.000Z",
+      "condition": "New",
+      "conditionId": "1000",
+      "buyingOptions": ["FIXED_PRICE"],
+      "categories": [
+        {"categoryId": "183454", "categoryName": "Pokémon TCG Sealed Booster Boxes"}
+      ],
+      "leafCategoryIds": ["183454"],
+      "itemLocation": {
+        "postalCode": "EH1**",
+        "country": "GB"
+      },
+      "listingMarketplaceId": "EBAY_GB",
+      "seller": {
+        "username": "edinburgh_card_emporium",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 612
+      }
+    }
+  ]
+}
