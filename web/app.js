@@ -157,12 +157,27 @@ function render(snap, history) {
 }
 
 function sourcePillClass(source) {
-  const known = ["ebay_us", "ebay_uk", "130point", "pricecharting"];
+  const known = ["ebay_us", "ebay_uk", "ebay_api_us", "ebay_api_uk", "130point", "pricecharting"];
   return "feed-pill s-" + (known.includes(source) ? source : "default");
 }
 function sourceLabel(source) {
-  const map = { ebay_us: "eBay US", ebay_uk: "eBay UK", "130point": "130point", pricecharting: "PriceCharting" };
+  const map = {
+    ebay_us: "eBay US",
+    ebay_uk: "eBay UK",
+    ebay_api_us: "eBay US (API)",
+    ebay_api_uk: "eBay UK (API)",
+    "130point": "130point",
+    pricecharting: "PriceCharting",
+  };
   return map[source] || source;
+}
+
+// Collapse transport variants for row-level rendering. The API and SRP
+// paths show the same kind of data — a single "eBay US" pill on each row
+// keeps the feed readable. The transport split is preserved in
+// source_counts (renderSources below) for debug visibility.
+function _rowSourceFamily(source) {
+  return (source || "").replace(/^ebay_api_/, "ebay_");
 }
 
 // One-glance scam check: a small pill rendered next to the source pill on
@@ -218,13 +233,14 @@ function makeFeedItem({ source, title, gbp, usd, date, url, sellerFeedback, sell
   const top = document.createElement("div");
   top.className = "feed-l-top";
   const pill = document.createElement("span");
-  pill.className = sourcePillClass(source);
-  pill.textContent = sourceLabel(source);
+  const visualSource = _rowSourceFamily(source);
+  pill.className = sourcePillClass(visualSource);
+  pill.textContent = sourceLabel(visualSource);
 
   // Trust pill: only meaningful for eBay sources (the only feeds where we
   // have seller-feedback data). PriceCharting / 130point pass undefined and
   // get no pill at all to avoid visual noise.
-  const isEbay = source === "ebay_us" || source === "ebay_uk";
+  const isEbay = visualSource === "ebay_us" || visualSource === "ebay_uk";
   let trust = null;
   if (isEbay) {
     trust = trustPill(sellerFeedback, sellerName, sellerPositivePct);
@@ -322,7 +338,7 @@ function renderSources(snap) {
   const list = document.getElementById("sources-list");
   const counts = snap.source_counts || {};
   list.innerHTML = "";
-  const order = ["pricecharting", "ebay_us", "ebay_uk", "130point", "ebay_us_active", "ebay_uk_active"];
+  const order = ["pricecharting", "ebay_us", "ebay_uk", "130point", "ebay_us_active", "ebay_uk_active", "ebay_api_us", "ebay_api_uk"];
   // Always show PriceCharting (it gave us the hero/last-sold data) at 1.
   const pcCount = (snap.prices && Object.keys(snap.prices).length) || 0;
   const all = { pricecharting: pcCount, ...counts };
