@@ -15,7 +15,7 @@ pending approval (manual review, ~1 business day). They were hand-crafted to
 match the documented shape of
 `GET /buy/browse/v1/item_summary/search` responses
 (https://developer.ebay.com/api-docs/buy/browse/resources/item_summary/methods/search)
-so downstream code (Tasks 4-7) can be built and unit-tested without live
+so downstream code (Tasks 4-6) can be built and unit-tested without live
 credentials.
 
 **These should be replaced with real captures** once the eBay Developer Program
