@@ -82,6 +82,15 @@ def test_normalise_response_raises_when_gbp_missing_fx():
         _normalise_response(payload, currency="GBP", gbp_per_usd=None)
 
 
+def test_normalise_response_raises_on_non_positive_fx_rate():
+    """Negative or zero gbp_per_usd is a corrupted FX rate, not a missing one."""
+    payload = {"itemSummaries": [{"title": "Test", "price": {"value": "30000.00", "currency": "GBP"}}]}
+    with pytest.raises(ValueError):
+        _normalise_response(payload, currency="GBP", gbp_per_usd=-0.5)
+    with pytest.raises(ValueError):
+        _normalise_response(payload, currency="GBP", gbp_per_usd=0.0)
+
+
 def test_normalise_handles_missing_seller_block():
     # Synthetic minimal payload — itemSummaries with no seller key
     payload = {
@@ -226,3 +235,60 @@ def test_ebay_api_uk_returns_empty_when_fx_unavailable(monkeypatch):
     # No GBP-per-USD rate → source can't convert, must short-circuit to [].
     rows = ebay_api_uk.fetch(gbp_per_usd=None)
     assert rows == []
+
+
+def test_ebay_api_uk_drops_titles_rejected_by_filter(monkeypatch):
+    """The UK source must apply the title-regex side of is_acceptable to every row."""
+    from scraper.sources import ebay_api_uk
+
+    def fake_browse_search(**kwargs):
+        return [
+            {
+                "title": "Pokemon Base Set Booster Box WOTC Sealed",
+                "usd_cents": 3_500_000,
+                "date": "2026-05-10",
+                "url": "https://www.ebay.co.uk/itm/1",
+                "seller_name": "uk_a", "seller_feedback": 200, "seller_positive_pct": 99.0,
+            },
+            {
+                "title": "Pokemon Japanese Base Set Booster Box Sealed",
+                "usd_cents": 3_500_000,
+                "date": "2026-05-10",
+                "url": "https://www.ebay.co.uk/itm/2",
+                "seller_name": "uk_b", "seller_feedback": 50, "seller_positive_pct": 100.0,
+            },
+        ]
+    monkeypatch.setattr(ebay_api_uk, "browse_search", fake_browse_search)
+
+    rows = ebay_api_uk.fetch(gbp_per_usd=0.75)
+    assert len(rows) == 1
+    assert rows[0]["source"] == "ebay_api_uk"
+    assert "japanese" not in rows[0]["title"].lower()
+
+
+def test_ebay_api_uk_drops_rows_outside_price_band(monkeypatch):
+    """The UK source must apply the price-band side of is_acceptable to every row."""
+    from scraper.sources import ebay_api_uk
+
+    def fake_browse_search(**kwargs):
+        return [
+            {
+                "title": "Pokemon Base Set Booster Box WOTC Sealed",
+                "usd_cents": 3_500_000,
+                "date": "2026-05-10",
+                "url": "https://www.ebay.co.uk/itm/1",
+                "seller_name": "uk_a", "seller_feedback": 200, "seller_positive_pct": 99.0,
+            },
+            {
+                "title": "Pokemon Base Set Booster Box WOTC Sealed",
+                "usd_cents": 200,
+                "date": "2026-05-10",
+                "url": "https://www.ebay.co.uk/itm/2",
+                "seller_name": "uk_b", "seller_feedback": 50, "seller_positive_pct": 100.0,
+            },
+        ]
+    monkeypatch.setattr(ebay_api_uk, "browse_search", fake_browse_search)
+
+    rows = ebay_api_uk.fetch(gbp_per_usd=0.75)
+    assert len(rows) == 1
+    assert rows[0]["usd_cents"] == 3_500_000

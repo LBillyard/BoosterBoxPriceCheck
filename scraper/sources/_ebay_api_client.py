@@ -118,8 +118,8 @@ def _normalise_response(
     """
     if currency not in ("USD", "GBP"):
         raise ValueError(f"unsupported currency: {currency!r}")
-    if currency == "GBP" and not gbp_per_usd:
-        raise ValueError("gbp_per_usd required when currency is GBP")
+    if currency == "GBP" and (not gbp_per_usd or gbp_per_usd <= 0):
+        raise ValueError("gbp_per_usd must be a positive float when currency is GBP")
 
     out: list[dict] = []
     for item in payload.get("itemSummaries") or []:

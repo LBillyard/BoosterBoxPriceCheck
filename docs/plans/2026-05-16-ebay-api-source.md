@@ -749,9 +749,12 @@ def fetch(gbp_per_usd: float | None = None) -> list[dict]:
 
     Parameters
     ----------
-    gbp_per_usd: FX rate from the orchestrator (``1/fx`` where ``fx`` is
-        usd_to_gbp). Required — if missing, the source returns ``[]``
-        rather than emit rows we can't convert.
+    gbp_per_usd: FX rate from the orchestrator — the value
+        ``scraper.fx.fetch_usd_to_gbp()`` returns, i.e. GBP per 1 USD
+        (e.g. ``0.7389``). The orchestrator should pass ``fx`` directly,
+        the same way ``ebay_uk.fetch(gbp_per_usd=fx)`` does. Required —
+        if missing or non-positive, the source returns ``[]`` rather
+        than emit rows we can't convert.
     """
     if not gbp_per_usd:
         return []
@@ -835,12 +838,12 @@ Find the `active_rows: list[dict] = []` block (around line 183). After the exist
     # API-backed active listings. Cheap (~1-3s each) and resilient — runs
     # alongside the SRP scrapers so either path can fail without dropping
     # the snapshot to zero rows. ebay_api_uk needs the FX rate to convert
-    # GBP → USD-cents; we pass 1/fx because fx is usd_to_gbp.
+    # GBP → USD-cents; fx is already GBP-per-USD so we pass it directly.
     rows = _run_with_timeout("ebay_api_us", lambda: ebay_api_us.fetch())
     source_counts["ebay_api_us"] = len(rows)
     active_rows.extend(rows)
 
-    rows = _run_with_timeout("ebay_api_uk", lambda: ebay_api_uk.fetch(gbp_per_usd=1.0 / fx))
+    rows = _run_with_timeout("ebay_api_uk", lambda: ebay_api_uk.fetch(gbp_per_usd=fx))
     source_counts["ebay_api_uk"] = len(rows)
     active_rows.extend(rows)
 ```

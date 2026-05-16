@@ -29,9 +29,12 @@ def fetch(gbp_per_usd: float | None = None) -> list[dict]:
 
     Parameters
     ----------
-    gbp_per_usd: FX rate from the orchestrator (``1/fx`` where ``fx`` is
-        usd_to_gbp). Required — if missing, the source returns ``[]``
-        rather than emit rows we can't convert.
+    gbp_per_usd: FX rate from the orchestrator — the value
+        ``scraper.fx.fetch_usd_to_gbp()`` returns, i.e. GBP per 1 USD
+        (e.g. ``0.7389``). The orchestrator should pass ``fx`` directly,
+        the same way ``ebay_uk.fetch(gbp_per_usd=fx)`` does. Required —
+        if missing or non-positive, the source returns ``[]`` rather
+        than emit rows we can't convert.
     """
     if not gbp_per_usd:
         return []
