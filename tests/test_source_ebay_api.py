@@ -126,3 +126,35 @@ def test_normalise_parses_item_creation_date():
     }
     rows = _normalise_response(payload, currency="USD")
     assert rows[0]["date"] == "2026-05-10"
+
+
+def test_ebay_api_us_drops_titles_rejected_by_filter(monkeypatch):
+    """The source must run is_acceptable on every row from the client."""
+    from scraper.sources import ebay_api_us
+
+    # Replace the transport with a stub that returns two rows: one with a
+    # title is_acceptable will accept, one it will reject (e.g. mentions
+    # "japanese" — see _filter.py for the rejection rules).
+    def fake_browse_search(**kwargs):
+        return [
+            {
+                "title": "Pokemon Base Set Booster Box WOTC Sealed",
+                "usd_cents": 3_500_000,
+                "date": "2026-05-10",
+                "url": "https://www.ebay.com/itm/1",
+                "seller_name": "seller_a", "seller_feedback": 100, "seller_positive_pct": 99.5,
+            },
+            {
+                "title": "Pokemon Japanese Base Set Booster Box Sealed",
+                "usd_cents": 200_000,
+                "date": "2026-05-10",
+                "url": "https://www.ebay.com/itm/2",
+                "seller_name": "seller_b", "seller_feedback": 50, "seller_positive_pct": 100.0,
+            },
+        ]
+    monkeypatch.setattr(ebay_api_us, "browse_search", fake_browse_search)
+
+    rows = ebay_api_us.fetch()
+    assert len(rows) == 1
+    assert rows[0]["source"] == "ebay_api_us"
+    assert "japanese" not in rows[0]["title"].lower()
