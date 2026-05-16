@@ -191,3 +191,38 @@ def test_ebay_api_us_drops_rows_outside_price_band(monkeypatch):
     rows = ebay_api_us.fetch()
     assert len(rows) == 1
     assert rows[0]["usd_cents"] == 3_500_000
+
+
+def test_ebay_api_uk_converts_gbp_via_fx_rate(monkeypatch):
+    from scraper.sources import ebay_api_uk
+
+    captured = {}
+
+    def fake_browse_search(**kwargs):
+        captured.update(kwargs)
+        # Return a row already normalised — _ebay_api_client did the conversion.
+        return [
+            {
+                "title": "Pokemon Base Set Booster Box WOTC Sealed",
+                "usd_cents": 4_000_000,  # 30000 GBP / 0.75 GBP/USD * 100
+                "date": "2026-05-10",
+                "url": "https://www.ebay.co.uk/itm/1",
+                "seller_name": "uk_seller", "seller_feedback": 200, "seller_positive_pct": 99.0,
+            },
+        ]
+    monkeypatch.setattr(ebay_api_uk, "browse_search", fake_browse_search)
+
+    rows = ebay_api_uk.fetch(gbp_per_usd=0.75)
+    assert captured["marketplace"] == "EBAY_GB"
+    assert captured["currency"] == "GBP"
+    assert captured["gbp_per_usd"] == 0.75
+    assert len(rows) == 1
+    assert rows[0]["source"] == "ebay_api_uk"
+
+
+def test_ebay_api_uk_returns_empty_when_fx_unavailable(monkeypatch):
+    from scraper.sources import ebay_api_uk
+
+    # No GBP-per-USD rate → source can't convert, must short-circuit to [].
+    rows = ebay_api_uk.fetch(gbp_per_usd=None)
+    assert rows == []
