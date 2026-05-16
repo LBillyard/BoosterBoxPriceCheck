@@ -9,6 +9,13 @@ Output shape matches the existing snapshot row contract exactly; see
 :func:`scraper.sources._ebay_api_client._normalise_response`. We add
 the ``source`` tag here so the orchestrator's ``source_counts`` and
 the web UI's per-source badging both pick it up.
+
+Note on the ``date`` field: the SRP sibling emits ``date: None`` for
+active listings (there's no sale date). The Browse API surfaces a real
+``itemCreationDate`` (when the seller posted the listing), so this
+source emits that. The snapshot's active-listings normaliser doesn't
+read ``date`` today, but the richer signal is preserved in case the UI
+ever wants a "listed N days ago" badge.
 """
 from __future__ import annotations
 
