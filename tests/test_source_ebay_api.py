@@ -32,6 +32,9 @@ def test_normalise_us_response_returns_expected_shape():
     assert isinstance(row["usd_cents"], int)
     assert row["usd_cents"] > 0
     assert isinstance(row["title"], str) and row["title"]
+    # USD rows must NOT carry a gbp_cents key — snapshot.py reads its
+    # presence as a signal to skip the USD->GBP FX round-trip.
+    assert "gbp_cents" not in row
 
 
 def test_normalise_uk_response_converts_gbp_to_usd_cents():
@@ -45,6 +48,38 @@ def test_normalise_uk_response_converts_gbp_to_usd_cents():
     raw_gbp = float(payload["itemSummaries"][0]["price"]["value"])
     expected = round(raw_gbp / gbp_per_usd * 100)
     assert row["usd_cents"] == expected
+    # GBP rows must also carry gbp_cents in their native currency so
+    # snapshot.py can use the exact value rather than round-tripping
+    # through FX.
+    assert row["gbp_cents"] == round(raw_gbp * 100)
+
+
+def test_normalise_response_raises_on_unknown_currency():
+    payload = {
+        "itemSummaries": [
+            {
+                "title": "Test",
+                "price": {"value": "100.00", "currency": "EUR"},
+                "itemWebUrl": "https://x",
+            }
+        ]
+    }
+    with pytest.raises(ValueError):
+        _normalise_response(payload, currency="EUR")
+
+
+def test_normalise_response_raises_when_gbp_missing_fx():
+    payload = {
+        "itemSummaries": [
+            {
+                "title": "Test",
+                "price": {"value": "100.00", "currency": "GBP"},
+                "itemWebUrl": "https://x",
+            }
+        ]
+    }
+    with pytest.raises(ValueError):
+        _normalise_response(payload, currency="GBP", gbp_per_usd=None)
 
 
 def test_normalise_handles_missing_seller_block():

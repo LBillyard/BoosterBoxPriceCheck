@@ -20,7 +20,6 @@ from __future__ import annotations
 import base64
 import datetime as dt
 import os
-import sys
 import time
 from typing import Any
 
@@ -117,6 +116,11 @@ def _normalise_response(
     the orchestrator already fetched) so we can populate ``usd_cents``
     in the canonical USD-cents shape the rest of the pipeline uses.
     """
+    if currency not in ("USD", "GBP"):
+        raise ValueError(f"unsupported currency: {currency!r}")
+    if currency == "GBP" and not gbp_per_usd:
+        raise ValueError("gbp_per_usd required when currency is GBP")
+
     out: list[dict] = []
     for item in payload.get("itemSummaries") or []:
         price = item.get("price")
@@ -128,15 +132,12 @@ def _normalise_response(
             continue
         if currency == "USD":
             usd_cents = round(raw_val * 100)
-        elif currency == "GBP":
-            if not gbp_per_usd:
-                continue
-            usd_cents = round(raw_val / gbp_per_usd * 100)
         else:
-            continue
+            usd_cents = round(raw_val / gbp_per_usd * 100)
+            gbp_cents = round(raw_val * 100)
 
         seller = item.get("seller") or {}
-        out.append({
+        row = {
             "title": (item.get("title") or "").strip(),
             "usd_cents": usd_cents,
             "date": _parse_item_creation_date(item.get("itemCreationDate")),
@@ -144,7 +145,10 @@ def _normalise_response(
             "seller_name": seller.get("username"),
             "seller_feedback": _parse_feedback_count(seller.get("feedbackScore")),
             "seller_positive_pct": _parse_feedback_pct(seller.get("feedbackPercentage")),
-        })
+        }
+        if currency == "GBP":
+            row["gbp_cents"] = gbp_cents
+        out.append(row)
     return out
 
 
