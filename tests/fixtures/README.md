@@ -1,11 +1,6 @@
 # Test fixtures
 
-## HTML fixtures (SRP-scraper tests)
-
-`130point.html`, `booster_box.html`, `ebay_uk.html`, `ebay_uk_synthetic.html`, and
-`ebay_us.html` are real or partially-synthetic HTML captures used by the existing
-SRP-scraper tests (`tests/test_source_130point.py`, `tests/test_source_ebay_us.py`,
-`tests/test_source_ebay_uk.py`, `tests/test_source_ebay_active.py`).
+`booster_box.html` is a real PriceCharting page capture used by the parser tests (`tests/test_parser_*.py`).
 
 ## eBay Browse API fixtures
 

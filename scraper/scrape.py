@@ -15,30 +15,13 @@ from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
 from .history import merge_sales
-from .sources import ebay_uk, ebay_us, ebay_us_active, ebay_api_us, ebay_api_uk
-# Two eBay UK sources are intentionally disabled:
-#
-# - ebay_uk_active: tried 3 URL variants, all hung patchright on the
-#   GH IP range. eBay UK refuses active-listing SRPs to datacenter IPs.
-#
-# - ebay_pinned: aimed to bypass the SRP block by fetching item pages
-#   directly, but eBay applies the same bot detection — patchright
-#   gets a 13KB JS-shell that never hydrates, then hangs on cleanup
-#   for the full source-timeout window. 90s wasted per cron for zero
-#   rows.
-#
-# Both will need a residential proxy or eBay's official Browse API
-# to land. For now we accept the gap: US listings + PriceCharting
-# cover the headline numbers, and the user can add UK entries via
-# a static overlay (out of scope of this orchestrator).
+from .sources import ebay_api_us, ebay_api_uk
+# Live sources: PriceCharting (parser.py) + the official eBay Browse API
+# (sources.ebay_api_us, sources.ebay_api_uk). The patchright SRP scrapers
+# were removed on 2026-05-17 — see git log and docs/plans/.
 
-# Per-source hard ceiling. Patchright's internal timeouts are not
-# always honoured when a page is stuck on a Cloudflare challenge, so we
-# wrap every source fetch in a ThreadPoolExecutor and kill-wait at
-# this boundary. 90s gives enough headroom for a normal patchright
-# render (~25s) plus several item-page sub-fetches, while killing
-# stuck sources fast enough to leave budget for retries within the
-# workflow's 12-minute ceiling.
+# Per-source hard ceiling. 90s is generous for the ~3s API calls but
+# protects against network hangs.
 SOURCE_TIMEOUT_S = 90
 
 
@@ -137,24 +120,11 @@ def main() -> int:
             write_error(f"FX fetch failed and no previous rate: {e}")
             return 1
 
-    # Recent sales from auxiliary sources. Each source is isolated AND
-    # wrapped in a hard timeout so a stuck patchright session on one
-    # source can't pin the whole scrape.
-    #
-    # 130point is currently excluded: Cloudflare blocks every patchright
-    # variant we've tried, so the source always returns 0 and its
-    # challenge-never-resolves failure mode was hanging the runner.
-    # Re-add it if/when a stealth bypass lands.
+    # Recent sales from auxiliary sources. PriceCharting "last sold" is
+    # the only remaining recent-sales feed; the patchright SRP scrapers
+    # (eBay UK/US sold, 130point) were removed on 2026-05-17.
     recent_sales: list[dict] = []
     source_counts: dict[str, int] = {}
-
-    for name, fn in (
-        ("ebay_uk",  lambda: ebay_uk.fetch(gbp_per_usd=fx)),
-        ("ebay_us",  lambda: ebay_us.fetch()),
-    ):
-        rows = _run_with_timeout(name, fn)
-        source_counts[name] = len(rows)
-        recent_sales.extend(rows)
 
     # Also include the PriceCharting "last sold" so it appears in the
     # Recent Sales feed — otherwise the Last Sold card at the top of the
@@ -177,24 +147,11 @@ def main() -> int:
         })
         source_counts["pricecharting_last_sold"] = 1
 
-    # Currently-active (Buy It Now) listings. ebay_us_active gets one
-    # retry on empty/timeout — eBay's bot detection is intermittent
-    # and a second patchright session often lands what the first
-    # missed. (See import-line comment for why ebay_uk_active is
-    # disabled.)
-    active_rows: list[dict] = []
-    rows = _run_with_timeout("ebay_us_active", lambda: ebay_us_active.fetch())
-    if not rows:
-        print("INFO: ebay_us_active returned 0; retrying once", file=sys.stderr, flush=True)
-        rows = _run_with_timeout("ebay_us_active(retry)", lambda: ebay_us_active.fetch())
-    source_counts["ebay_us_active"] = len(rows)
-    active_rows.extend(rows)
-
     # API-backed active listings via the official eBay Browse API.
-    # Cheap (~1-3s each) and resilient — runs alongside the SRP scrapers
-    # so either path can fail without dropping the snapshot to zero rows.
-    # ebay_api_uk needs the FX rate to convert GBP→USD-cents at the
-    # transport layer; fx is already GBP-per-USD so we pass it directly.
+    # Cheap (~1-3s each). ebay_api_uk needs the FX rate to convert
+    # GBP→USD-cents at the transport layer; fx is already GBP-per-USD
+    # so we pass it directly.
+    active_rows: list[dict] = []
     rows = _run_with_timeout("ebay_api_us", lambda: ebay_api_us.fetch())
     source_counts["ebay_api_us"] = len(rows)
     active_rows.extend(rows)
@@ -202,8 +159,6 @@ def main() -> int:
     rows = _run_with_timeout("ebay_api_uk", lambda: ebay_api_uk.fetch(gbp_per_usd=fx))
     source_counts["ebay_api_uk"] = len(rows)
     active_rows.extend(rows)
-
-    # ebay_pinned removed — see import-line comment for why.
 
     now = dt.datetime.now(dt.timezone.utc).isoformat()
     snap = build_snapshot(prices, last_sold, listings, fx, scraped_at=now,
@@ -234,10 +189,4 @@ def main() -> int:
     return 0
 
 if __name__ == "__main__":
-    rc = main()
-    # If a source timed out, its abandoned worker thread is still alive
-    # running a hung patchright browser. Python's atexit machinery joins
-    # all non-daemon threads on interpreter shutdown, so a normal
-    # sys.exit() would block forever waiting for that leaked thread.
-    # We've already written the snapshot, so bypass atexit entirely.
-    os._exit(rc)
+    sys.exit(main())
