@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-05-17T13:57:42.673186+00:00",
+  "scraped_at": "2026-05-17T14:17:58.417913+00:00",
   "fx": {
     "usd_to_gbp": 0.74862,
-    "fetched_at": "2026-05-17T13:57:42.673186+00:00"
+    "fetched_at": "2026-05-17T14:17:58.417913+00:00"
   },
   "prices": {
     "loose": {
@@ -143,10 +143,7 @@
   ],
   "purchase_price_gbp": 29253.05,
   "source_counts": {
-    "ebay_uk": 0,
-    "ebay_us": 0,
     "pricecharting_last_sold": 1,
-    "ebay_us_active": 0,
     "ebay_api_us": 9,
     "ebay_api_uk": 2
   }
