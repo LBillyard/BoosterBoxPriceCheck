@@ -1,6 +1,5 @@
 """Entry point: fetch PriceCharting page, parse, fetch FX, write data files."""
 import json
-import os
 import sys
 import datetime as dt
 import time
