@@ -138,6 +138,7 @@ def _normalise_response(
 
         seller = item.get("seller") or {}
         row = {
+            "item_id": item.get("itemId"),
             "title": (item.get("title") or "").strip(),
             "usd_cents": usd_cents,
             "date": _parse_item_creation_date(item.get("itemCreationDate")),

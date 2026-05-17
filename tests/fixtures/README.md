@@ -30,3 +30,6 @@ payloads instead of the JSON fixtures:
 - Items missing `price.value` — normaliser must skip.
 - Items with `feedbackPercentage` as a string (eBay's documented shape).
 - Out-of-band currencies and missing/negative FX rates — raise `ValueError`.
+
+The listings-history tests in `tests/test_listings_history.py` are fixture-free —
+they build payloads inline and write to `tmp_path`.
