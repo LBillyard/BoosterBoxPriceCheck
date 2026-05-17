@@ -1,0 +1,426 @@
+{
+  "href": "https://api.ebay.com/buy/browse/v1/item_summary/search?q=pokemon+base+set+booster+box+wotc+sealed&limit=50&filter=price%3A%5B10000..%5D%2CpriceCurrency%3AGBP%2CbuyingOptions%3A%7BFIXED_PRICE%7D&offset=0",
+  "total": 5,
+  "limit": 50,
+  "offset": 0,
+  "itemSummaries": [
+    {
+      "itemId": "v1|198215232725|0",
+      "title": "Sealed 1999 Pokemon Base Set Booster Box Vintage WoTC Wizards 36 Pack",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "1",
+          "categoryName": "Collectables"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectable Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/4lgAAeSwOyxpwAqM/s-l225.jpg"
+      },
+      "price": {
+        "value": "35000.00",
+        "currency": "GBP"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C198215232725%7C0",
+      "seller": {
+        "username": "totallygoo",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 292,
+        "sellerAccountType": "BUSINESS"
+      },
+      "marketingPrice": {
+        "discountPercentage": "0"
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/4lgAAeSwOyxpwAqM/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "20.00",
+            "currency": "GBP"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T23:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-20T23:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.co.uk/itm/198215232725?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2e268c6cd5:g:4lgAAeSwOyxpwAqM",
+      "itemLocation": {
+        "postalCode": "GL51***",
+        "country": "GB"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/MbMAAeSwIIFpwAqN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/4k4AAeSw4phpwAqM/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/VfUAAeSwEvxpwAqN/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "198215232725",
+      "availableCoupons": true,
+      "itemOriginDate": "2026-03-22T15:29:58.000Z",
+      "itemCreationDate": "2026-03-22T15:29:58.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_GB"
+    },
+    {
+      "itemId": "v1|336571134866|0",
+      "title": "Pokemon Base Set (WoTC) Green Wing Booster Box - Sealed",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "1",
+          "categoryName": "Collectables"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectable Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/2r0AAeSwKDVp-3yu/s-l225.jpg"
+      },
+      "price": {
+        "value": "34500.00",
+        "currency": "GBP"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C336571134866%7C0",
+      "seller": {
+        "username": "infinitygrails",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 185,
+        "sellerAccountType": "BUSINESS"
+      },
+      "marketingPrice": {
+        "discountPercentage": "0"
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/2r0AAeSwKDVp-3yu/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "4.65",
+            "currency": "GBP"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T23:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-20T23:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.co.uk/itm/336571134866?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e5d33f392:g:2r0AAeSwKDVp-3yu",
+      "itemLocation": {
+        "postalCode": "HP18***",
+        "country": "GB"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/IZIAAeSw6SNp-3yv/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "336571134866",
+      "availableCoupons": true,
+      "itemOriginDate": "2026-05-06T17:44:22.000Z",
+      "itemCreationDate": "2026-05-06T17:44:22.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_GB"
+    },
+    {
+      "itemId": "v1|362508967862|0",
+      "title": "1999 POKEMON BASE UNLIMITED BOOSTER BOX 36 PACKS SEALED NEW - ONE COUNTRY CODE",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/W-4AAOSwt3hcEye5/s-l225.jpg"
+      },
+      "price": {
+        "value": "75041.27",
+        "currency": "GBP",
+        "convertedFromValue": "99999.99",
+        "convertedFromCurrency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C362508967862%7C0",
+      "seller": {
+        "username": "gradedexchange",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 21363
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/W-4AAOSwt3hcEye5/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "CALCULATED",
+          "shippingCost": {
+            "value": "338.65",
+            "currency": "GBP",
+            "convertedFromValue": "451.28",
+            "convertedFromCurrency": "USD"
+          }
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "epid": "9026714747",
+      "itemWebUrl": "https://www.ebay.co.uk/itm/362508967862?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item546737dfb6:g:W-4AAOSwt3hcEye5",
+      "itemLocation": {
+        "postalCode": "100**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/B7AAAOSwYo1cEyTK/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/el0AAOSwEfVcEyTC/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/pEIAAOSw~slcEyTE/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/jqoAAOSw2zRcEyTG/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/fpkAAOSwSVNcEyTI/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/V0gAAOSwp3dcEyTN/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "362508967862",
+      "availableCoupons": false,
+      "itemOriginDate": "2018-12-14T03:44:03.000Z",
+      "itemCreationDate": "2018-12-14T03:44:03.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|286557248420|0",
+      "title": "1st Edition Base Set Charizard Booster Pack PSA 10 Shadowless Pokemon New Sealed",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/gEkAAOSwYUFjtMmW/s-l225.jpg"
+      },
+      "price": {
+        "value": "37519.89",
+        "currency": "GBP",
+        "convertedFromValue": "49999.00",
+        "convertedFromCurrency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C286557248420%7C0",
+      "seller": {
+        "username": "ig-retrogamesncards",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 1399
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/gEkAAOSwYUFjtMmW/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "187.60",
+            "currency": "GBP",
+            "convertedFromValue": "250.00",
+            "convertedFromCurrency": "USD"
+          }
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.co.uk/itm/286557248420?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item42b8249ba4:g:gEkAAOSwYUFjtMmW",
+      "itemLocation": {
+        "country": "NL"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/bmcAAOSwgKZjtMmW/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "286557248420",
+      "availableCoupons": false,
+      "itemOriginDate": "2023-01-04T00:38:49.000Z",
+      "itemCreationDate": "2025-05-10T04:33:54.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|188018863049|0",
+      "title": "RARE Pokemon Cards Base Set 2 Booster Box Sealed 36 packs WOTC vintage",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "1",
+          "categoryName": "Collectables"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectable Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/BJMAAeSwBStoigDQ/s-l225.jpg"
+      },
+      "price": {
+        "value": "11086.69",
+        "currency": "GBP"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C188018863049%7C0",
+      "seller": {
+        "username": "razcore91",
+        "feedbackPercentage": "94.6",
+        "feedbackScore": 47,
+        "sellerAccountType": "INDIVIDUAL"
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/BJMAAeSwBStoigDQ/s-l1600.jpg"
+        }
+      ],
+      "pickupOptions": [
+        {
+          "pickupLocationType": "ARRANGED_LOCATION"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.co.uk/itm/188018863049?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2bc6cc2bc9:g:BJMAAeSwBStoigDQ",
+      "itemLocation": {
+        "postalCode": "DN11***",
+        "country": "GB"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/CPYAAeSwfihoigDZ/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/2LsAAeSwT~FoigCO/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/S2YAAeSwmsloigCP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/BOEAAeSw4~VoigCP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/XGsAAeSwhqBoigCP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/-GEAAeSwA19oigCS/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/A6UAAeSwoX9oigCP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Wq8AAeSwBhVoigCQ/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/WmQAAeSwGqJoigCQ/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "188018863049",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-02-02T16:39:54.000Z",
+      "itemCreationDate": "2026-02-02T16:39:54.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_GB"
+    }
+  ]
+}

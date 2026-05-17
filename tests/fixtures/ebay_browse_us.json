@@ -1,0 +1,3025 @@
+{
+  "href": "https://api.ebay.com/buy/browse/v1/item_summary/search?q=pokemon+base+set+booster+box+wotc+sealed&limit=50&filter=price%3A%5B15000..%5D%2CpriceCurrency%3AUSD%2CbuyingOptions%3A%7BFIXED_PRICE%7D&offset=0",
+  "total": 35,
+  "limit": 50,
+  "offset": 0,
+  "itemSummaries": [
+    {
+      "itemId": "v1|267648591048|0",
+      "title": "XRAY Base Set SEALED Booster Box WOTC Authentic Guarantee LOA (Pokemon Cards)",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/9ZgAAeSw-dNp6jgd/s-l225.jpg"
+      },
+      "price": {
+        "value": "57000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C267648591048%7C0",
+      "seller": {
+        "username": "tca_gaming",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 109823
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/9ZgAAeSw-dNp6jgd/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "epid": "9026714747",
+      "itemWebUrl": "https://www.ebay.com/itm/267648591048?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item3e511964c8:g:9ZgAAeSw-dNp6jgd",
+      "itemLocation": {
+        "postalCode": "286**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/WJUAAeSwiY5p6jgb/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/4rcAAeSwoJhp6jgc/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/R3QAAeSw0Ulp6jga/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/T9IAAeSwBb1p6jgb/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/j5QAAeSwRxtp6jga/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/XCgAAeSwGTpp6jgY/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "267648591048",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-04-23T15:22:05.000Z",
+      "itemCreationDate": "2026-04-23T15:22:05.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|318192906310|0",
+      "title": "XRAY Base Set 2 SEALED Booster Box WOTC Authentic Guarantee LOA (Pokemon Cards)",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/pWAAAeSwAaFp6jk0/s-l225.jpg"
+      },
+      "price": {
+        "value": "35000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C318192906310%7C0",
+      "seller": {
+        "username": "tca_gaming",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 109823
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/pWAAAeSwAaFp6jk0/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/318192906310?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4a15c67046:g:pWAAAeSwAaFp6jk0",
+      "itemLocation": {
+        "postalCode": "286**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/ClMAAeSwQW9p6jkz/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/JAsAAeSwaZBp6jkx/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/UiUAAeSw5-9p6jkx/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/D5AAAeSwCmBp6jkz/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/QSIAAeSw~adp6jkx/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/JKIAAeSw3w1p6jkx/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "318192906310",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-04-23T15:23:44.000Z",
+      "itemCreationDate": "2026-04-23T15:23:44.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|236017015392|0",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box WOTC Sealed Mint Blue Wing Charizard",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/P84AAeSwaGln327A/s-l225.jpg"
+      },
+      "price": {
+        "value": "50000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C236017015392%7C0",
+      "seller": {
+        "username": "garys_pokemart",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 410
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/P84AAeSwaGln327A/s-l225.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "epid": "9026714747",
+      "itemWebUrl": "https://www.ebay.com/itm/236017015392?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item36f3b5da60:g:P84AAeSwaGln327A",
+      "itemLocation": {
+        "postalCode": "902**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/K5MAAeSwk81n327B/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/EWYAAeSwveBn327B/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/hgEAAeSwn5xn327B/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/jSQAAeSwigtn327B/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/TjAAAeSwGpZn327B/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "236017015392",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-03-23T02:19:03.000Z",
+      "itemCreationDate": "2025-03-23T02:19:03.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|335765516351|0",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box WOTC Sealed",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/OXcAAOSwpgJngZvN/s-l225.jpg"
+      },
+      "price": {
+        "value": "80000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C335765516351%7C0",
+      "seller": {
+        "username": "trust-always",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 834
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/OXcAAOSwpgJngZvN/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "epid": "9026714747",
+      "itemWebUrl": "https://www.ebay.com/itm/335765516351?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e2d2f303f:g:OXcAAOSwpgJngZvN",
+      "itemLocation": {
+        "postalCode": "300**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/soAAAOSw3~hngZvO/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "335765516351",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-01-10T22:17:57.000Z",
+      "itemCreationDate": "2025-01-10T22:17:57.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|184892025947|0",
+      "title": "Pokemon GUARANTEED SHADOWLESS BASE SET BOOSTER BOX - FACTORY SEALED - CHARIZARD",
+      "leafCategoryIds": [
+        "261035"
+      ],
+      "categories": [
+        {
+          "categoryId": "261035",
+          "categoryName": "Sealed Trading Card Boxes"
+        },
+        {
+          "categoryId": "1",
+          "categoryName": "Collectibles"
+        },
+        {
+          "categoryId": "182982",
+          "categoryName": "Non-Sport Trading Cards"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/FFoAAOSwpc5gyr3J/s-l225.jpg"
+      },
+      "price": {
+        "value": "135000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C184892025947%7C0",
+      "seller": {
+        "username": "thepokemonshark",
+        "feedbackPercentage": "99.9",
+        "feedbackScore": 8328
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/FFoAAOSwpc5gyr3J/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/184892025947?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2b0c6c6c5b:g:FFoAAOSwpc5gyr3J",
+      "itemLocation": {
+        "postalCode": "956**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/W78AAOSwRoJgyr3L/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/tq0AAOSwoVlgyr3N/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/~tgAAOSwXlZgyr3P/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/jb0AAOSwYG9gyr3R/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/XVgAAOSwSrxgyr3T/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/9Y4AAOSwgBpgyr3r/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/R7YAAOSwZYxhHxvU/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "184892025947",
+      "availableCoupons": false,
+      "itemOriginDate": "2021-06-17T03:38:42.000Z",
+      "itemCreationDate": "2021-06-17T03:38:42.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|188371983504|0",
+      "title": "Sealed WOTC Pokemon Base Set blister case (24qty)  \ud83d\udd25",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/ueIAAeSwn8tqAfZ3/s-l225.jpg"
+      },
+      "price": {
+        "value": "70000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C188371983504%7C0",
+      "seller": {
+        "username": "ovgames",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 337
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/ueIAAeSwn8tqAfZ3/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "CALCULATED"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/188371983504?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2bdbd85c90:g:ueIAAeSwn8tqAfZ3",
+      "itemLocation": {
+        "postalCode": "786**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/PnAAAeSw37VqAfaP/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "188371983504",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-05-11T15:41:49.000Z",
+      "itemCreationDate": "2026-05-11T15:41:49.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|187883842737|0",
+      "title": "Pokemon 1ST EDITION BASE SET BOOSTER PACK - 21.0g - FACTORY SEALED - HEAVY???",
+      "leafCategoryIds": [
+        "183053"
+      ],
+      "categories": [
+        {
+          "categoryId": "183053",
+          "categoryName": "Sealed Trading Card Packs"
+        },
+        {
+          "categoryId": "1",
+          "categoryName": "Collectibles"
+        },
+        {
+          "categoryId": "182982",
+          "categoryName": "Non-Sport Trading Cards"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/Dr8AAeSw6z9pTyss/s-l225.jpg"
+      },
+      "price": {
+        "value": "20000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C187883842737%7C0",
+      "seller": {
+        "username": "thepokemonshark",
+        "feedbackPercentage": "99.9",
+        "feedbackScore": 8328
+      },
+      "condition": "Open Box/Used",
+      "conditionId": "3000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Dr8AAeSw6z9pTyss/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-23T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/187883842737?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2bbebfecb1:g:Dr8AAeSw6z9pTyss",
+      "itemLocation": {
+        "postalCode": "956**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/8GIAAeSwp3ZpTyss/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/4XAAAeSwPF5pTyss/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/yxEAAeSwGCxpTyss/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "187883842737",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-12-27T00:45:09.000Z",
+      "itemCreationDate": "2025-12-27T00:45:09.000Z",
+      "topRatedBuyingExperience": true,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|362508967862|0",
+      "title": "1999 POKEMON BASE UNLIMITED BOOSTER BOX 36 PACKS SEALED NEW - ONE COUNTRY CODE",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/W-4AAOSwt3hcEye5/s-l225.jpg"
+      },
+      "price": {
+        "value": "99999.99",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C362508967862%7C0",
+      "seller": {
+        "username": "gradedexchange",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 21363
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/W-4AAOSwt3hcEye5/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-21T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "epid": "9026714747",
+      "itemWebUrl": "https://www.ebay.com/itm/362508967862?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item546737dfb6:g:W-4AAOSwt3hcEye5",
+      "itemLocation": {
+        "postalCode": "100**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/B7AAAOSwYo1cEyTK/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/el0AAOSwEfVcEyTC/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/pEIAAOSw~slcEyTE/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/jqoAAOSw2zRcEyTG/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/fpkAAOSwSVNcEyTI/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/V0gAAOSwp3dcEyTN/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "362508967862",
+      "availableCoupons": false,
+      "itemOriginDate": "2018-12-14T03:44:03.000Z",
+      "itemCreationDate": "2018-12-14T03:44:03.000Z",
+      "topRatedBuyingExperience": true,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|317788432858|0",
+      "title": "ORIGINAL | FACTORY SEALED | 1999 Pokemon Fossil 1st Edition Booster Box",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/AYUAAeSw4XZpcZCU/s-l225.jpg"
+      },
+      "price": {
+        "value": "39999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C317788432858%7C0",
+      "seller": {
+        "username": "loosepacks",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 223
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/AYUAAeSw4XZpcZCU/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "3000.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/317788432858?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item49fdaaa9da:g:AYUAAeSw4XZpcZCU",
+      "itemLocation": {
+        "postalCode": "300**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/AXsAAeSwWkJpcZCU/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "317788432858",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-01-22T02:54:35.000Z",
+      "itemCreationDate": "2026-01-22T02:54:35.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|286118725516|0",
+      "title": "Pokemon Base Set Unlimited Booster Box GREEN WING CHARIZARD Sealed English MINT",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/YeMAAOSwOVtmOXsM/s-l225.jpg"
+      },
+      "price": {
+        "value": "100000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C286118725516%7C0",
+      "seller": {
+        "username": "bergey202",
+        "feedbackPercentage": "99.5",
+        "feedbackScore": 943
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/YeMAAOSwOVtmOXsM/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "CALCULATED"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/286118725516?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item429e01478c:g:YeMAAOSwOVtmOXsM",
+      "itemLocation": {
+        "postalCode": "451**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/KpMAAOSwLGZmOXsO/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/fbwAAOSwRKJmOXsQ/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/BEoAAOSwa41mOXsR/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/vGoAAOSwTulmOXsT/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/ofoAAOSwqihmOXsU/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "286118725516",
+      "availableCoupons": false,
+      "itemOriginDate": "2024-05-07T00:52:32.000Z",
+      "itemCreationDate": "2024-10-20T19:58:03.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|147233825560|0",
+      "title": "Base Set Booster Pack Costco 10 Count Blister - FACTORY SEALED - 1999 Pokemon",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/LxIAAeSwGwtpzCt-/s-l225.jpg"
+      },
+      "price": {
+        "value": "24397.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C147233825560%7C0",
+      "seller": {
+        "username": "thanossnaps",
+        "feedbackPercentage": "99.8",
+        "feedbackScore": 12016
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/LxIAAeSwGwtpzCt-/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/147233825560?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2247d1e318:g:LxIAAeSwGwtpzCt-",
+      "itemLocation": {
+        "postalCode": "830**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/tSUAAeSw-jZp9l8A/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/as0AAeSwDFxpzCt-/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/9kMAAeSw16ZpzCt-/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Op0AAeSwATdp9l8C/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/WAwAAeSwSYZpzCt-/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/bCgAAeSwx2dpzCt-/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "147233825560",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-03-31T20:22:48.000Z",
+      "itemCreationDate": "2026-03-31T20:22:48.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|336566821732|0",
+      "title": "1999 Pokemon Base Set Sealed Booster Box 36 Packs One Country Code Shadowless?",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/c7QAAOSwuBViSh02/s-l225.jpg"
+      },
+      "price": {
+        "value": "124000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C336566821732%7C0",
+      "seller": {
+        "username": "beaniesandphotosandbooks",
+        "feedbackPercentage": "99.6",
+        "feedbackScore": 8461
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/c7QAAOSwuBViSh02/s-l640.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "940.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-21T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-28T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/336566821732?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e5cf22364:g:c7QAAOSwuBViSh02",
+      "itemLocation": {
+        "postalCode": "017**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/qasAAOSw89RiSh1U/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/2poAAOSwm3tiSh1F/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/pSwAAOSw7kFiSh1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/RE0AAOSw-GxlgysR/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/tUQAAOSwYpNlgysa/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "336566821732",
+      "availableCoupons": false,
+      "itemOriginDate": "2022-04-03T22:40:32.000Z",
+      "itemCreationDate": "2026-05-03T23:38:44.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|317315339111|0",
+      "title": "CASE FRESH | FACTORY SEALED | 2002 Pokemon Legendary Collection Booster Box",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/bo4AAeSwnJto0Fco/s-l225.jpg"
+      },
+      "price": {
+        "value": "184999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C317315339111%7C0",
+      "seller": {
+        "username": "loosepacks",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 223
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/bo4AAeSwnJto0Fco/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/317315339111?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item49e177d367:g:bo4AAeSwnJto0Fco",
+      "itemLocation": {
+        "postalCode": "300**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/TSYAAeSwf2po0Fco/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "317315339111",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-09-21T19:53:47.000Z",
+      "itemCreationDate": "2025-09-21T19:53:47.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|317195901292|0",
+      "title": "ORIGINAL | FACTORY SEALED | 1999 Pokemon Base Set Booster Box | 36 Packs | WOTC",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/WEUAAeSwAhJope5Q/s-l225.jpg"
+      },
+      "price": {
+        "value": "49999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C317195901292%7C0",
+      "seller": {
+        "username": "loosepacks",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 223
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/WEUAAeSwAhJope5Q/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "5000.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/317195901292?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item49da59596c:g:WEUAAeSwAhJope5Q&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZJ06mFALw8F1nw31VzMj%2Bl3Cai%2FFnjqf6B9yzPy0llDL%2Fwhp1ZRO76GByfIpRhD2BZbiUxpJRrYBICapbvzXwTPDwUuqlN8BL4TYTOi3vfCMbyQjnpY3kGhDnUob6crzx%2FIDlkvj1VkXfOFtvGX7toMtPxPkO5MibklzLCdaUahfPoSTq0rnSxVwjcQJONRifbY38qhB7RsuaWILQgBJNH3j53L20LnhXfA%2Fd1PC0TsEDEWTMRE0QVItpvspwLJmo%2Fz4MP7Yt1yDgOhruhdFij0tLljyDqiZJlB8jKr77yvQix9k3ci8I2inM6NKzAZUpKn7i9wOSJ3CLBBLTZqdA4",
+      "itemLocation": {
+        "postalCode": "300**",
+        "country": "US"
+      },
+      "adultOnly": false,
+      "legacyItemId": "317195901292",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-08-20T15:52:46.000Z",
+      "itemCreationDate": "2025-08-20T15:52:46.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": true,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|315005009497|0",
+      "title": "1999 Base Set Booster Box | GREEN WING | FACTORY SEALED WOTC Pokemon | 36 Packs",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/708AAeSwcNRpUYit/s-l225.jpg"
+      },
+      "price": {
+        "value": "54999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C315005009497%7C0",
+      "seller": {
+        "username": "loosepacks",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 223
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/708AAeSwcNRpUYit/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "3000.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/315005009497?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4957c2fe59:g:708AAeSwcNRpUYit",
+      "itemLocation": {
+        "postalCode": "300**",
+        "country": "US"
+      },
+      "adultOnly": false,
+      "legacyItemId": "315005009497",
+      "availableCoupons": false,
+      "itemOriginDate": "2023-12-02T16:42:14.000Z",
+      "itemCreationDate": "2023-12-02T16:42:14.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|198215232725|0",
+      "title": "Sealed 1999 Pokemon Base Set Booster Box Vintage WoTC Wizards 36 Pack",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "1",
+          "categoryName": "Collectables"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectable Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/4lgAAeSwOyxpwAqM/s-l225.jpg"
+      },
+      "price": {
+        "value": "46641.00",
+        "currency": "USD",
+        "convertedFromValue": "35000.00",
+        "convertedFromCurrency": "GBP"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C198215232725%7C0",
+      "seller": {
+        "username": "totallygoo",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 292
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/4lgAAeSwOyxpwAqM/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "133.26",
+            "currency": "USD",
+            "convertedFromValue": "100.00",
+            "convertedFromCurrency": "GBP"
+          },
+          "minEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-06-01T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/198215232725?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2e268c6cd5:g:4lgAAeSwOyxpwAqM",
+      "itemLocation": {
+        "postalCode": "GL51***",
+        "country": "GB"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/MbMAAeSwIIFpwAqN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/4k4AAeSw4phpwAqM/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/VfUAAeSwEvxpwAqN/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "198215232725",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-03-22T15:29:58.000Z",
+      "itemCreationDate": "2026-03-22T15:29:58.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_GB"
+    },
+    {
+      "itemId": "v1|166900321486|0",
+      "title": "Pokemon Complete Sealed Booster Pack Lot WOTC TOPPS EX DPP+ BW XY SM SWSH SV ME",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/Ja0AAeSwghNofCT2/s-l225.jpg"
+      },
+      "price": {
+        "value": "1000000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C166900321486%7C0",
+      "seller": {
+        "username": "paristexasllc",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 1742
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Ja0AAeSwghNofCT2/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-23T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-26T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/166900321486?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item26dc08ccce:g:Ja0AAeSwghNofCT2",
+      "itemLocation": {
+        "postalCode": "100**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/3RQAAOSwBERmrcBq/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/ZOQAAeSwyCRowccB/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/lz8AAOSwRVRmrcBr/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/TsMAAOSwXYVmrcBs/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/E~QAAOSwPDZmrcBv/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/PSEAAOSwBExmrcBw/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/s7cAAOSwUvJmrcBx/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/fnUAAOSwEdhmrcBy/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/hw8AAOSw0vpmrcBz/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/vRMAAOSw8NhmrcB0/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/EUIAAeSwOupofCUA/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/1GgAAeSwaRppyGVj/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "166900321486",
+      "availableCoupons": false,
+      "itemOriginDate": "2024-08-03T05:32:02.000Z",
+      "itemCreationDate": "2024-08-03T05:32:02.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|317195919922|0",
+      "title": "ORIGINAL | FACTORY SEALED | 2000 Pokemon Gym Challenge 1st Edition Booster Box",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/pZQAAeSwxUNopfFc/s-l225.jpg"
+      },
+      "price": {
+        "value": "49999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C317195919922%7C0",
+      "seller": {
+        "username": "loosepacks",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 223
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/pZQAAeSwxUNopfFc/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "3000.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/317195919922?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item49da59a232:g:pZQAAeSwxUNopfFc",
+      "itemLocation": {
+        "postalCode": "300**",
+        "country": "US"
+      },
+      "adultOnly": false,
+      "legacyItemId": "317195919922",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-08-20T16:02:45.000Z",
+      "itemCreationDate": "2025-08-20T16:02:45.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|354693089295|0",
+      "title": "Pok\u00e9mon 1st edition fossil sealed booster box,3 PSA Grade 10 WOTC Base Set Packs",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/GbYAAeSwxrFoP~3f/s-l225.jpg"
+      },
+      "price": {
+        "value": "49999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C354693089295%7C0",
+      "seller": {
+        "username": "angelx23",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 89
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/GbYAAeSwxrFoP~3f/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "CALCULATED"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/354693089295?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item52955b080f:g:GbYAAeSwxrFoP~3f",
+      "itemLocation": {
+        "postalCode": "940**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/qocAAeSwqa9oP~3f/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/NOYAAeSwbHNoP~3f/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "354693089295",
+      "availableCoupons": false,
+      "itemOriginDate": "2021-11-13T07:31:49.000Z",
+      "itemCreationDate": "2023-04-03T07:57:28.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|317315327639|0",
+      "title": "ORIGINAL | FACTORY SEALED | 2000 Pokemon Neo Genesis 1st Edition Booster Box",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/afwAAeSwX-xo0FX1/s-l225.jpg"
+      },
+      "price": {
+        "value": "99999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C317315327639%7C0",
+      "seller": {
+        "username": "loosepacks",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 223
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/afwAAeSwX-xo0FX1/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-19T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/317315327639?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item49e177a697:g:afwAAeSwX-xo0FX1",
+      "itemLocation": {
+        "postalCode": "300**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Z6IAAeSwH-Fo0FX1/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "317315327639",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-09-21T19:49:02.000Z",
+      "itemCreationDate": "2025-09-21T19:49:02.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|336568456024|0",
+      "title": "Super Rare! 1999 Pokemon 1st Edition French Base Booster Box Sealed Read",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/qrIAAOSwRFNgc3GE/s-l225.jpg"
+      },
+      "price": {
+        "value": "104500.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C336568456024%7C0",
+      "seller": {
+        "username": "beaniesandphotosandbooks",
+        "feedbackPercentage": "99.6",
+        "feedbackScore": 8461
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/qrIAAOSwRFNgc3GE/s-l640.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "584.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-21T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-28T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/336568456024?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e5d0b1358:g:qrIAAOSwRFNgc3GE",
+      "itemLocation": {
+        "postalCode": "017**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/BREAAOSwuA5gc3GQ/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/hckAAOSwK71gc3Gd/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/~jsAAOSwgx9gc3Gr/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/MnIAAOSwEypgc3G3/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/~VgAAOSw8dZkQxU2/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "336568456024",
+      "availableCoupons": false,
+      "itemOriginDate": "2021-11-18T23:46:56.000Z",
+      "itemCreationDate": "2026-05-05T02:20:06.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|117035666951|0",
+      "title": "Pokemon HEAVY? Base set 1st Edition - Blister Booster Pack (Factory Sealed MINT)",
+      "leafCategoryIds": [
+        "183456",
+        "183053"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "183053",
+          "categoryName": "Sealed Trading Card Packs"
+        },
+        {
+          "categoryId": "1",
+          "categoryName": "Collectibles"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        },
+        {
+          "categoryId": "182982",
+          "categoryName": "Non-Sport Trading Cards"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/S4kAAeSwiP9pj0gp/s-l225.jpg"
+      },
+      "price": {
+        "value": "19999.99",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C117035666951%7C0",
+      "seller": {
+        "username": "galleontradingcompany",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 2771
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/S4kAAeSwiP9pj0gp/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-30T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-06-06T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "epid": "1101446509",
+      "itemWebUrl": "https://www.ebay.com/itm/117035666951?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item1b3fde8e07:g:S4kAAeSwiP9pj0gp",
+      "itemLocation": {
+        "postalCode": "346**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/3yQAAeSwx-1pj0gp/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/JQ0AAeSwERtpj0go/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/TRUAAeSwb5Zpj0go/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Vr0AAeSwgeJpj0go/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Ss4AAeSwoVJpj0go/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/BoUAAeSwpttpj0gp/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/TegAAeSw0eVpj0go/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/VroAAeSwgeJpj0go/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/KMMAAeSwdpxpj0gp/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/sbwAAeSwERtpj0gq/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "117035666951",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-02-13T16:03:24.000Z",
+      "itemCreationDate": "2026-02-13T16:03:24.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|124623825482|0",
+      "title": "1999 Pokemon - Base set - Green Wing Booster Box (Factory Sealed, 36 packs, NM)",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/2zgAAOSwnBRgSPrn/s-l225.jpg"
+      },
+      "price": {
+        "value": "100000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C124623825482%7C0",
+      "seller": {
+        "username": "galleontradingcompany",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 2771
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/2zgAAOSwnBRgSPrn/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-30T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-06-06T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "epid": "9026714747",
+      "itemWebUrl": "https://www.ebay.com/itm/124623825482?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item1d0428aa4a:g:2zgAAOSwnBRgSPrn",
+      "itemLocation": {
+        "postalCode": "346**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/EoEAAOSwLURgSPrf/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/iosAAOSwPPZgSPrb/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/5YEAAOSwcKtgSPrd/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/yscAAOSwHtxgSPrh/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/-j0AAOSwJ9dgSPrj/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/lPwAAOSwR5lgSPrl/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "124623825482",
+      "availableCoupons": false,
+      "itemOriginDate": "2021-03-10T17:05:54.000Z",
+      "itemCreationDate": "2021-03-10T17:05:54.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|157704214201|0",
+      "title": "Pok\u00e9mon 1st Edition Base Set SEALED BLISTERS \u2013 Full Art Set (3 PACKS) - FRENCH",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/tmwAAeSw96VpnQ1c/s-l225.jpg"
+      },
+      "price": {
+        "value": "30000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C157704214201%7C0",
+      "seller": {
+        "username": "centercityauthentic",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 26
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/tmwAAeSw96VpnQ1c/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "epid": "26043327370",
+      "itemWebUrl": "https://www.ebay.com/itm/157704214201?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item24b7e756b9:g:tmwAAeSw96VpnQ1c",
+      "itemLocation": {
+        "postalCode": "194**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/bIsAAeSwxzNpnQ4d/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/cdAAAeSw2bppnQ1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/lXcAAeSwI3ppnQ1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/dDUAAeSwEdBpnQ1b/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/AfwAAeSwleRpnQ1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/ZnwAAeSwFQxpnQ1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Q7IAAeSwtMZpnQ1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Zh4AAeSwfX1pnQ1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/cmEAAeSw~vRpnQ1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/2P4AAeSwx-1pnQ1c/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/58sAAeSwKG5pnQ1d/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/yZ8AAeSwKChpnQ1d/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/IGsAAeSwG6xpnQ1d/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/nA4AAeSwHappnQbN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/LcIAAeSwM0hpnQbN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/UtcAAeSwOcNpnQbN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/07YAAeSwJPdpnQbN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/ONwAAeSw71NpnQbN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/UtgAAeSwOcNpnQbN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/fKoAAeSwVjJpnQbN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/yggAAeSwYkNpnQ4d/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/TtEAAeSwF9FpnQ4d/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/gwMAAeSw8uJpnQ4d/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "157704214201",
+      "availableCoupons": false,
+      "itemOriginDate": "2026-02-24T02:56:22.000Z",
+      "itemCreationDate": "2026-02-24T02:56:22.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|393088786298|0",
+      "title": "Pokemon Blister 10 Pack Base Set Factory Sealed 1999 Mint Extremely Rare \ud83d\udd25\ud83d\udc40\ud83d\udd25 ",
+      "leafCategoryIds": [
+        "183456",
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/hrwAAOSwwu1hUbyp/s-l225.jpg"
+      },
+      "price": {
+        "value": "24999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C393088786298%7C0",
+      "seller": {
+        "username": "rochsha-4",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 111
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/hrwAAOSwwu1hUbyp/s-l960.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/393088786298?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item5b85eadf7a:g:hrwAAOSwwu1hUbyp",
+      "itemLocation": {
+        "postalCode": "980**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/bnoAAOSwKm9f-ORa/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/UAgAAOSwHxNf-ORA/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/k2kAAOSwC5pf-ORH/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/CAcAAOSw5aRf-ORP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/GJAAAOSwRfNf-ORU/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/DOwAAOSwVWlf-RzH/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/m4MAAOSwE95f-OQu/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/NbQAAOSwig9f-OQz/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/PS8AAOSwWjlf-OQ6/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/xukAAOSw9WBf-Rvk/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/zEgAAOSwn91f-Ryv/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "393088786298",
+      "availableCoupons": false,
+      "itemOriginDate": "2021-01-09T03:08:30.000Z",
+      "itemCreationDate": "2021-01-09T03:08:30.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|164727630762|0",
+      "title": "Factory Sealed Pokemon 1st Edition Base Set Booster Blister Pack (Unweighed)",
+      "leafCategoryIds": [
+        "183454"
+      ],
+      "categories": [
+        {
+          "categoryId": "183454",
+          "categoryName": "CCG Individual Cards"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/M3UAAOSwloxfw~MO/s-l225.jpg"
+      },
+      "price": {
+        "value": "39999.99",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C164727630762%7C0",
+      "seller": {
+        "username": "legendarylo0t",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 365
+      },
+      "condition": "Ungraded",
+      "conditionId": "4000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/M3UAAOSwloxfw~MO/s-l1200.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/164727630762?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item265a882baa:g:M3UAAOSwloxfw~MO",
+      "itemLocation": {
+        "postalCode": "201**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/RRwAAOSwc2pfw~MP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/YF0AAOSwne1fw~MO/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/7dAAAOSwG5xfw~MO/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "164727630762",
+      "availableCoupons": false,
+      "itemOriginDate": "2021-02-27T02:47:42.000Z",
+      "itemCreationDate": "2021-02-27T02:47:42.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|286557248420|0",
+      "title": "1st Edition Base Set Charizard Booster Pack PSA 10 Shadowless Pokemon New Sealed",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/gEkAAOSwYUFjtMmW/s-l225.jpg"
+      },
+      "price": {
+        "value": "49999.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C286557248420%7C0",
+      "seller": {
+        "username": "ig-retrogamesncards",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 1399
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/gEkAAOSwYUFjtMmW/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "250.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-28T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-06-04T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/286557248420?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item42b8249ba4:g:gEkAAOSwYUFjtMmW",
+      "itemLocation": {
+        "country": "NL"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/bmcAAOSwgKZjtMmW/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "286557248420",
+      "availableCoupons": false,
+      "itemOriginDate": "2023-01-04T00:38:49.000Z",
+      "itemCreationDate": "2025-05-10T04:33:54.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|164554181655|0",
+      "title": "Factory Sealed Pokemon 1st Edition Base Set Booster Blister Pack (Unweighed)",
+      "leafCategoryIds": [
+        "183454"
+      ],
+      "categories": [
+        {
+          "categoryId": "183454",
+          "categoryName": "CCG Individual Cards"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/IqEAAOSwQC1fw~b6/s-l225.jpg"
+      },
+      "price": {
+        "value": "39999.99",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C164554181655%7C0",
+      "seller": {
+        "username": "legendarylo0t",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 365
+      },
+      "condition": "Ungraded",
+      "conditionId": "4000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/IqEAAOSwQC1fw~b6/s-l1200.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/164554181655?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2650318c17:g:IqEAAOSwQC1fw~b6",
+      "itemLocation": {
+        "postalCode": "201**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/WcsAAOSwKIhfw~b6/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/qXAAAOSwcbhfw~b6/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/klUAAOSwGgdfw~b~/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "164554181655",
+      "availableCoupons": false,
+      "itemOriginDate": "2020-12-03T03:24:38.000Z",
+      "itemCreationDate": "2020-12-03T03:24:38.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|376104613663|0",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box WOTC Sealed Blue Wing Charizard",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/z40AAOSwL-Bn5dUY/s-l225.jpg"
+      },
+      "price": {
+        "value": "80000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C376104613663%7C0",
+      "seller": {
+        "username": "mtsightsphotoig",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 704
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/z40AAOSwL-Bn5dUY/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "CALCULATED"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "epid": "9026714747",
+      "itemWebUrl": "https://www.ebay.com/itm/376104613663?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item579194f71f:g:z40AAOSwL-Bn5dUY",
+      "itemLocation": {
+        "postalCode": "341**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/McIAAOSwcUpn5dUY/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/mmQAAOSwFg9n5dUY/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/O04AAOSwUjJn5dUY/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/cIwAAOSwDgtn5dUY/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/2ZkAAOSwDY1n5dUY/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "376104613663",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-03-27T22:46:03.000Z",
+      "itemCreationDate": "2025-03-27T22:46:03.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|376104602862|0",
+      "title": "ORIGINAL Pokemon Base Set #2 Booster Box FACTORY SEALED ENGLISH",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/6fYAAOSwojtn5dOi/s-l225.jpg"
+      },
+      "price": {
+        "value": "50000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C376104602862%7C0",
+      "seller": {
+        "username": "mtsightsphotoig",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 704
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/6fYAAOSwojtn5dOi/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "epid": "2254353037",
+      "itemWebUrl": "https://www.ebay.com/itm/376104602862?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item579194ccee:g:6fYAAOSwojtn5dOi",
+      "itemLocation": {
+        "postalCode": "341**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/YNgAAOSwjrhn5dOC/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/eqMAAOSwN6xn5dOC/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/8vgAAOSwrC9n5dOC/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/5PwAAOSw5dJn5dOC/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/7BgAAOSwwe1n5dOC/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "376104602862",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-03-27T22:41:02.000Z",
+      "itemCreationDate": "2025-03-27T22:41:02.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|295936767337|0",
+      "title": "1999 Pokemon Base Set Booster Sealed Pack  Art Set WOTC - PSA 10 - SEQUENTIAL",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/SfAAAOSwNf9lB4-~/s-l225.jpg"
+      },
+      "price": {
+        "value": "20000000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C295936767337%7C0",
+      "seller": {
+        "username": "kira_tcg",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 97
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/SfAAAOSwNf9lB4-~/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/295936767337?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item44e734b569:g:SfAAAOSwNf9lB4-~",
+      "itemLocation": {
+        "postalCode": "032**",
+        "country": "US"
+      },
+      "adultOnly": false,
+      "legacyItemId": "295936767337",
+      "availableCoupons": false,
+      "itemOriginDate": "2023-09-17T23:47:48.000Z",
+      "itemCreationDate": "2023-09-17T23:47:48.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|376104618193|0",
+      "title": "Pokemon Factory Sealed TEAM ROCKET 1ST EDITION - Booster Box Rare - UNOPENED!",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/3wMAAOSwuO5n5dZL/s-l225.jpg"
+      },
+      "price": {
+        "value": "80000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C376104618193%7C0",
+      "seller": {
+        "username": "mtsightsphotoig",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 704
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/3wMAAOSwuO5n5dZL/s-l1600.jpg"
+        }
+      ],
+      "shippingOptions": [
+        {
+          "shippingCostType": "FIXED",
+          "shippingCost": {
+            "value": "0.00",
+            "currency": "USD"
+          },
+          "minEstimatedDeliveryDate": "2026-05-20T07:00:00.000Z",
+          "maxEstimatedDeliveryDate": "2026-05-22T07:00:00.000Z"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/376104618193?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item57919508d1:g:3wMAAOSwuO5n5dZL",
+      "itemLocation": {
+        "postalCode": "341**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/LBAAAOSwFeJn5dYe/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/uOAAAOSwRQBn5dYe/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/lUgAAOSwg7Zn5dYe/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/unQAAOSwFxVn5dYe/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/2ZMAAOSwvtRn5dYe/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "376104618193",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-03-27T22:51:43.000Z",
+      "itemCreationDate": "2025-03-27T22:51:43.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|285176228006|0",
+      "title": "Pokemon Base Set Booster Box Unlimited 1999 WOTC Factory Sealed English 36 Packs",
+      "leafCategoryIds": [
+        "261044"
+      ],
+      "categories": [
+        {
+          "categoryId": "261044",
+          "categoryName": "CCG Sealed Boxes"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/SzYAAeSw2eVopNgs/s-l225.jpg"
+      },
+      "price": {
+        "value": "50000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C285176228006%7C0",
+      "seller": {
+        "username": "villoham",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 192
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/SzYAAeSw2eVopNgs/s-l1600.jpg"
+        }
+      ],
+      "pickupOptions": [
+        {
+          "pickupLocationType": "ARRANGED_LOCATION"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/285176228006?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4265d3e8a6:g:SzYAAeSw2eVopNgs",
+      "itemLocation": {
+        "postalCode": "937**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/qPkAAeSw1VBopNgt/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/I9EAAOSw5pBkCXGy/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/YyAAAOSwnTpkCXGz/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/5gUAAOSwGgRkCXGz/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/VlQAAOSwx1VkCXG1/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/8~8AAOSwD-tkCXG1/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/cj0AAeSwGdlopNgs/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/czgAAeSw0XlopNgs/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/v7AAAeSwq11opNgs/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/zXkAAeSwuBBopNgt/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "285176228006",
+      "availableCoupons": false,
+      "itemOriginDate": "2023-03-09T05:44:51.000Z",
+      "itemCreationDate": "2023-03-09T05:44:51.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|297403372676|0",
+      "title": "\ud83d\udea6Factory Sealed 1999 Pokemon Base Booster Box (36 packs) Single Country Code",
+      "leafCategoryIds": [
+        "183456"
+      ],
+      "categories": [
+        {
+          "categoryId": "183456",
+          "categoryName": "CCG Sealed Packs"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/d4QAAOSwVVNfAmZu/s-l225.jpg"
+      },
+      "price": {
+        "value": "99999.99",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C297403372676%7C0",
+      "seller": {
+        "username": "roguerule",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 2213
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/d4QAAOSwVVNfAmZu/s-l1600.jpg"
+        }
+      ],
+      "pickupOptions": [
+        {
+          "pickupLocationType": "ARRANGED_LOCATION"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/297403372676?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item453e9f5484:g:d4QAAOSwVVNfAmZu",
+      "itemLocation": {
+        "postalCode": "800**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/us0AAOSwoTBfAmZw/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/yV4AAOSwsuNfAmZ1/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Q7wAAOSwSEJfAmZ5/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/1PsAAOSwr65fAmZ7/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/E1cAAOSwhDBfEx~A/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/lWcAAOSw7qlfAmaA/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/pTkAAOSwj6tn5bzk/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "297403372676",
+      "availableCoupons": false,
+      "itemOriginDate": "2025-06-12T00:48:03.000Z",
+      "itemCreationDate": "2025-06-12T00:48:03.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    },
+    {
+      "itemId": "v1|333861595998|0",
+      "title": "Complete English Sealed WoTC Pokemon Theme Deck Collection W/Variations, & Gift",
+      "leafCategoryIds": [
+        "183457"
+      ],
+      "categories": [
+        {
+          "categoryId": "183457",
+          "categoryName": "CCG Sealed Decks & Kits"
+        },
+        {
+          "categoryId": "220",
+          "categoryName": "Toys & Hobbies"
+        },
+        {
+          "categoryId": "2536",
+          "categoryName": "Collectible Card Games"
+        }
+      ],
+      "image": {
+        "imageUrl": "https://i.ebayimg.com/images/g/PW0AAOSw~nFf4vti/s-l225.jpg"
+      },
+      "price": {
+        "value": "222000.00",
+        "currency": "USD"
+      },
+      "itemHref": "https://api.ebay.com/buy/browse/v1/item/v1%7C333861595998%7C0",
+      "seller": {
+        "username": "nostalgic-alley-cat",
+        "feedbackPercentage": "100.0",
+        "feedbackScore": 346
+      },
+      "condition": "New/Factory Sealed",
+      "conditionId": "1000",
+      "thumbnailImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/PW0AAOSw~nFf4vti/s-l1600.jpg"
+        }
+      ],
+      "pickupOptions": [
+        {
+          "pickupLocationType": "ARRANGED_LOCATION"
+        }
+      ],
+      "buyingOptions": [
+        "FIXED_PRICE",
+        "BEST_OFFER"
+      ],
+      "itemWebUrl": "https://www.ebay.com/itm/333861595998?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4dbbb3ab5e:g:PW0AAOSw~nFf4vti",
+      "itemLocation": {
+        "postalCode": "919**",
+        "country": "US"
+      },
+      "additionalImages": [
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/rfsAAOSwnKlf5Ef7/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/dLgAAOSwACpf5EF9/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/9LoAAOSwpNxf5D-H/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/HbkAAOSwKepf5EJL/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/ngUAAOSwSqJf5EeP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/eWkAAOSwrOlf5Ea1/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/ifUAAOSwxVFf8tQS/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/93EAAOSwAOJko4M9/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/oCwAAOSwihJko4L6/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/Hg0AAOSw5upko4DP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/3ZgAAOSwHitko4H8/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/HEoAAOSwsxdko4KU/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/2ZUAAOSwEOhf5EYK/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/G2gAAOSwYbdko4H9/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/9xIAAOSwNFJko4H-/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/7DIAAOSw9Jlko4H~/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/quAAAOSwxJlko4FN/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/neMAAOSwihJko4FO/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/rGEAAOSwrilko4FO/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/wUYAAOSwNdpko4FL/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/xuoAAOSwoaZko4FM/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/AJQAAOSwocdko4FP/s-l225.jpg"
+        },
+        {
+          "imageUrl": "https://i.ebayimg.com/images/g/FYUAAOSwDx1ko4NC/s-l225.jpg"
+        }
+      ],
+      "adultOnly": false,
+      "legacyItemId": "333861595998",
+      "availableCoupons": false,
+      "itemOriginDate": "2021-01-18T13:24:30.000Z",
+      "itemCreationDate": "2021-01-18T13:24:30.000Z",
+      "topRatedBuyingExperience": false,
+      "priorityListing": false,
+      "listingMarketplaceId": "EBAY_US"
+    }
+  ]
+}

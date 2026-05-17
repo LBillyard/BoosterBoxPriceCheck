@@ -8,12 +8,14 @@ from concurrent.futures import ThreadPoolExecutor, TimeoutError as FutTimeoutErr
 from pathlib import Path
 
 import requests
+from dotenv import load_dotenv
+load_dotenv()  # noop in CI where vars come from GitHub Secrets
 
 from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
 from .history import merge_sales
-from .sources import ebay_uk, ebay_us, ebay_us_active
+from .sources import ebay_uk, ebay_us, ebay_us_active, ebay_api_us, ebay_api_uk
 # Two eBay UK sources are intentionally disabled:
 #
 # - ebay_uk_active: tried 3 URL variants, all hung patchright on the
@@ -186,6 +188,19 @@ def main() -> int:
         print("INFO: ebay_us_active returned 0; retrying once", file=sys.stderr, flush=True)
         rows = _run_with_timeout("ebay_us_active(retry)", lambda: ebay_us_active.fetch())
     source_counts["ebay_us_active"] = len(rows)
+    active_rows.extend(rows)
+
+    # API-backed active listings via the official eBay Browse API.
+    # Cheap (~1-3s each) and resilient — runs alongside the SRP scrapers
+    # so either path can fail without dropping the snapshot to zero rows.
+    # ebay_api_uk needs the FX rate to convert GBP→USD-cents at the
+    # transport layer; fx is already GBP-per-USD so we pass it directly.
+    rows = _run_with_timeout("ebay_api_us", lambda: ebay_api_us.fetch())
+    source_counts["ebay_api_us"] = len(rows)
+    active_rows.extend(rows)
+
+    rows = _run_with_timeout("ebay_api_uk", lambda: ebay_api_uk.fetch(gbp_per_usd=fx))
+    source_counts["ebay_api_uk"] = len(rows)
     active_rows.extend(rows)
 
     # ebay_pinned removed — see import-line comment for why.
