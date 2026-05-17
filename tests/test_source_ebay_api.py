@@ -292,3 +292,36 @@ def test_ebay_api_uk_drops_rows_outside_price_band(monkeypatch):
     rows = ebay_api_uk.fetch(gbp_per_usd=0.75)
     assert len(rows) == 1
     assert rows[0]["usd_cents"] == 3_500_000
+
+
+def test_normalise_response_includes_item_id():
+    payload = {
+        "itemSummaries": [
+            {
+                "itemId": "v1|115678901234|0",
+                "title": "Pokemon Base Set Booster Box WOTC Sealed",
+                "price": {"value": "30000.00", "currency": "USD"},
+                "itemWebUrl": "https://www.ebay.com/itm/115678901234",
+                "itemCreationDate": "2026-05-10T12:00:00.000Z",
+            }
+        ]
+    }
+    rows = _normalise_response(payload, currency="USD")
+    assert rows[0]["item_id"] == "v1|115678901234|0"
+
+
+def test_normalise_response_handles_missing_item_id():
+    """eBay always returns itemId in real responses, but be defensive."""
+    payload = {
+        "itemSummaries": [
+            {
+                "title": "Pokemon Base Set Booster Box",
+                "price": {"value": "30000.00", "currency": "USD"},
+                "itemWebUrl": "https://www.ebay.com/itm/x",
+            }
+        ]
+    }
+    rows = _normalise_response(payload, currency="USD")
+    # Row still produced (no skip), item_id is None
+    assert len(rows) == 1
+    assert rows[0].get("item_id") is None
