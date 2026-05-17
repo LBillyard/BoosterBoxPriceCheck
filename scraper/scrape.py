@@ -14,6 +14,7 @@ from .parser import parse_prices, parse_last_sold, parse_listings
 from .fx import fetch_usd_to_gbp
 from .snapshot import build_snapshot
 from .history import merge_sales
+from .listings_history import merge_listings
 from .sources import ebay_api_us, ebay_api_uk
 # Live sources: PriceCharting (parser.py) + the official eBay Browse API
 # (sources.ebay_api_us, sources.ebay_api_uk). The patchright SRP scrapers
@@ -67,6 +68,7 @@ USER_AGENT = (
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 SNAPSHOT_FILE = DATA_DIR / "snapshot.json"
 HISTORY_FILE = DATA_DIR / "sales_history.json"
+LISTINGS_HISTORY_FILE = DATA_DIR / "listings_history.json"
 ERROR_FILE = DATA_DIR / "error.json"
 
 def fetch_page() -> str:
@@ -176,6 +178,13 @@ def main() -> int:
         print(f"WARN: sales history merge failed: {hist_err}", file=sys.stderr)
         history_count = -1
 
+    try:
+        listings_history = merge_listings(active_rows, LISTINGS_HISTORY_FILE)
+        listings_history_count = len(listings_history)
+    except Exception as hist_err:  # noqa: BLE001 — history is opportunistic
+        print(f"WARN: listings history merge failed: {hist_err}", file=sys.stderr)
+        listings_history_count = -1
+
     if ERROR_FILE.exists():
         ERROR_FILE.unlink()
     counts_str = ", ".join(f"{k}={v}" for k, v in source_counts.items())
@@ -183,7 +192,7 @@ def main() -> int:
         f"OK: wrote {SNAPSHOT_FILE} with {len(prices)} prices, "
         f"{len(listings)} listings, {len(snap['recent_sales'])} recent sales, "
         f"{len(snap['active_listings'])} active listings, "
-        f"history={history_count} ({counts_str})"
+        f"sales_history={history_count}, listings_history={listings_history_count} ({counts_str})"
     )
     return 0
 
