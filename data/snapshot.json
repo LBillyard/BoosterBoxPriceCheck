@@ -1,13 +1,13 @@
 {
-  "scraped_at": "2026-05-18T14:59:54.174979+00:00",
+  "scraped_at": "2026-05-19T02:39:49.156171+00:00",
   "fx": {
     "usd_to_gbp": 0.74708,
-    "fetched_at": "2026-05-18T14:59:54.174979+00:00"
+    "fetched_at": "2026-05-19T02:39:49.156171+00:00"
   },
   "prices": {
     "loose": {
-      "usd": 36251.0,
-      "gbp": 27082.4
+      "usd": 38688.49,
+      "gbp": 28903.4
     }
   },
   "last_sold": {
@@ -117,7 +117,7 @@
       "gbp": 42583.56,
       "url": "https://www.ebay.com/itm/267648591048?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item3e511964c8:g:9ZgAAeSw-dNp6jgd",
       "seller_name": "tca_gaming",
-      "seller_feedback": 109825,
+      "seller_feedback": 109841,
       "seller_positive_pct": 100.0
     },
     {
