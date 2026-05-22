@@ -10,7 +10,7 @@
     "seller_feedback": 109824,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-05-22T02:43:37Z"
+    "last_seen": "2026-05-22T14:24:57Z"
   },
   {
     "item_id": "v1|236017015392|0",
@@ -23,7 +23,7 @@
     "seller_feedback": 410,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-05-22T02:43:37Z"
+    "last_seen": "2026-05-22T14:24:57Z"
   },
   {
     "item_id": "v1|335765516351|0",
@@ -36,7 +36,7 @@
     "seller_feedback": 834,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-05-22T02:43:37Z"
+    "last_seen": "2026-05-22T14:24:57Z"
   },
   {
     "item_id": "v1|315005009497|0",
@@ -49,7 +49,7 @@
     "seller_feedback": 223,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-05-22T02:43:37Z"
+    "last_seen": "2026-05-22T14:24:57Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -75,7 +75,7 @@
     "seller_feedback": 223,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-05-22T02:43:37Z"
+    "last_seen": "2026-05-22T14:24:57Z"
   },
   {
     "item_id": "v1|376104613663|0",
@@ -88,7 +88,7 @@
     "seller_feedback": 704,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-05-22T02:43:37Z"
+    "last_seen": "2026-05-22T14:24:57Z"
   },
   {
     "item_id": "v1|376104602862|0",
@@ -101,7 +101,7 @@
     "seller_feedback": 704,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-05-22T02:43:37Z"
+    "last_seen": "2026-05-22T14:24:57Z"
   },
   {
     "item_id": "v1|285176228006|0",
@@ -114,7 +114,7 @@
     "seller_feedback": 192,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-05-22T02:43:37Z"
+    "last_seen": "2026-05-22T14:24:57Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -310,5 +310,57 @@
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-21T14:50:17Z",
     "last_seen": "2026-05-22T02:43:37Z"
+  },
+  {
+    "item_id": "v1|336571134866|0",
+    "source": "ebay_api_us",
+    "title": "Pokemon Base Set (WoTC) Green Wing Booster Box - Sealed",
+    "usd_cents": 4633695,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/336571134866?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e5d33f392:g:2r0AAeSwKDVp-3yu",
+    "seller_name": "infinitygrails",
+    "seller_feedback": 187,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-05-22T14:24:57Z",
+    "last_seen": "2026-05-22T14:24:57Z"
+  },
+  {
+    "item_id": "v1|198215232725|0",
+    "source": "ebay_api_us",
+    "title": "Sealed 1999 Pokemon Base Set Booster Box Vintage WoTC Wizards 36 Pack",
+    "usd_cents": 4700850,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/198215232725?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2e268c6cd5:g:4lgAAeSwOyxpwAqM",
+    "seller_name": "totallygoo",
+    "seller_feedback": 292,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-05-22T14:24:57Z",
+    "last_seen": "2026-05-22T14:24:57Z"
+  },
+  {
+    "item_id": "v1|336571134866|0",
+    "source": "ebay_api_uk",
+    "title": "Pokemon Base Set (WoTC) Green Wing Booster Box - Sealed",
+    "usd_cents": 4629008,
+    "gbp_cents": 3450000,
+    "url": "https://www.ebay.co.uk/itm/336571134866?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e5d33f392:g:2r0AAeSwKDVp-3yu",
+    "seller_name": "infinitygrails",
+    "seller_feedback": 187,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-05-22T14:24:57Z",
+    "last_seen": "2026-05-22T14:24:57Z"
+  },
+  {
+    "item_id": "v1|198215232725|0",
+    "source": "ebay_api_uk",
+    "title": "Sealed 1999 Pokemon Base Set Booster Box Vintage WoTC Wizards 36 Pack",
+    "usd_cents": 4696096,
+    "gbp_cents": 3500000,
+    "url": "https://www.ebay.co.uk/itm/198215232725?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2e268c6cd5:g:4lgAAeSwOyxpwAqM",
+    "seller_name": "totallygoo",
+    "seller_feedback": 292,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-05-22T14:24:57Z",
+    "last_seen": "2026-05-22T14:24:57Z"
   }
 ]
