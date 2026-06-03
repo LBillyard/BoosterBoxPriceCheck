@@ -10,7 +10,7 @@
     "seller_feedback": 109824,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
   },
   {
     "item_id": "v1|236017015392|0",
@@ -23,7 +23,7 @@
     "seller_feedback": 410,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
   },
   {
     "item_id": "v1|335765516351|0",
@@ -36,7 +36,7 @@
     "seller_feedback": 834,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
   },
   {
     "item_id": "v1|315005009497|0",
@@ -49,7 +49,7 @@
     "seller_feedback": 223,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -75,7 +75,7 @@
     "seller_feedback": 223,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
   },
   {
     "item_id": "v1|376104613663|0",
@@ -88,7 +88,7 @@
     "seller_feedback": 704,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
   },
   {
     "item_id": "v1|376104602862|0",
@@ -101,7 +101,7 @@
     "seller_feedback": 704,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
   },
   {
     "item_id": "v1|285176228006|0",
@@ -699,7 +699,7 @@
     "seller_feedback": 293,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-02T16:08:57Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -712,6 +712,19 @@
     "seller_feedback": 293,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-02T16:08:57Z",
-    "last_seen": "2026-06-02T16:08:57Z"
+    "last_seen": "2026-06-03T03:29:27Z"
+  },
+  {
+    "item_id": "v1|285176228006|0",
+    "source": "ebay_api_us",
+    "title": "Pokemon Base Set Booster Box Unlimited 1999 WOTC Factory Sealed English 36 Packs",
+    "usd_cents": 5500000,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/285176228006?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4265d3e8a6:g:SzYAAeSw2eVopNgs",
+    "seller_name": "villoham",
+    "seller_feedback": 193,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-06-03T03:29:27Z",
+    "last_seen": "2026-06-03T03:29:27Z"
   }
 ]

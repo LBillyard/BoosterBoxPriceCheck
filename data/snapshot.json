@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-06-02T16:08:57.406601+00:00",
+  "scraped_at": "2026-06-03T03:29:27.197820+00:00",
   "fx": {
     "usd_to_gbp": 0.74225,
-    "fetched_at": "2026-06-02T16:08:57.406601+00:00"
+    "fetched_at": "2026-06-03T03:29:27.197820+00:00"
   },
   "prices": {
     "loose": {
@@ -35,7 +35,7 @@
       "title": "ORIGINAL | FACTORY SEALED | 1999 Pokemon Base Set Booster Box | 36 Packs | WOTC",
       "usd": 49999.0,
       "gbp": 37111.76,
-      "url": "https://www.ebay.com/itm/317195901292?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item49da59596c:g:WEUAAeSwAhJope5Q&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZJ06mFALw8F1nw31VzMj%2Bl3Cai%2FFnjqf6B9yzPy0llDL%2Fwhp1ZRO76GByfIpRhD2BZbiUxpJRrYBICapbvzXwTPDwUuqlN8BL4TYTOi3vfCMbyQjnpY3kGhDnUob6crzzWv0DrKRqcspj8igA9Gxq1v%2FaDxtBoLHQdr8hLup4da%2BLw1YWRbblzL4q8nLVFCy8ogCBnUhBUPcIFDSwb7GMLRhv17eZOWSG3XNU9KbEwLNS2hoAOs8bPRnok31bWhRMnBk9Ak3eb78kOThxw8LCQ4KEjE%2B0Ey7mbjjv%2FiCRNYeqirJx8erEYltn9i%2FV9hJJcAfsUhthOjDVeqO2Mqw1H",
+      "url": "https://www.ebay.com/itm/317195901292?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item49da59596c:g:WEUAAeSwAhJope5Q&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZJ06mFALw8F1nw31VzMj%2Bl3Cai%2FFnjqf6B9yzPy0llDL%2Fwhp1ZRO76GByfIpRhD2BZbiUxpJRrYBICapbvzXwTPDwUuqlN8BL4TYTOi3vfCMbyQjnpY3kGhDnUob6crzyuKJEYFG%2Bs8YsAi%2FQ%2FnEwXWxWCS5J6%2FdXyW7IUuVGKTqx52s9zW19r%2BXAgwPmk7Csb%2FIriD%2FIb4hGODXCwzls%2Fl2aRZiFSTsfDfeSZNraJWK7THbGVX8Z1fPI8fvstyyIXYC%2FZEtttoaHJt4PK%2F3ce%2F3QlYn55ds9wtFqml5hI%2FC5%2FZPBM8G%2B3HP1zosuI7OJwtwAH0DN%2BnciHt5iqt52p",
       "seller_name": "loosepacks",
       "seller_feedback": 223,
       "seller_positive_pct": 100.0
@@ -57,17 +57,7 @@
       "gbp": 37112.5,
       "url": "https://www.ebay.com/itm/376104602862?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item579194ccee:g:6fYAAOSwojtn5dOi",
       "seller_name": "mtsightsphotoig",
-      "seller_feedback": 707,
-      "seller_positive_pct": 100.0
-    },
-    {
-      "source": "ebay_api_us",
-      "title": "Pokemon Base Set Booster Box Unlimited 1999 WOTC Factory Sealed English 36 Packs",
-      "usd": 50000.0,
-      "gbp": 37112.5,
-      "url": "https://www.ebay.com/itm/285176228006?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4265d3e8a6:g:SzYAAeSw2eVopNgs",
-      "seller_name": "villoham",
-      "seller_feedback": 193,
+      "seller_feedback": 708,
       "seller_positive_pct": 100.0
     },
     {
@@ -102,12 +92,22 @@
     },
     {
       "source": "ebay_api_us",
+      "title": "Pokemon Base Set Booster Box Unlimited 1999 WOTC Factory Sealed English 36 Packs",
+      "usd": 55000.0,
+      "gbp": 40823.75,
+      "url": "https://www.ebay.com/itm/285176228006?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4265d3e8a6:g:SzYAAeSw2eVopNgs",
+      "seller_name": "villoham",
+      "seller_feedback": 193,
+      "seller_positive_pct": 100.0
+    },
+    {
+      "source": "ebay_api_us",
       "title": "XRAY Base Set SEALED Booster Box WOTC Authentic Guarantee LOA (Pokemon Cards)",
       "usd": 57000.0,
       "gbp": 42308.25,
       "url": "https://www.ebay.com/itm/267648591048?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item3e511964c8:g:9ZgAAeSw-dNp6jgd",
       "seller_name": "tca_gaming",
-      "seller_feedback": 109979,
+      "seller_feedback": 109986,
       "seller_positive_pct": 100.0
     },
     {
@@ -127,7 +127,7 @@
       "gbp": 59380.0,
       "url": "https://www.ebay.com/itm/376104613663?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item579194f71f:g:z40AAOSwL-Bn5dUY",
       "seller_name": "mtsightsphotoig",
-      "seller_feedback": 707,
+      "seller_feedback": 708,
       "seller_positive_pct": 100.0
     }
   ],
