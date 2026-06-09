@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-06-08T15:36:01.218362+00:00",
+  "scraped_at": "2026-06-09T02:32:38.567908+00:00",
   "fx": {
     "usd_to_gbp": 0.74835,
-    "fetched_at": "2026-06-08T15:36:01.218362+00:00"
+    "fetched_at": "2026-06-09T02:32:38.567908+00:00"
   },
   "prices": {
     "loose": {
@@ -107,7 +107,27 @@
       "gbp": 42655.95,
       "url": "https://www.ebay.com/itm/267648591048?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item3e511964c8:g:9ZgAAeSw-dNp6jgd",
       "seller_name": "tca_gaming",
-      "seller_feedback": 110014,
+      "seller_feedback": 110017,
+      "seller_positive_pct": 100.0
+    },
+    {
+      "source": "ebay_api_us",
+      "title": "1999 Pok\u00e9mon Base Set Booster Box (Green Wing) \u2013 Factory Sealed - CASE FRESH \ud83d\udce6",
+      "usd": 57000.0,
+      "gbp": 42655.95,
+      "url": "https://www.ebay.com/itm/327202734304?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4c2ecd80e0:g:jwMAAeSwqvlqJtQ5",
+      "seller_name": "vtgrad2010",
+      "seller_feedback": 1199,
+      "seller_positive_pct": 100.0
+    },
+    {
+      "source": "ebay_api_us",
+      "title": "POKEMON BASE SET 1999 GREEN WING SEALED BOOSTER BOX WIZARDS OF THE COAST",
+      "usd": 59999.98,
+      "gbp": 44900.99,
+      "url": "https://www.ebay.com/itm/306991002972?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item477a16f55c:g:FwMAAeSwFhpqJ0lN",
+      "seller_name": "teamaqua69",
+      "seller_feedback": 386,
       "seller_positive_pct": 100.0
     },
     {
@@ -134,7 +154,7 @@
   "purchase_price_gbp": 29253.05,
   "source_counts": {
     "pricecharting_last_sold": 1,
-    "ebay_api_us": 9,
+    "ebay_api_us": 11,
     "ebay_api_uk": 1
   }
 }
