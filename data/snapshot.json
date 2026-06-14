@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-06-14T02:56:49.574325+00:00",
+  "scraped_at": "2026-06-14T13:47:26.448162+00:00",
   "fx": {
     "usd_to_gbp": 0.74613,
-    "fetched_at": "2026-06-14T02:56:49.574325+00:00"
+    "fetched_at": "2026-06-14T13:47:26.448162+00:00"
   },
   "prices": {
     "loose": {
@@ -37,7 +37,7 @@
       "gbp": 35813.49,
       "url": "https://www.ebay.com/itm/188502880251?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2be3a5affb:g:QygAAeSw4VlqLFGz",
       "seller_name": "pfootballpete4dhx",
-      "seller_feedback": 685275,
+      "seller_feedback": 685382,
       "seller_positive_pct": 99.4
     },
     {
@@ -57,7 +57,7 @@
       "gbp": 37306.5,
       "url": "https://www.ebay.com/itm/236017015392?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item36f3b5da60:g:P84AAeSwaGln327A",
       "seller_name": "garys_pokemart",
-      "seller_feedback": 422,
+      "seller_feedback": 423,
       "seller_positive_pct": 100.0
     },
     {
