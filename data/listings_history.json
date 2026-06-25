@@ -10,7 +10,7 @@
     "seller_feedback": 109824,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|236017015392|0",
@@ -23,7 +23,7 @@
     "seller_feedback": 410,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|335765516351|0",
@@ -36,7 +36,7 @@
     "seller_feedback": 834,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|315005009497|0",
@@ -49,7 +49,7 @@
     "seller_feedback": 223,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -75,7 +75,7 @@
     "seller_feedback": 223,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|376104613663|0",
@@ -88,7 +88,7 @@
     "seller_feedback": 704,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|376104602862|0",
@@ -101,7 +101,7 @@
     "seller_feedback": 704,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|285176228006|0",
@@ -725,7 +725,7 @@
     "seller_feedback": 193,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-03T03:29:27Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -855,7 +855,7 @@
     "seller_feedback": 1199,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-09T02:32:38Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -985,7 +985,7 @@
     "seller_feedback": 684480,
     "seller_positive_pct": 99.4,
     "first_seen": "2026-06-13T02:45:27Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -1206,6 +1206,32 @@
     "seller_feedback": 107,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-25T02:39:28Z",
-    "last_seen": "2026-06-25T02:39:28Z"
+    "last_seen": "2026-06-25T14:10:39Z"
+  },
+  {
+    "item_id": "v1|198215232725|0",
+    "source": "ebay_api_us",
+    "title": "Sealed 1999 Pokemon Base Set Booster Box Vintage WoTC Wizards 36 Pack",
+    "usd_cents": 5267200,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/198215232725?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2e268c6cd5:g:4lgAAeSwOyxpwAqM",
+    "seller_name": "zorocardstcg",
+    "seller_feedback": 294,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-06-25T14:10:39Z",
+    "last_seen": "2026-06-25T14:10:39Z"
+  },
+  {
+    "item_id": "v1|198215232725|0",
+    "source": "ebay_api_uk",
+    "title": "Sealed 1999 Pokemon Base Set Booster Box Vintage WoTC Wizards 36 Pack",
+    "usd_cents": 5264128,
+    "gbp_cents": 4000000,
+    "url": "https://www.ebay.co.uk/itm/198215232725?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2e268c6cd5:g:4lgAAeSwOyxpwAqM",
+    "seller_name": "zorocardstcg",
+    "seller_feedback": 294,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-06-25T14:10:39Z",
+    "last_seen": "2026-06-25T14:10:39Z"
   }
 ]
