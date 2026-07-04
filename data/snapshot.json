@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-07-04T02:12:30.297036+00:00",
+  "scraped_at": "2026-07-04T13:07:54.820726+00:00",
   "fx": {
     "usd_to_gbp": 0.74878,
-    "fetched_at": "2026-07-04T02:12:30.297036+00:00"
+    "fetched_at": "2026-07-04T13:07:54.820726+00:00"
   },
   "prices": {
     "loose": {
@@ -32,20 +32,10 @@
   "active_listings": [
     {
       "source": "ebay_api_us",
-      "title": "1999 Pokemon TCG Green Wing Charizard Base Set Booster Box FACTORY SEALED",
-      "usd": 22780.0,
-      "gbp": 17057.21,
-      "url": "https://www.ebay.com/itm/137437274728?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item1fffe66268:g:emcAAeSwCPVqNypd",
-      "seller_name": "overstax_sales",
-      "seller_feedback": 9,
-      "seller_positive_pct": 84.6
-    },
-    {
-      "source": "ebay_api_us",
       "title": "Pokemon Base Set Unlimited Booster Box GREEN WING CHARIZARD Sealed English MINT",
       "usd": 42000.0,
       "gbp": 31448.76,
-      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDk9ntNBUlc4BZ4wpKztjpPHzRFQYsj7XP5g1SE5M1S3chyFNLPPCmKZOqKucttPH3ZqmV6YmcwMbS0qgWo4mGaPmTK%2B2UbO7q0S0glTnphXLxeBIsxbFSaAm6VYxl%2BurkkcbS%2FlBnhq0sn6SoH6yQSKpHXSE4Av4rr4Z4tPsIEWws1zjGc%2B0iY5l8JgRovKU1fmTiD2neFRA49AZuwoQ7oz",
+      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDmVaygc52hB%2FCCP9EmJRP9GaIDOqGFgvNijUcqvZvZZ5OzweY%2FjIGH6DyqN7jeosSRyfcEzB5iTVFhlmHgglVqvJhyjiI1yuCt5uMEASNFbuG3GE0fJWzZqpyePqczctBuak8A0liorSTxjf0vDkFskE822LO00OEwDdVp3QVqwiQU3E9Z9kFjAE%2FSDGtM8ojwO41lApcJDDLOczETa3h8n",
       "seller_name": "akim026",
       "seller_feedback": 107,
       "seller_positive_pct": 100.0
@@ -57,8 +47,18 @@
       "gbp": 35940.69,
       "url": "https://www.ebay.com/itm/188502880251?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2be3a5affb:g:QygAAeSw4VlqLFGz",
       "seller_name": "pfootballpete4dhx",
-      "seller_feedback": 698996,
+      "seller_feedback": 699254,
       "seller_positive_pct": 99.4
+    },
+    {
+      "source": "ebay_api_us",
+      "title": "1999 Pokemon TCG Green Wing Charizard Base Set Booster Box FACTORY SEALED",
+      "usd": 49360.0,
+      "gbp": 36959.78,
+      "url": "https://www.ebay.com/itm/137437274728?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item1fffe66268:g:emcAAeSwCPVqNypd",
+      "seller_name": "overstax_sales",
+      "seller_feedback": 9,
+      "seller_positive_pct": 84.6
     },
     {
       "source": "ebay_api_us",
