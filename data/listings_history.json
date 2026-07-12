@@ -10,7 +10,7 @@
     "seller_feedback": 109824,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
   },
   {
     "item_id": "v1|236017015392|0",
@@ -23,7 +23,7 @@
     "seller_feedback": 410,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
   },
   {
     "item_id": "v1|335765516351|0",
@@ -36,7 +36,7 @@
     "seller_feedback": 834,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
   },
   {
     "item_id": "v1|315005009497|0",
@@ -88,7 +88,7 @@
     "seller_feedback": 704,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
   },
   {
     "item_id": "v1|376104602862|0",
@@ -101,7 +101,7 @@
     "seller_feedback": 704,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
   },
   {
     "item_id": "v1|285176228006|0",
@@ -725,7 +725,7 @@
     "seller_feedback": 193,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-03T03:29:27Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -855,7 +855,7 @@
     "seller_feedback": 1199,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-09T02:32:38Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -985,7 +985,7 @@
     "seller_feedback": 684480,
     "seller_positive_pct": 99.4,
     "first_seen": "2026-06-13T02:45:27Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -1323,6 +1323,19 @@
     "seller_feedback": 644,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-07-08T13:47:29Z",
-    "last_seen": "2026-07-11T13:02:39Z"
+    "last_seen": "2026-07-12T02:04:00Z"
+  },
+  {
+    "item_id": "v1|137449945352|0",
+    "source": "ebay_api_us",
+    "title": "Pokemon Base Set Unlimited Booster Box GREEN WING CHARIZARD Sealed English MINT",
+    "usd_cents": 4400000,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDmqDH04jWxfLUq2%2Ffe4ZE1oOHk0yIeHOnC68gdnR0x9HSCwD%2FDYGegCtNmJZyEzDuAwJ2asCa3WjSzWmJZBeyNisnWruvrWQTfn31cqzpnwJ%2FpNv07CHho%2FVFt3kixwC2md6ZKwbhyYQamdgG6LL%2BLBolfhSjunUoRzOXxGQZSRcWy4O9aouvLRxMb6yxShBBcJMQfR0R9eEZHkdF93Ym5m",
+    "seller_name": "akim026",
+    "seller_feedback": 107,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-07-12T02:04:00Z",
+    "last_seen": "2026-07-12T02:04:00Z"
   }
 ]
