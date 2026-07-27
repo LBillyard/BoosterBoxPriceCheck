@@ -1,13 +1,13 @@
 {
-  "scraped_at": "2026-07-26T13:04:44.167857+00:00",
+  "scraped_at": "2026-07-27T02:13:43.612834+00:00",
   "fx": {
     "usd_to_gbp": 0.75053,
-    "fetched_at": "2026-07-26T13:04:44.167857+00:00"
+    "fetched_at": "2026-07-27T02:13:43.612834+00:00"
   },
   "prices": {
     "loose": {
-      "usd": 35625.0,
-      "gbp": 26737.63
+      "usd": 36600.0,
+      "gbp": 27469.4
     }
   },
   "last_sold": {
@@ -45,7 +45,7 @@
       "title": "Pokemon Base Set Unlimited Booster Box GREEN WING CHARIZARD Sealed English MINT",
       "usd": 47000.0,
       "gbp": 35274.91,
-      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDkrNUg25saH0fP1TGGUOQh0fGDnTS404esqYE%2B6PXW6tCehVs4B1Yq98fBnJWiVxHYB%2BnTkIya2cK%2F9tgmmK7%2FTsfuOJSbsRWCRJyoP5%2Brw4Y9PW99HzVPFfWjq3IMX%2FmrfOOVptPjRUbr7voB7qC4wFiQy0qgOEKMwcDllyIenOon2DVbySWT7KaHV5z%2FLkyhVU5WarZ4L2wxhySJsptKp",
+      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDmznG%2F47nrsgyR8C9F7bhFdIpnwRLX6noZVRecB74sDZRSrMXwLgXJcLIN2bp4drCjafKUmdmS47ForPuQ0nxBUt5VnCn8y5b49rGVe8TrTpXGfis4vEdZx4E8zA5K1RqElskswhPQ4NaRvLCe%2BkTakiTQhdkdzOGh%2FHynElNzC9AYJycfeMCO1nGQrI8B%2Bso1MsU%2FaBgv7p7p69%2FTp4%2F2%2F",
       "seller_name": "akim026",
       "seller_feedback": 107,
       "seller_positive_pct": 100.0
@@ -57,7 +57,7 @@
       "gbp": 36024.69,
       "url": "https://www.ebay.com/itm/188502880251?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2be3a5affb:g:QygAAeSw4VlqLFGz",
       "seller_name": "pfootballpete4dhx",
-      "seller_feedback": 710726,
+      "seller_feedback": 710764,
       "seller_positive_pct": 99.4
     },
     {
