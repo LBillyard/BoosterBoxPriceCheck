@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-09-02T15:45:34.265739+00:00",
+  "scraped_at": "2026-09-03T02:27:03.581056+00:00",
   "fx": {
     "usd_to_gbp": 0.74167,
-    "fetched_at": "2026-09-02T15:45:34.265739+00:00"
+    "fetched_at": "2026-09-03T02:27:03.581056+00:00"
   },
   "prices": {
     "loose": {
@@ -35,7 +35,7 @@
       "title": "Pokemon Base Set Unlimited Booster Box GREEN WING CHARIZARD Sealed English MINT",
       "usd": 47000.0,
       "gbp": 34858.49,
-      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDn0HC%2BHZO%2Fyi29NXpYLZ3s163dz%2BMbjby5XQ6%2B7ylKRACgv%2FqMlOegm%2BaauDiIU7JRI7ZkGl%2FZhC61pTtUtWyRATE7HnfzZ12GpSz1xyKwJAgEIF0UrlKru00shDMsuFdQICBNlSt5qzmdCk6fVarr5GGK%2BoG9AHoH6QjX5ldHgxRNke8oTJR1ezZKS8ilPPt0F9%2Bs6YuveBrIRMXmgBNPG",
+      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDkF9b8%2BpL1m9%2BIgkHhQDHkST7a4BPG0xLW745MFZQqaAL7QM4fkrubX0L61mNvlhFwSAuFEFozUajnBRFAEV5AdHNUYuS5bwobar0OeGFLC%2FBN7Xjme6ObAOU0HdumjJKEnt8ELjQ7xGdGA0ikz0ameQe7feOebWuqso%2FSZzhQJrCe86x8VxXLZpbb%2FR4GKtDvcvneDUojnq0mjPD5QcpO7",
       "seller_name": "akim026",
       "seller_feedback": 109,
       "seller_positive_pct": 100.0
@@ -47,7 +47,7 @@
       "gbp": 35154.42,
       "url": "https://www.ebay.com/itm/317195901292?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item49da59596c:g:gAUAAeSwFh9qlvEW",
       "seller_name": "loosepacks",
-      "seller_feedback": 234,
+      "seller_feedback": 235,
       "seller_positive_pct": 100.0
     },
     {
@@ -72,6 +72,16 @@
     },
     {
       "source": "ebay_api_us",
+      "title": "Pokemon Base Set Green Wing Unlimited Booster Box 1999 WOTC Factory Sealed",
+      "usd": 52699.0,
+      "gbp": 39085.27,
+      "url": "https://www.ebay.com/itm/315005009497?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4957c2fe59:g:Z3YAAeSw2DJqimHG",
+      "seller_name": "loosepacks",
+      "seller_feedback": 235,
+      "seller_positive_pct": 100.0
+    },
+    {
+      "source": "ebay_api_us",
       "title": "Pokemon Base Set Booster Box Unlimited 1999 WOTC Factory Sealed English 36 Packs",
       "usd": 55000.0,
       "gbp": 40791.85,
@@ -87,17 +97,7 @@
       "gbp": 44500.19,
       "url": "https://www.ebay.com/itm/267648591048?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item3e511964c8:g:9ZgAAeSw-dNp6jgd",
       "seller_name": "tca_gaming",
-      "seller_feedback": 110370,
-      "seller_positive_pct": 100.0
-    },
-    {
-      "source": "ebay_api_us",
-      "title": "1999 Pokemon Base Set Unlimited Booster Box WOTC Sealed Blue Wing Charizard",
-      "usd": 80000.0,
-      "gbp": 59333.6,
-      "url": "https://www.ebay.com/itm/376104613663?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item579194f71f:g:z40AAOSwL-Bn5dUY",
-      "seller_name": "mtsightsphotoig",
-      "seller_feedback": 715,
+      "seller_feedback": 110397,
       "seller_positive_pct": 100.0
     },
     {
@@ -109,12 +109,22 @@
       "seller_name": "trust-always",
       "seller_feedback": 838,
       "seller_positive_pct": 100.0
+    },
+    {
+      "source": "ebay_api_us",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box WOTC Sealed Blue Wing Charizard",
+      "usd": 80000.0,
+      "gbp": 59333.6,
+      "url": "https://www.ebay.com/itm/376104613663?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item579194f71f:g:z40AAOSwL-Bn5dUY",
+      "seller_name": "mtsightsphotoig",
+      "seller_feedback": 715,
+      "seller_positive_pct": 100.0
     }
   ],
   "purchase_price_gbp": 29253.05,
   "source_counts": {
     "pricecharting_last_sold": 1,
-    "ebay_api_us": 8,
+    "ebay_api_us": 9,
     "ebay_api_uk": 0
   }
 }
