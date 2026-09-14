@@ -1,13 +1,13 @@
 {
-  "scraped_at": "2026-09-13T15:25:28.206656+00:00",
+  "scraped_at": "2026-09-14T02:48:00.381746+00:00",
   "fx": {
     "usd_to_gbp": 0.7403,
-    "fetched_at": "2026-09-13T15:25:28.206656+00:00"
+    "fetched_at": "2026-09-14T02:48:00.381746+00:00"
   },
   "prices": {
     "loose": {
-      "usd": 32750.0,
-      "gbp": 24244.82
+      "usd": 35000.0,
+      "gbp": 25910.5
     }
   },
   "last_sold": {
@@ -35,7 +35,7 @@
       "title": "Pokemon Base Set Unlimited Booster Box GREEN WING CHARIZARD Sealed English MINT",
       "usd": 45000.0,
       "gbp": 33313.5,
-      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDmCxDAZqZU%2FwiCmtcQfi1YYrIH4kahsMjxcNOoNXntORAbAkqwbLvGjAqXEcOVazSDAz0ZU05SwU2UGPlqm7STcDzZIYe6JajV6noehjnxq%2B33v21KzecJJTYS7ZkLmKg2VjS9fFKZ%2Buo84R4hpVQEF2hXUt26LcOGhYzBCzVSTCozGYH02bStfynt5QKU%2BnW2MRDmWPlEkR5LjoC74ZrJw",
+      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbrOtm8KQ2utRjeKnC2eqgzYgPqKELCSZ9wkI0338YB9VxvdU8VQUqx9YNzFNR9%2B5Vgz8Qdykydbgdu4XA8U9O%2FzoCQluFU1ruQrL9ekgc%2FO%2Fhx6ELpYFS2h9%2BzjmoXbDmTMXIrDvWJ8QeeYprRUNH%2FhD9hm4Wq4GmWUiVtGdubW21tr55uUFwUHVS%2BMkomSz2inSqTYJbUz0XOzFDj5GvDiDRlRM%2FPnBMi9Ii3pQeZ%2B7I9SxrssnRWCTqoJlafybEurBRNj01kALpFakrPC1G080XwAIQna4Xuzo2nJIzy8OfzZSPA2xH%2B7fEyieO%2BQ1jykl%2BaxTpYuLOSnQD5rErc",
       "seller_name": "akim026",
       "seller_feedback": 109,
       "seller_positive_pct": 100.0
