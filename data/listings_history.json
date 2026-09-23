@@ -23,7 +23,7 @@
     "seller_feedback": 410,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-09-23T02:45:57Z"
+    "last_seen": "2026-09-23T15:53:51Z"
   },
   {
     "item_id": "v1|335765516351|0",
@@ -36,7 +36,7 @@
     "seller_feedback": 834,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-09-23T02:45:57Z"
+    "last_seen": "2026-09-23T15:53:51Z"
   },
   {
     "item_id": "v1|315005009497|0",
@@ -725,7 +725,7 @@
     "seller_feedback": 193,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-03T03:29:27Z",
-    "last_seen": "2026-09-23T02:45:57Z"
+    "last_seen": "2026-09-23T15:53:51Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -1492,7 +1492,7 @@
     "seller_feedback": 229,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-08-23T00:54:01Z",
-    "last_seen": "2026-09-23T02:45:57Z"
+    "last_seen": "2026-09-23T15:53:51Z"
   },
   {
     "item_id": "v1|137449945352|0",
@@ -1518,7 +1518,7 @@
     "seller_feedback": 109,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-09-18T02:36:12Z",
-    "last_seen": "2026-09-23T02:45:57Z"
+    "last_seen": "2026-09-23T15:53:51Z"
   },
   {
     "item_id": "v1|407227284790|0",
@@ -1531,6 +1531,6 @@
     "seller_feedback": 17408,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-09-19T02:35:27Z",
-    "last_seen": "2026-09-23T02:45:57Z"
+    "last_seen": "2026-09-23T15:53:51Z"
   }
 ]
