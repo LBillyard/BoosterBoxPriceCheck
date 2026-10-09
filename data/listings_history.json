@@ -23,7 +23,7 @@
     "seller_feedback": 410,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-10-08T03:54:59Z"
+    "last_seen": "2026-10-09T04:00:23Z"
   },
   {
     "item_id": "v1|335765516351|0",
@@ -36,7 +36,7 @@
     "seller_feedback": 834,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-05-17T14:29:55Z",
-    "last_seen": "2026-10-08T03:54:59Z"
+    "last_seen": "2026-10-09T04:00:23Z"
   },
   {
     "item_id": "v1|315005009497|0",
@@ -725,7 +725,7 @@
     "seller_feedback": 193,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-03T03:29:27Z",
-    "last_seen": "2026-10-08T03:54:59Z"
+    "last_seen": "2026-10-09T04:00:23Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -1206,7 +1206,7 @@
     "seller_feedback": 107,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-06-25T02:39:28Z",
-    "last_seen": "2026-10-08T03:54:59Z"
+    "last_seen": "2026-10-09T04:00:23Z"
   },
   {
     "item_id": "v1|198215232725|0",
@@ -1531,7 +1531,7 @@
     "seller_feedback": 17408,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-09-19T02:35:27Z",
-    "last_seen": "2026-10-08T03:54:59Z"
+    "last_seen": "2026-10-09T04:00:23Z"
   },
   {
     "item_id": "v1|317195901292|0",
@@ -1544,7 +1544,7 @@
     "seller_feedback": 246,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-09-27T16:10:23Z",
-    "last_seen": "2026-10-08T03:54:59Z"
+    "last_seen": "2026-10-09T04:00:23Z"
   },
   {
     "item_id": "v1|128109598575|0",
@@ -1570,7 +1570,7 @@
     "seller_feedback": 257,
     "seller_positive_pct": 100.0,
     "first_seen": "2026-10-04T03:43:05Z",
-    "last_seen": "2026-10-08T03:54:59Z"
+    "last_seen": "2026-10-09T04:00:23Z"
   },
   {
     "item_id": "v1|407272143504|0",
@@ -1583,6 +1583,58 @@
     "seller_feedback": 2881,
     "seller_positive_pct": 99.4,
     "first_seen": "2026-10-07T03:41:08Z",
-    "last_seen": "2026-10-08T03:54:59Z"
+    "last_seen": "2026-10-09T04:00:23Z"
+  },
+  {
+    "item_id": "v1|377554747505|0",
+    "source": "ebay_api_us",
+    "title": "1999 WOTC Pokemon Base Set Unlimited Factory Sealed Booster Box",
+    "usd_cents": 4149999,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/377554747505?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item57e8044071:g:e6MAAeSwqYhqv~sY",
+    "seller_name": "dcsports87",
+    "seller_feedback": 1796308,
+    "seller_positive_pct": 99.8,
+    "first_seen": "2026-10-09T04:00:23Z",
+    "last_seen": "2026-10-09T04:00:23Z"
+  },
+  {
+    "item_id": "v1|167882266674|0",
+    "source": "ebay_api_us",
+    "title": "1999 Pokemon Base Set Unlimited Booster Box Blue Wing Factory Sealed",
+    "usd_cents": 4199696,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/167882266674?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2716901832:g:GzIAAeSwiQdqtH-2&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGZKa2XU1p86WBzGVrrC2gha9w8bssWa%2FmbkvqiW37qlHSq4cLNfO8MFPWhbwJDiXMhaBCbjnAg1UXXEFz4isEX0fgom%2FoPlqA8j%2F3qhG4P9A%2BlNd6x67Na9SxZfLot8QiMpuW%2BwVzTkFgrGHrCs9Mfxc1yrCWBqqwVvElyjZrJlwreewbV20yYqLrVrEFw%2Fw2P2qoZD0L7VlrSAazOkOscyNj7%2F5PRpnQaVIDXuidYjoFcZlTLUtuSTjE0mdhQE8ztv5dNfxDRYl0Pz2pe%2BOW66SfiKMRuAKMVJ2CeRzpOH8ssKkDFzuingjEKOojBfDvAzMIjnkYZ2LqBTyRjjsaSh",
+    "seller_name": "kohdeadman",
+    "seller_feedback": 31,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-10-09T04:00:23Z",
+    "last_seen": "2026-10-09T04:00:23Z"
+  },
+  {
+    "item_id": "v1|335159451354|0",
+    "source": "ebay_api_us",
+    "title": "1999 Pokemon TCG Green Wing Charizard Base Set Booster Box FACTORY SEALED!!",
+    "usd_cents": 5990000,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/335159451354?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e090f5eda:g:BG4AAOSw~lVldh2V&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGbbt5LsLJ642HxRJh55p7OomfQA8k2KcGLRibdg1wz9CO59GpRP7TqeE6V8UpiNpa5MdLotauVjoRLIhMiYQE9RLech0GRSh5W%2Bo%2F1GrXd%2B%2BYr3vIAjP0p4fi1Ivzelx70NuIFRMOiNEcozpNKWKYOlzh2CxXL8qpHkC0DV6cuuCOtegcpvTTyoZs4TWjJDh%2F9Xi4%2F0usiEOH644A22LL6TkXwigKwtlu9j9PQrdHlsd%2FmtrU2nimxmJS%2Bi6fC2gU5E%2Fns%2BYo8HshrxeIlo2%2FC%2F3LLkbxebls0kqE0Cww%2FxiHA0jn8ylJgxdphje9F64U62%2F1B4XSodWaEg%2BbrLM4q3",
+    "seller_name": "smokiestradingco",
+    "seller_feedback": 292,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-10-09T04:00:23Z",
+    "last_seen": "2026-10-09T04:00:23Z"
+  },
+  {
+    "item_id": "v1|398209575789|0",
+    "source": "ebay_api_us",
+    "title": "1999 Pokemon Base Set Unlimited Booster Box Green Wing Factory Sealed",
+    "usd_cents": 5400000,
+    "gbp_cents": null,
+    "url": "https://www.ebay.com/itm/398209575789?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item5cb723eb6d:g:yJMAAeSwmtxpWcp-&amdata=enc%3AAQALAAABEACCtXRWQnOEpyOqnQQ8KGa0yY%2FzJlFHv930U%2BtN8%2FahXyvo%2BbPHiJf0jSVsYUnw6X3Etlnk%2FLEYP64T8S2w6rAxnIXrezIkEnI4%2FoQRsrWh%2F6NEA40R9aEljHLwZGwthFTq7xBVwe5WfVT5O1iLuTxwFY7mfQkQtB4kDnP%2BVpRk2Cny3L66LJ4u9IMdcSlqIv6RSiBaLc6D9DIkyJmIz91KbWmqflTDlf%2BHgqJW%2F5TfMMS8Apce68xGmSVd3LLHiJsHLWZD%2FrQv7Wjdl%2BHbdNCJGjucdoj3AyfGHz3g9p5fTPPw9bFhmBtwqtGVDlbsbihOetXydAx6pDf4JFbmja6Z5J3liha%2FNw5twbqh%2FT8%2B",
+    "seller_name": "eacollectibles99",
+    "seller_feedback": 172,
+    "seller_positive_pct": 100.0,
+    "first_seen": "2026-10-09T04:00:23Z",
+    "last_seen": "2026-10-09T04:00:23Z"
   }
 ]
