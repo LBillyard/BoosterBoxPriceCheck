@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-10-25T15:21:59.213973+00:00",
+  "scraped_at": "2026-10-26T02:38:14.699202+00:00",
   "fx": {
     "usd_to_gbp": 0.74804,
-    "fetched_at": "2026-10-25T15:21:59.213973+00:00"
+    "fetched_at": "2026-10-26T02:38:14.699202+00:00"
   },
   "prices": {
     "loose": {
@@ -52,52 +52,12 @@
     },
     {
       "source": "ebay_api_us",
-      "title": "Pokemon Base Set Unlimited Booster Box GREEN WING CHARIZARD Sealed English MINT",
-      "usd": 42000.0,
-      "gbp": 31417.68,
-      "url": "https://www.ebay.com/itm/137449945352?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2000a7b908:g:0KEAAeSwTAVqPFL1&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7mh0VVSzVmh4emnOmkFvyHua1ss1MuoCJ%2FgLr0Z1nWTTD63ubIWBrYT4nXY18o8gX9PaTTqJnzcsoACh452ocqfU8d59K6Xp%2FccV%2BtcelIROFoucbtilMeT4qrhLj4gXaSfUSm%2BRaPyMXuuHs8CRTLXtpwomDYKG4dxcDmB34fVQJC3T%2B8knq0wcu3Bh1UIhZSo7U%2FfUa32CAqGOwCQ6yn0taY0QB3TyLQpQFgRsdI8Ak1gqRRzVuxipsS8EnhKXddM6dw0PquZCYy%2B7DqRpIl3YwOkZqPGtObXS1cUIqgfeYCTLoDnxs19%2BvfZJFQZ7V3McJe17UXkJOXB2TPyFOiW",
-      "seller_name": "akim026",
-      "seller_feedback": 109,
-      "seller_positive_pct": 100.0
-    },
-    {
-      "source": "ebay_api_us",
       "title": "1999 Pokemon Base Set Unlimited Booster Box Blue Wing Factory Sealed",
       "usd": 42755.75,
       "gbp": 31983.01,
-      "url": "https://www.ebay.com/itm/167882266674?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2716901832:g:GzIAAeSwiQdqtH-2&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7miowhsKW7sfNGtKKhr7fgZPrg4ehFhV6fYXIe0azKM2%2FbyVxCAkGFYTAVfqmLnfHKfXMIAyVmyfcTzEjsjVGX9y4GrCLGKMmqaeaXjfj2Fs8SRiP%2FxQsDYtsG5G3igzX5u9JbCTCXBwbqZbeyNIAeMl%2F8gSu6pavyFWEe1%2BMhsXSJIMIUWnFBbMXeFcZbHYneEcEPIu6NHudTztnwfn1eAwPl%2FenJm7JSX9oDWLs8hrPHs1ouDW%2FHMUICdEvHc5sTXVsqzzDO8Pq0znWV4l7Qxf8G2Z8frsD1w3KpNvugKmHwOF7vJxbqI7wARXtu6PwPHShsvNlaT1mdULpPTDpC6",
+      "url": "https://www.ebay.com/itm/167882266674?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2716901832:g:GzIAAeSwiQdqtH-2&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7miowhsKW7sfNGtKKhr7fgZPrg4ehFhV6fYXIe0azKM2%2FbyVxCAkGFYTAVfqmLnfHKfXMIAyVmyfcTzEjsjVGX9y4GrCLGKMmqaeaXjfj2Fs8SRiP%2FxQsDYtsG5G3igzX7ikG9uQr0jkYr7plYjwNxoSbPtVzbRyH%2B0aulF%2BpQ2eB0jNdg3utpS7CdkJHd7P5nU97gj7ULTXlPPn196wrsTAo9X9hXk5P7UER9OWLGapvuku1aJHxSIhoFZ3io%2FFhxk56IVYqr19Nc7h33EaPlV4mg5pxwt6Gyfi7VnfRQwhyE%2FtOTYaNMCDk8WtS%2FYAvg%2BwSedwUG7eLUcwLFVHK4N",
       "seller_name": "kohdeadman",
       "seller_feedback": 31,
-      "seller_positive_pct": 100.0
-    },
-    {
-      "source": "ebay_api_us",
-      "title": "1999 Pokemon Base Set Unlimited Factory Sealed Booster Box (Great Condition)",
-      "usd": 43800.0,
-      "gbp": 32764.15,
-      "url": "https://www.ebay.com/itm/860060322120?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=itemc83f970948:g:zAUAAeSw9fdq1aKH",
-      "seller_name": "j_84901",
-      "seller_feedback": 517,
-      "seller_positive_pct": 100.0
-    },
-    {
-      "source": "ebay_api_us",
-      "title": "1999 Pokemon Base Set Unlimited Booster Box Blue Wing Factory Sealed",
-      "usd": 44000.0,
-      "gbp": 32913.76,
-      "url": "https://www.ebay.com/itm/920065447459?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=itemd6382c9623:g:WBwAAeSwl3RpWcnW&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7lLv4xP4%2FDLxKDVp9g4TOp4MxGNV%2FCfcU1NK7x3LRDRMRfafJD%2FL1cLUgEpxpreBXjqdPIo%2BvsmCJf3gj7rotN4xWLsXKK1ZtRiluxAxmtzxF1bQUg0RIg0L22Ux2a87dh4CkTKyu%2FFHQ3rrMKFTacoBQv96gCCgYoNrtwJgQN54c7ddWw3Nwd61pz1PPCXJb6FEShleKgmowIB%2F3EIsnn5ztykwgotM6luMrfXsnse9%2Fw%2FtehcU%2BwT--AcQ0%2Bqj38AE3SvguqIim28qgKBBxoRFnGy3ODwor31rA679gAwWKeY6fqRNvDRgCy4S1O6fz7dAdFhu5b2cdUfTWPxxabG",
-      "seller_name": "eacollectibles99",
-      "seller_feedback": 174,
-      "seller_positive_pct": 100.0
-    },
-    {
-      "source": "ebay_api_us",
-      "title": "PRISTINE 1999 Pokemon Factory Sealed Base Set Booster Box - Blue Wing",
-      "usd": 44999.0,
-      "gbp": 33661.05,
-      "url": "https://www.ebay.com/itm/257812537414?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item3c06d32046:g:6LcAAeSwN2Vq2pei",
-      "seller_name": "boardgamefanatic",
-      "seller_feedback": 314,
       "seller_positive_pct": 100.0
     },
     {
@@ -107,7 +67,17 @@
       "gbp": 34409.83,
       "url": "https://www.ebay.com/itm/407227284790?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item5ed0a33d36:g:eWYAAeSwy4NqrW0I",
       "seller_name": "cccentral",
-      "seller_feedback": 17591,
+      "seller_feedback": 17593,
+      "seller_positive_pct": 100.0
+    },
+    {
+      "source": "ebay_api_us",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box Blue Wing Factory Sealed",
+      "usd": 46000.0,
+      "gbp": 34409.84,
+      "url": "https://www.ebay.com/itm/920065447459?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=itemd6382c9623:g:WBwAAeSwl3RpWcnW&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7lLv4xP4%2FDLxKDVp9g4TOp4MxGNV%2FCfcU1NK7x3LRDRMRfafJD%2FL1cLUgEpxpreBXjqdPIo%2BvsmCJf3gj7rotN4xWLsXKK1ZtRiluxAxmtzxF1bQUg0RIg0L22Ux2a87dhxx4eow8Kf2c9t1%2BmYuiOhy664Mjt3ctg9%2FX0HR720Poq7CCZ51Mh0K%2FN%2BYuAYf%2FEArcHZv9dEJ1otDJUkau8WpNN1jnASEo1tSngifXeRhlbUlQTkYWqqGdVcB3IBrtB3WLNvvelM3SaqEOMDILqTb85X1qoWeaRhUMi9ZWqOXzBuQ9tJsebmq5iDC8aQnhn0UlGn13hdwqyGBDzP3Ed0",
+      "seller_name": "eacollectibles99",
+      "seller_feedback": 174,
       "seller_positive_pct": 100.0
     },
     {
@@ -154,7 +124,7 @@
   "purchase_price_gbp": 29253.05,
   "source_counts": {
     "pricecharting_last_sold": 1,
-    "ebay_api_us": 12,
+    "ebay_api_us": 9,
     "ebay_api_uk": 0
   }
 }
