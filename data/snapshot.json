@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-10-26T18:02:35.690911+00:00",
+  "scraped_at": "2026-10-27T03:13:10.023138+00:00",
   "fx": {
     "usd_to_gbp": 0.7492,
-    "fetched_at": "2026-10-26T18:02:35.690911+00:00"
+    "fetched_at": "2026-10-27T03:13:10.023138+00:00"
   },
   "prices": {
     "loose": {
@@ -57,7 +57,7 @@
       "gbp": 31091.79,
       "url": "https://www.ebay.com/itm/377554747505?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item57e8044071:g:e6MAAeSwqYhqv~sY",
       "seller_name": "dcsports87",
-      "seller_feedback": 1840459,
+      "seller_feedback": 1842504,
       "seller_positive_pct": 99.8
     },
     {
@@ -65,7 +65,7 @@
       "title": "1999 Pokemon Base Set Unlimited Booster Box Blue Wing Factory Sealed",
       "usd": 42755.75,
       "gbp": 32032.61,
-      "url": "https://www.ebay.com/itm/167882266674?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2716901832:g:GzIAAeSwiQdqtH-2&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7miowhsKW7sfNGtKKhr7fgZPrg4ehFhV6fYXIe0azKM2%2FbyVxCAkGFYTAVfqmLnfHKfXMIAyVmyfcTzEjsjVGX9y4GrCLGKMmqaeaXjfj2Fs8SRiP%2FxQsDYtsG5G3igzX6p2YCsDKLd66foHtzJM5AS3mh4Jp49NEXJWCY5XdV02PezkilpUBnU8zPT0OGYQix6tpgcPVeW6qq6atkDPyHfiYq6OMWN8SgMELmXgrQWZr1lrTw71FOu7Pv7T1OM%2BbB20gVZZ87l4rNnCEyjynPVspwGb0r7zQjq9CCpYqboezFxZYZjf%2FyCAGExz%2FWj48slb3pfe2mc4k2wGUTZFqco",
+      "url": "https://www.ebay.com/itm/167882266674?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2716901832:g:GzIAAeSwiQdqtH-2&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7miowhsKW7sfNGtKKhr7fgZPrg4ehFhV6fYXIe0azKM2%2FbyVxCAkGFYTAVfqmLnfHKfXMIAyVmyfcTzEjsjVGX9y4GrCLGKMmqaeaXjfj2Fs8SRiP%2FxQsDYtsG5G3igzX7b6H84deYtft76az0uihne0eIqQI1oS7x%2Frs735TQ721gmhPo00IVVf3s1zWP8bpNtK8CUcqH7EPyCfdkUBUwTVvRrccNWklVZCIvIDWmvkrUGQwfy%2FL%2Bl4JYHnrdYg1NPYTxJ8ZL36VbemABYGGznBRhh0qRBN01p6n6gvdyCgg81vvKn0lnr7jDXEeMo6WAbin0N%2BYYVEMO%2B0S1ONJvX",
       "seller_name": "kohdeadman",
       "seller_feedback": 31,
       "seller_positive_pct": 100.0
@@ -77,7 +77,17 @@
       "gbp": 34463.19,
       "url": "https://www.ebay.com/itm/407227284790?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item5ed0a33d36:g:eWYAAeSwy4NqrW0I",
       "seller_name": "cccentral",
-      "seller_feedback": 17597,
+      "seller_feedback": 17599,
+      "seller_positive_pct": 100.0
+    },
+    {
+      "source": "ebay_api_us",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box Blue Wing Factory Sealed",
+      "usd": 47000.0,
+      "gbp": 35212.4,
+      "url": "https://www.ebay.com/itm/920065447459?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=itemd6382c9623:g:WBwAAeSwl3RpWcnW&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7m2%2BxaE2c7OZZm05mL4MIyaX6qq9SVhYBbBpwRrxOwUQC6RpLzKDmGP9Sm5ufmUIe2oGu3mkZAgNjo6V7PRA2eRt08mn4LiRl8BW4WNu8SCOc151vzgyCh%2BiySJ%2FLS5tCJGAAvuG8j0uM9J05%2FGCZ92WwjYwKoJrevJTK0BF23LPdUhJIZcG%2BpEJt17Z8R4aN2xycxLGlmpdvSmYlABQHh0jldR8gXILd29QlcvmvQ%2BJRSje%2Bg3Tt7c%2BEy9xHLJP8JVX794iUpnc3I28KHarNCj%2FtpGtc8gJvPS6TCBwKBWOjqOlYsIbwfQLfnp%2BTQI--zbPe%2BNM8BdrjbG0V2fGRFX",
+      "seller_name": "eacollectibles99",
+      "seller_feedback": 174,
       "seller_positive_pct": 100.0
     },
     {
@@ -115,7 +125,7 @@
       "title": "1999 Pokemon TCG Green Wing Charizard Base Set Booster Box FACTORY SEALED!!",
       "usd": 59900.0,
       "gbp": 44877.08,
-      "url": "https://www.ebay.com/itm/335159451354?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e090f5eda:g:BG4AAOSw~lVldh2V&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7n3KERzDPOzEYXYWjuE0qZ%2BTbSkOJzPOXcsIaPbmFXwTRxKZkNGoLFoNULJlFa7GC3xvjRwEtHGJc2AHNWhob2Yxhb8R2zLkgARkHrDO53eKCh%2FXmAUfpELUGTUZwgQI4sgGJt69MmA2%2BBKVqqTGSEksJI8kcVverbZ4vr9GDeTU2u64UkJbo%2FZ7mHgJW5SFor0B%2FKR8HaPHT3DRmcMgu7Z0azdsrUF7N0JwCB7VCkxHVOzn%2FyUoqYq9vN6d3mgbahzOhcQZysGl3drKD4YoEskqxgoap7Wh8w2coos1HcQwNIRd69HH4HUp3eCLCYgujyQp4zqPhmT47SiaOeZuarz",
+      "url": "https://www.ebay.com/itm/335159451354?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item4e090f5eda:g:BG4AAOSw~lVldh2V&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7n3KERzDPOzEYXYWjuE0qZ%2BTbSkOJzPOXcsIaPbmFXwTRxKZkNGoLFoNULJlFa7GC3xvjRwEtHGJc2AHNWhob2Yxhb8R2zLkgARkHrDO53eKCh%2FXmAUfpELUGTUZwgQI4v22BuZpWx54SPutWbSE61zLCGLUSndIUCycNazVxL1Wt313tW5VFtshsQH6Qa0WWaXKpZrSsohBRc1ThtGqtQbpxIJKYM6nBKM8z0KyeG%2FPpUjEbT9qQ3EeHa%2BYMd6bz8JMVia3OipGVNV%2FgOziAsg1rPDDkRGLrdhbRIVQ4aJX%2FwqTCEhcBYfpaP8a5b0SBYh9trxHXt2l4%2F3rGh9WKoh",
       "seller_name": "smokiestradingco",
       "seller_feedback": 293,
       "seller_positive_pct": 100.0
@@ -134,7 +144,7 @@
   "purchase_price_gbp": 29253.05,
   "source_counts": {
     "pricecharting_last_sold": 1,
-    "ebay_api_us": 10,
+    "ebay_api_us": 11,
     "ebay_api_uk": 0
   }
 }
