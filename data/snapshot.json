@@ -1,8 +1,8 @@
 {
-  "scraped_at": "2026-11-17T20:18:51.741601+00:00",
+  "scraped_at": "2026-11-18T05:27:58.189137+00:00",
   "fx": {
     "usd_to_gbp": 0.75808,
-    "fetched_at": "2026-11-17T20:18:51.741601+00:00"
+    "fetched_at": "2026-11-18T05:27:58.189137+00:00"
   },
   "prices": {
     "loose": {
@@ -55,7 +55,7 @@
       "title": "1999 Pokemon Base Set Unlimited Booster Box Blue Wing Factory Sealed",
       "usd": 41873.6,
       "gbp": 31743.54,
-      "url": "https://www.ebay.com/itm/167882266674?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2716901832:g:GzIAAeSwiQdqtH-2&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7miowhsKW7sfNGtKKhr7fgZPrg4ehFhV6fYXIe0azKM2%2FbyVxCAkGFYTAVfqmLnfHKfXMIAyVmyfcTzEjsjVGX9y4GrCLGKMmqaeaXjfj2Fs8SRiP%2FxQsDYtsG5G3igzX5qVkp2Ua34dYM5cyqgNf5mJW9gwtDsHW8b1DmyiOdYV16vQUpbMUnem2HZeRZGdtEpNEQ0X%2BEncGM1ACnXW3PHV8%2FJuwGsBbFyvhsf4V5PwrQBIeMP2iMuFn86KfwaJFGkshpjogGwoRWI3y1lyAG555H5MYkRHB72JoyuSUzr02nzzRl5G93Ge3f9%2FpFr9XUnfSITQmGWo1DLrg%2B6gptF",
+      "url": "https://www.ebay.com/itm/167882266674?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item2716901832:g:GzIAAeSwiQdqtH-2&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7miowhsKW7sfNGtKKhr7fgZPrg4ehFhV6fYXIe0azKM2%2FbyVxCAkGFYTAVfqmLnfHKfXMIAyVmyfcTzEjsjVGX9y4GrCLGKMmqaeaXjfj2Fs8SRiP%2FxQsDYtsG5G3igzX4oZ3VPY8knKVCWeWLrqqzqfmzd4tDjLxqGCGUjKq3RTgX%2FdR%2B8vXImP0VhzDoUQVHPN0sKZwq95KOQhk1%2FV8K5mlPcr1RQZ1GCCalrZEolXX8j9%2BUJeNm%2FrgYealazOvHmc0sV2HfzW%2Bj9sC1xsqR1EYTaY4kHtnBKY1DSPd9rwbM5Ij2L9wk%2BadpptUXiE7x5OdFtbXiBADri23uH%2B5ru",
       "seller_name": "kohdeadman",
       "seller_feedback": 31,
       "seller_positive_pct": 100.0
@@ -67,17 +67,7 @@
       "gbp": 34871.66,
       "url": "https://www.ebay.com/itm/407227284790?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item5ed0a33d36:g:eWYAAeSwy4NqrW0I",
       "seller_name": "cccentral",
-      "seller_feedback": 17715,
-      "seller_positive_pct": 100.0
-    },
-    {
-      "source": "ebay_api_us",
-      "title": "1999 Pokemon Base Set Unlimited Booster Box Blue Wing Factory Sealed",
-      "usd": 47000.0,
-      "gbp": 35629.76,
-      "url": "https://www.ebay.com/itm/920065447459?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=itemd6382c9623:g:WBwAAeSwl3RpWcnW&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7m2%2BxaE2c7OZZm05mL4MIyaX6qq9SVhYBbBpwRrxOwUQC6RpLzKDmGP9Sm5ufmUIe2oGu3mkZAgNjo6V7PRA2eRt08mn4LiRl8BW4WNu8SCOc151vzgyCh%2BiySJ%2FLS5tCI4EFcLPbTl%2BEUJvvjdUDYC55rf6XE7dBnSLQnB0%2BkuANYDpN124VGG2Xi6NZ4DVTx4%2FufAE1F%2FdEwVe461Vs8l%2FkitfKOtN4G%2FzbntLio%2BSnnAHI2ut3XoiQHqG8JBc8QPpS49ZJKGWpJC7HKdhnNEpu8QjIsPpubwjxS3SvcT1V%2FTEO5XnMagv98LqhK2ScycGXhqE0Zq7yZvnq6zOWhR",
-      "seller_name": "eacollectibles99",
-      "seller_feedback": 178,
+      "seller_feedback": 17720,
       "seller_positive_pct": 100.0
     },
     {
@@ -102,12 +92,22 @@
     },
     {
       "source": "ebay_api_us",
+      "title": "1999 Pokemon Base Set Unlimited Booster Box Green Wing Factory Sealed",
+      "usd": 50000.0,
+      "gbp": 37904.0,
+      "url": "https://www.ebay.com/itm/920139720559?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=itemd63c99e76f:g:yJMAAeSwmtxpWcp-&amdata=enc%3AAQALAAABEOf5zIIojhOf%2BkQK%2Bxzjn7lNN1nqH8tYBS1%2BLpZZd2mDEz6l0YupuqbsVKyH7UwYE1Fb%2Bb9oxWSQXMRrz%2FbuR431e6dLxXQFdJ75seY5JzSY3fXY7%2BV4dIWjrsPwX4rbE0D0UEi64kP%2BJiXptKXM0AAvHeDfGDX0l%2FdnZLmLlGL6us7Cu7P2TAQ0zfvZpV1BfablpKJZ1FL8u36nFwY%2FywTwG%2F0eiVM7e3WLfLd7McbUGzvu4qOHAT9T1ROF9lkFqUpQfnYq4RZC5yrab1ksZOum931l7Puxkn7HK4sSU%2BoegHym8cetj%2B8LppdAYkwGMbIIXJUrv10ekCeYZQqB%2FUOEHpS7%2BcSl1nzyBckL2duS",
+      "seller_name": "eacollectibles99",
+      "seller_feedback": 178,
+      "seller_positive_pct": 100.0
+    },
+    {
+      "source": "ebay_api_us",
       "title": "1999 Pokemon Base Set Unlimited Booster Box Green Wing Factory Sealed WOTC 36 Pk",
       "usd": 55000.0,
       "gbp": 41694.4,
       "url": "https://www.ebay.com/itm/366771782437?_skw=pokemon+base+set+booster+box+wotc+sealed&hash=item55654d4325:g:ac8AAeSw2l9q5MCo",
       "seller_name": "weedles_warehouse",
-      "seller_feedback": 12608,
+      "seller_feedback": 12611,
       "seller_positive_pct": 100.0
     },
     {
